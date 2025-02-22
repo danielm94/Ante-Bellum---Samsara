@@ -42,5 +42,8 @@ spriteTypes = {
 		name = "government_reform_parmistan_emperor_man"
 		texturefile = "gfx//interface//government_reform_icons//parmistan_emperor_man.dds"
 	}
-	
+	spriteType = {
+		name = "government_reform_st_thomas_apostle"
+		texturefile = "gfx//interface//government_reform_icons//st_thomas_apostle.dds"
+	}
 }
