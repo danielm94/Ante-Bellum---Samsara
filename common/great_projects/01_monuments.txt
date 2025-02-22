@@ -12387,6 +12387,13 @@ ellora_caves = {
 				has_owner_religion = yes
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
+
+			AND = {
+				owner = {
+					religion = malankara
+					secondary_religion_group = dharmic
+				}
+            }
 		}
 		# }}}
 	}
@@ -12416,6 +12423,13 @@ ellora_caves = {
 				has_owner_religion = yes
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
+
+			AND = {
+				owner = {
+					religion = malankara
+					secondary_religion_group = dharmic
+				}
+            }
 		}
 		# }}}
 	}
@@ -13475,6 +13489,13 @@ hampi = {
 				has_owner_religion = yes
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
+
+			AND = {
+				owner = {
+					religion = malankara
+					secondary_religion_group = dharmic
+				}
+            }
 		}
 		# }}}
 	}
@@ -13504,6 +13525,13 @@ hampi = {
 				has_owner_religion = yes
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
+
+			AND = {
+				owner = {
+					religion = malankara
+					secondary_religion_group = dharmic
+				}
+            }
 		}
 		# }}}
 	}
