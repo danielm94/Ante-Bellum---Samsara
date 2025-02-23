@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "gfx_lha_sword_and_dharma"
+		texturefile = "gfx/interface/missions/LHA/lha_sword_and_dharma.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_unite_the_faithful"
+		texturefile = "gfx/interface/missions/LHA/lha_unite_the_faithful.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_pacify_the_old_faith"
+		texturefile = "gfx/interface/missions/LHA/lha_pacify_the_old_faith.dds"
+	}
+}
