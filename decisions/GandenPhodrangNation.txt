@@ -1,0 +1,21 @@
+country_decisions{
+	ganden_phodrang_nation={
+		major = yes
+		potential = {
+			tag = LHA
+		}
+		allow = {
+			NOT = {exists = GPH}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+		}
+		effect = {
+			change_tag = GPH
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+}

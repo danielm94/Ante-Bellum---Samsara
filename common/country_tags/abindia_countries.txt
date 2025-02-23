@@ -119,6 +119,7 @@ SAU = "countries/Saurashtra.txt"
 STH = "countries/Sorath.txt"
 LNK = "countries/Lanka.txt"
 ACM = "countries/AndhraCoromandel.txt"
+GPH = "countries/GandenPhodrang.txt"
 
 #Colonial countries
 AU1 = "countries/Aljanubia.txt"		#Muslim Australia
