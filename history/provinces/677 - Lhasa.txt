@@ -20,6 +20,8 @@ discovered_by = indian
 
 add_province_triggered_modifier = religious_center
 add_province_triggered_modifier = vajrayana_lhasa
+add_province_triggered_modifier = lha_unorthodox_population_of_lhasa
+
 center_of_trade = 2
 
 
