@@ -18,3 +18,8 @@ lha_vajrayana_legitimized = {
 	global_heathen_missionary_strength = 0.01
 	devotion = 0.5
 }
+
+lha_legacy_of_trisong_detsen_effect = {
+	monarch_military_power = 1
+	province_warscore_cost = -0.1
+}
