@@ -23,3 +23,8 @@ lha_legacy_of_trisong_detsen_effect = {
 	monarch_military_power = 1
 	province_warscore_cost = -0.1
 }
+
+lha_tibet_unified = {
+	global_autonomy = -0.05
+	local_development_cost = -0.1
+}
