@@ -29,4 +29,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/LHA/lha_legacy_of_trisong_detsen.dds"
 	}
 
+	spriteType = {
+		name = "gfx_lha_forge_alliances"
+		texturefile = "gfx/interface/missions/LHA/lha_forge_alliances.dds"
+	}
+
+	
+	spriteType = {
+		name = "gfx_lha_take_refuge_under_yuan"
+		texturefile = "gfx/interface/missions/LHA/lha_take_refuge_under_yuan.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_develop_the_holy_city"
+		texturefile = "gfx/interface/missions/LHA/lha_develop_the_holy_city.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_support_the_gelug_school"
+		texturefile = "gfx/interface/missions/LHA/lha_support_the_gelug_school.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_crown_of_the_plateau"
+		texturefile = "gfx/interface/missions/LHA/lha_crown_of_the_plateau.dds"
+	}
 }
