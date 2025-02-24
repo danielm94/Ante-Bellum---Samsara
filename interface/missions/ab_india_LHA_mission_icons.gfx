@@ -18,4 +18,15 @@ spriteTypes = {
 		name = "gfx_lha_purify_the_holy_city"
 		texturefile = "gfx/interface/missions/LHA/lha_purify_the_holy_city.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_tibet_unified"
+		texturefile = "gfx/interface/missions/LHA/lha_tibet_unified.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_legacy_of_trisong_detsen"
+		texturefile = "gfx/interface/missions/LHA/lha_legacy_of_trisong_detsen.dds"
+	}
+
 }
