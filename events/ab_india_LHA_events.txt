@@ -59,7 +59,6 @@ country_event = {
 	}
 	
 	immediate = {
-		add_prestige = -1
 		hidden_effect = {
 			clr_country_flag = lha_mission_unlocked
 			set_country_flag = lha_mission_failed
@@ -69,5 +68,6 @@ country_event = {
 	
 	option = {
 		name = ab_india_lha_events.3.a
+		add_prestige = -1
 	}
 }
