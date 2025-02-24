@@ -1,0 +1,73 @@
+namespace = ab_india_lha_events
+#Starting Bad Event
+province_event = {
+	id = ab_india_lha_events.1
+	title = ab_india_lha_events.1.t
+	desc = ab_india_lha_events.1.d
+	picture = GFX_ab_india_lha_events.1
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_active_triggered_province_modifier = lha_unorthodox_population_of_lhasa
+	}
+	option = {
+		name = ab_india_lha_events.1_acknowledge
+		custom_tooltip = ab_india_lha_events.1_acknowledge_tooltip
+		owner = {
+			add_prestige = -20
+		}
+	}
+}
+
+#Timed Mission Unlock
+country_event = {
+	id = ab_india_lha_events.2
+	title = ab_india_lha_events.2.t
+	desc = ab_india_lha_events.2.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = ab_india_lha_events.2.a
+		set_country_flag = lha_mission_unlocked
+		hidden_effect = {
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#Timed Mission Fail
+country_event = {
+	id = ab_india_lha_events.3
+	title = ab_india_lha_events.3.t
+	desc = ab_india_lha_events.3.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1460
+		OR = {
+			tag = LHA
+			was_tag = LHA
+		}
+		has_country_flag = lha_mission_unlocked
+		NOT = {
+			mission_completed = lha_legacy_of_trisong_detsen
+		}
+	}
+	
+	immediate = {
+		add_prestige = -1
+		hidden_effect = {
+			clr_country_flag = lha_mission_unlocked
+			set_country_flag = lha_mission_failed
+			swap_non_generic_missions = yes
+		}
+	}
+	
+	option = {
+		name = ab_india_lha_events.3.a
+	}
+}
