@@ -1,0 +1,11 @@
+﻿l_english:
+ ab_india_lha_events.1.t:0 "The Bon Hold on Lhasa"
+ ab_india_lha_events.1.d:0 "Though our rule extends over the sacred city of Lhasa, the people within its walls remain bound to the old ways. The temples of Bon still stand, their rituals continuing much as they have for centuries. Even as Vajrayana Buddhism spreads across the land, the devotion of Lhasa’s people to their ancestral faith remains unshaken. Some whisper that the monastic order has failed in its duty, that the ancient gods of the plateau still hold sway in the hearts of the people.\nFor generations, Bon priests have maintained their influence through deep local ties, an understanding of the land, and the sheer force of tradition. Attempts at conversion have been slow, resisted by both the common folk and noble families who see no reason to abandon the gods of their forebears. While our monks rule in name, their word carries little weight among a people who do not recognize their faith.\nIf we are to make Lhasa the true spiritual heart of our realm, we must find a way to break the grip of the old faith—or else accept coexistence, no matter how uneasy it may be."
+ ab_india_lha_events.1_acknowledge:0 "A land ruled in name, but not in spirit…"
+ ab_india_lha_events.1_acknowledge_tooltip:0 "Until we convert Lhasa, we will experience:\nDiplomatic Reputation: §R-2.00§! \nYearly Devotion: §R-1.00§! \nMonastic Orders Loyalty Equilibrium: §R-10.00§!"
+ ab_india_lha_events.2.t:0 "Timed Mission Unlocked"
+ ab_india_lha_events.2.d:0 "We have unlocked the 'Legacy of Trisong Detsen' timed mission. If we complete this mission before the year 1460, we will unlock a powerful bonus. Should we fail, the mission will be §Rpermanently removed§! from our mission tree."
+ ab_india_lha_events.2.a:0 "We must act quickly!"
+ ab_india_lha_events.3.t:0 "Timed Mission Failed"
+ ab_india_lha_events.3.d:0 "We have failed to complete 'The Legacy of Trisong Detsen' in time, and are no longer eligible to receive the reward."
+ ab_india_lha_events.3.a:0 "MISSION FAILED, WE'LL GET EM' NEXT TIME!"
