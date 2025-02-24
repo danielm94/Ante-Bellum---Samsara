@@ -248,6 +248,53 @@ COA_ideas = {
 	}
 }
 
+GPH_ideas = {
+	start = {
+		dip_tech_cost_modifier = -0.075
+		global_trade_power = 0.1
+	}
+	
+	bonus = {
+		diplomats = 1
+	}	
+
+	trigger = { 
+		tag = GPH
+	}
+	
+	free = yes
+	
+	GPH_deep_sea_navy = {
+		global_ship_cost = -0.05
+		heavy_ship_power = 0.15
+	}
+	GPH_destroyers_of_invaders = {
+		shock_damage_received = -0.075
+		hostile_attrition = 2
+		max_hostile_attrition = 1
+	}
+	GPH_into_unknown = {
+		may_explore = yes
+		colonists = 1
+	}
+	GPH_tamil_unification = {
+		manpower_in_culture_group_provinces = 0.15
+		stability_cost_modifier = -0.1
+	}
+	GPH_seacrossing_empire = {
+		cb_on_overseas = yes
+		core_creation = -0.1
+	}
+	GPH_tributary_system = {
+		accept_vassalization_reasons = 10
+		diplomatic_upkeep = 1
+	}
+	GPH_new_chola_empire = {
+		global_ship_trade_power = 0.15
+		global_trade_goods_size_modifier = 0.05
+	}
+}
+
 #Kakatiya ideas
 KAK_ideas = {
 	start = {
