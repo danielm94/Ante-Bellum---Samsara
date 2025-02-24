@@ -1,0 +1,20 @@
+lha_struggle_for_tibet = {
+	land_morale = 0.05
+	ae_impact = -0.1
+}
+
+lha_faithful_united = {
+	core_creation = -0.15
+	years_of_nationalism = -5
+}
+
+lha_subdue_the_unorthodox = {
+	global_missionary_strength = 0.03
+	missionary_maintenance_cost = -0.5
+	harsh_treatment_cost = -0.5
+}
+
+lha_vajrayana_legitimized = {
+	global_heathen_missionary_strength = 0.01
+	devotion = 0.5
+}
