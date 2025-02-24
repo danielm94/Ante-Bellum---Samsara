@@ -13,4 +13,9 @@ spriteTypes = {
 		name = "gfx_lha_pacify_the_old_faith"
 		texturefile = "gfx/interface/missions/LHA/lha_pacify_the_old_faith.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_purify_the_holy_city"
+		texturefile = "gfx/interface/missions/LHA/lha_purify_the_holy_city.dds"
+	}
 }
