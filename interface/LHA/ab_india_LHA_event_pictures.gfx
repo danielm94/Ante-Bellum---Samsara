@@ -4,4 +4,29 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_1.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_ab_india_lha_events.4"
+		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_4.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ab_india_lha_events.5"
+		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_5.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ab_india_lha_events.8"
+		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_8.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ab_india_lha_events.9"
+		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_9.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ab_india_lha_events.10"
+		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_10.dds"
+		alwaystransparent = yes
+	}
 }
