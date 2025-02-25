@@ -2,6 +2,7 @@ lha_slot_1 = {
 	slot = 1
 	generic = no
 	ai = yes
+	has_country_shield = yes
 	potential = {
 		OR = {
 			tag = LHA
@@ -11,11 +12,11 @@ lha_slot_1 = {
 			map_setup = map_setup_random
 		}
 	}
-
 	lha_purify_the_holy_city = {
 		icon = gfx_lha_purify_the_holy_city
-		position = 2
-		required_missions = {  }
+		position = 1
+		required_missions = {
+		}
 		trigger = {
 			677 = {
 				religion = vajrayana
@@ -32,26 +33,90 @@ lha_slot_1 = {
 			}
 		}
 	}
+	lha_construct_temples = {
+		icon = mission_mnd_dai_temples
+		position = 2
+		required_missions = {
+			lha_purify_the_holy_city
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					has_tax_building_trigger = yes
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			custom_tooltip = lha_construct_temples_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_building = temple
+					}
+					add_province_modifier = {
+						name = lha_faithful_flock_to_our_monestaries
+						duration = 3650
+					}
+				}
+			}
+			define_advisor = {
+				type = theologian
+				skill = 1
+				religion = ROOT
+				cost_multiplier = 0.5
+			}
+		}
+	}
 	lha_develop_the_holy_city = {
-		icon = mission_build_up_to_force_limit
+		icon = gfx_lha_develop_the_holy_city
 		position = 3
-		required_missions = { lha_purify_the_holy_city }
-		trigger = { }
-		effect = { }
+		required_missions = {
+			lha_construct_temples
+		}
+		trigger = {
+			677 = {
+				development = 20
+			}
+		}
+		effect = {
+			custom_tooltip = lha_develop_the_holy_city_tooltip
+			677 = {
+				if = {
+					limit = {
+						has_building = temple
+					}
+					upgrade_tax_building = yes
+				}
+				else = {
+					add_building = temple
+				}
+			}
+		}
 	}
 	lha_renaissance_city = {
 		icon = mission_build_up_to_force_limit
 		position = 4
-		required_missions = { lha_develop_the_holy_city }
-		trigger = { }
-		effect = { }
+		required_missions = {
+			lha_develop_the_holy_city
+		}
+		trigger = {
+		}
+		effect = {
+		}
 	}
 	lha_upgrade_jokhang_temple = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { lha_renaissance_city }
-		trigger = { }
-		effect = { }
+		required_missions = {
+			lha_renaissance_city
+		}
+		trigger = {
+		}
+		effect = {
+		}
 	}
 }
 
@@ -59,6 +124,7 @@ lha_slot_2 = {
 	slot = 2
 	generic = no
 	ai = yes
+	has_country_shield = yes
 	potential = {
 		OR = {
 			tag = LHA
@@ -68,11 +134,12 @@ lha_slot_2 = {
 			map_setup = map_setup_random
 		}
 	}
-
 	lha_pacify_the_old_faith = {
 		icon = gfx_lha_pacify_the_old_faith
 		position = 2
-		required_missions = { lha_sword_and_dharma }
+		required_missions = {
+			lha_sword_and_dharma
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = ngari_area
@@ -100,19 +167,68 @@ lha_slot_2 = {
 			}
 		}
 	}
-	lha_construct_temples = {
-		icon = mission_build_up_to_force_limit
+	lha_support_the_gelug_school = {
+		icon = gfx_lha_support_the_gelug_school
 		position = 3
-		required_missions = { lha_purify_the_holy_city }
-		trigger = { }
-		effect = { }
+		required_missions = {
+			lha_construct_temples
+		}
+		trigger = {
+			theologian = 1
+			calc_true_if = {
+				all_owned_province = {
+					has_tax_building_trigger = yes
+					development = 10
+				}
+				amount = 4
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_supporting_the_gelug_school
+				duration = -1
+			}
+		}
 	}
-	lha_develop_the_temples = {
-		icon = mission_build_up_to_force_limit
+	lha_crown_of_the_plateau = {
+		icon = gfx_lha_crown_of_the_plateau
 		position = 4
-		required_missions = { lha_construct_temples }
-		trigger = { }
-		effect = { }
+		required_missions = {
+			lha_develop_the_holy_city
+		}
+		trigger = {
+			677 = {
+				development = 30
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_manpower_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			677 = {
+				add_province_modifier = {
+					name = lha_crown_of_the_plateau
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
 	}
 }
 
@@ -120,6 +236,7 @@ lha_slot_3 = {
 	slot = 3
 	generic = no
 	ai = yes
+	has_country_shield = yes
 	potential = {
 		OR = {
 			tag = LHA
@@ -129,11 +246,11 @@ lha_slot_3 = {
 			map_setup = map_setup_random
 		}
 	}
-
 	lha_sword_and_dharma = {
 		icon = gfx_lha_sword_and_dharma
 		position = 1
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			army_size_percentage = 0.8
 			num_of_generals = 1
@@ -179,10 +296,98 @@ lha_slot_3 = {
 			}
 		}
 	}
+}
+
+lha_locked = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = LHA
+			was_tag = LHA
+		}
+		NOT = {
+			has_country_flag = lha_mission_unlocked
+		}
+		NOT = {
+			has_country_flag = lha_mission_failed
+		}
+	}
+	lha_timed_1 = {
+		icon = gfx_ab_india_mission_timed
+		position = 2
+		required_missions = {
+			lha_sword_and_dharma
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = LHA_UNLOCKABLE
+				has_country_flag = crn_you_cant_get_this
+			}
+		}
+		effect = {
+			custom_tooltip = LHA_UNLOCKABLE
+		}
+	}
+}
+
+lha_unlocked = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = LHA
+			was_tag = LHA
+		}
+		has_country_flag = lha_mission_unlocked
+		NOT = {
+			has_country_flag = lha_mission_failed
+		}
+	}
+	lha_legacy_of_trisong_detsen = {
+		icon = gfx_lha_legacy_of_trisong_detsen
+		position = 2
+		required_missions = {
+			lha_sword_and_dharma
+		}
+		trigger = {
+			mission_completed = lha_tibet_unified
+			NOT = {
+				is_year = 1460
+			}
+		}
+		effect = {
+			custom_tooltip = LHA_LEGACY_OF_TRISONG_DETSEN_TOOLTIP
+			add_country_modifier = {
+				name = lha_legacy_of_trisong_detsen_effect
+				duration = -1
+			}
+		}
+	}
+}
+
+lha_slot_3_continued = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = LHA
+			was_tag = LHA
+		}
+	}
 	lha_tibet_unified = {
 		icon = gfx_lha_tibet_unified
 		position = 3
-		required_missions = { lha_pacify_the_old_faith lha_unite_the_faithful }
+		required_missions = {
+			lha_pacify_the_old_faith
+			lha_unite_the_faithful
+		}
 		trigger = {
 			tibet_region = {
 				type = all
@@ -197,19 +402,41 @@ lha_slot_3 = {
 			}
 		}
 	}
-	lha_in_search_of_dalai_lama = {
-		icon = mission_build_up_to_force_limit
-		position = 4
-		required_missions = { lha_construct_temples lha_tibet_unified }
-		trigger = { }
-		effect = { }
+	lha_find_the_dalai_lama = {
+		icon = gfx_lha_find_the_dalai_lama
+		position = 3
+		required_missions = {
+			lha_support_the_gelug_school
+			lha_tibet_unified
+		}
+		trigger = {
+			tibet_region = {
+				type = all
+				country_or_subject_holds = ROOT
+				religion = vajrayana
+			}
+		}
+		effect = {
+			set_country_flag = begin_search_for_dalai_lama
+			country_event = {
+				id = ab_india_lha_events.4
+			}
+		}
 	}
-	lha_rule_of_dalai_lama = {
+	lha_ascension_of_the_sacred_one = {
 		icon = mission_build_up_to_force_limit
 		position = 5
-		required_missions = { lha_in_search_of_dalai_lama }
-		trigger = { }
-		effect = { }
+		required_missions = {
+			lha_find_the_dalai_lama
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = lha_dalai_lama_found_tooltip
+				has_country_flag = dalai_lama_found
+			}
+		}
+		effect = {
+		}
 	}
 }
 
@@ -217,6 +444,7 @@ lha_slot_4 = {
 	slot = 4
 	generic = no
 	ai = yes
+	has_country_shield = yes
 	potential = {
 		OR = {
 			tag = LHA
@@ -226,11 +454,45 @@ lha_slot_4 = {
 			map_setup = map_setup_random
 		}
 	}
-
+	lha_take_refuge_under_yuan = {
+		icon = gfx_lha_take_refuge_under_yuan
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			NOT = {
+				grown_by_development = 250
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				event_target:EmperorOfChina = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = -10
+			event_target:EmperorOfChina = {
+				create_subject = {
+					subject_type = tributary_state
+					subject = LHA
+				}
+			}
+		}
+	}
 	lha_unite_the_faithful = {
 		icon = gfx_lha_unite_the_faithful
 		position = 2
-		required_missions = { lha_sword_and_dharma }
+		required_missions = {
+			lha_sword_and_dharma
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = amdo_area
@@ -270,77 +532,11 @@ lha_slot_4 = {
 	}
 }
 
-lha_locked = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = LHA
-			was_tag = LHA
-		}
-		NOT = {
-			has_country_flag = lha_mission_unlocked
-		}
-		NOT = {
-			has_country_flag = lha_mission_failed
-		}
-	}
-
-	lha_timed_1 = {
-		icon = gfx_ab_india_mission_timed
-		position = 4
-		required_missions = { undefined }
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = LHA_UNLOCKABLE
-				has_country_flag = crn_you_cant_get_this
-			}
-		}
-		effect = {
-			custom_tooltip = LHA_UNLOCKABLE
-		}
-	}
-}
-
-lha_unlocked = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = LHA
-			was_tag = LHA
-		}
-		has_country_flag = lha_mission_unlocked
-		NOT = {
-			has_country_flag = lha_mission_failed
-		}
-	}
-
-	lha_legacy_of_trisong_detsen = {
-		icon = gfx_lha_legacy_of_trisong_detsen
-		position = 4
-		required_missions = { lha_tibet_unified }
-		trigger = {
-			NOT = {
-				is_year = 1460
-			}
-		}
-		effect = {
-			custom_tooltip = LHA_LEGACY_OF_TRISONG_DETSEN_TOOLTIP
-			add_country_modifier = {
-				name = lha_legacy_of_trisong_detsen_effect
-				duration = -1
-			}
-		}
-	}
-}
-
 lha_slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
+	has_country_shield = yes
 	potential = {
 		OR = {
 			tag = LHA
@@ -350,20 +546,19 @@ lha_slot_5 = {
 			map_setup = map_setup_random
 		}
 	}
-
-	lha_get_allies = {
-		icon = mission_build_up_to_force_limit
+	lha_forge_alliances = {
+		icon = gfx_lha_forge_alliances
 		position = 1
-		required_missions = {  }
-		trigger = { }
-		effect = { }
-	}
-	lha_become_yuan_tributary = {
-		icon = mission_build_up_to_force_limit
-		position = 2
-		required_missions = { lha_get_allies }
-		trigger = { }
-		effect = { }
+		required_missions = {
+		}
+		trigger = {
+			num_of_allies = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_strengthening_alliances
+				duration = 5475
+			}
+		}
 	}
 }
-

@@ -54,4 +54,9 @@ spriteTypes = {
 		name = "gfx_lha_crown_of_the_plateau"
 		texturefile = "gfx/interface/missions/LHA/lha_crown_of_the_plateau.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_find_the_dalai_lama"
+		texturefile = "gfx/interface/missions/LHA/lha_find_the_dalai_lama.dds"
+	}
 }
