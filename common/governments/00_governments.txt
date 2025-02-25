@@ -2109,6 +2109,7 @@ theocracy = {
 				rhl_confederation_reform
 				# Samsara
 				vlr_st_thomas_apostle
+				gph_realm_of_the_bodhisattva
 				# ]]]
 			}
 		}

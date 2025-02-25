@@ -1,0 +1,19 @@
+gph_realm_of_the_bodhisattva = {
+	icon = "st_thomas_apostle"
+	allow_convert = no
+	allow_normal_conversion = no
+	monarchy = yes
+	lock_level_when_selected = no
+	potential = {
+		tag = GPH
+		religion = vajrayana
+	}
+	modifiers = {
+		#TODO
+	}
+	conditional = {
+		has_parliament = yes
+		allow = {
+		}
+	}
+}
