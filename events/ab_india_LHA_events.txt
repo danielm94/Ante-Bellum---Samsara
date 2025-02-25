@@ -6,9 +6,6 @@ province_event = {
 	desc = ab_india_lha_events.1.d
 	picture = GFX_ab_india_lha_events.1
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 1
-	}
 	trigger = {
 		has_active_triggered_province_modifier = lha_unorthodox_population_of_lhasa
 	}
@@ -43,9 +40,7 @@ country_event = {
 	title = ab_india_lha_events.3.t
 	desc = ab_india_lha_events.3.d
 	picture = BAD_WITH_MONARCH_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1460
 		OR = {
@@ -57,7 +52,6 @@ country_event = {
 			mission_completed = lha_legacy_of_trisong_detsen
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = lha_mission_unlocked
@@ -65,9 +59,223 @@ country_event = {
 			swap_non_generic_missions = yes
 		}
 	}
-	
 	option = {
 		name = ab_india_lha_events.3.a
 		add_prestige = -1
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#First Event
+#How fast do you want the Dalai Lama?
+country_event = {
+	id = ab_india_lha_events.4
+	title = ab_india_lha_events.4.t
+	desc = ab_india_lha_events.4.d
+	picture = GFX_ab_india_lha_events.4
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = begin_search_for_dalai_lama
+	}
+	option = {
+		name = ab_india_lha_events.4.a
+		custom_tooltip = ab_india_lha_events.4.tooltip
+		add_country_modifier = {
+			name = lha_searching_for_the_dalai_lama_fastest
+			duration = -1
+		}
+		clr_country_flag = begin_search_for_dalai_lama
+		set_country_flag = searching_for_dalai_lama_fastest
+	}
+	option = {
+		name = ab_india_lha_events.4.b
+		custom_tooltip = ab_india_lha_events.4.tooltip
+		add_country_modifier = {
+			name = lha_searching_for_the_dalai_lama_faster
+			duration = -1
+		}
+		clr_country_flag = begin_search_for_dalai_lama
+		set_country_flag = searching_for_dalai_lama_fast
+	}
+	option = {
+		name = ab_india_lha_events.4.c
+		custom_tooltip = ab_india_lha_events.4.c.tooltip
+		clr_country_flag = begin_search_for_dalai_lama
+		set_country_flag = searching_for_dalai_lama
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#Final Event Fastest
+country_event = {
+	id = ab_india_lha_events.5
+	title = ab_india_lha_events.5.t
+	desc = ab_india_lha_events.5.d
+	picture = GFX_ab_india_lha_events.5
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		has_country_flag = searching_for_dalai_lama_fastest
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	immediate = {
+		clr_country_flag = searching_for_dalai_lama_fastest
+		remove_country_modifier = lha_searching_for_the_dalai_lama_fastest
+		set_country_flag = dalai_lama_found
+	}
+	option = {
+		name = ab_india_lha_events.5.a
+		add_prestige = 25
+		add_devotion = 10
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#Final Event Fast
+country_event = {
+	id = ab_india_lha_events.6
+	title = ab_india_lha_events.5.t
+	desc = ab_india_lha_events.5.d
+	picture = GFX_ab_india_lha_events.5
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = searching_for_dalai_lama_fast
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		clr_country_flag = searching_for_dalai_lama_fast
+		remove_country_modifier = lha_searching_for_the_dalai_lama_faster
+		set_country_flag = dalai_lama_found
+	}
+	option = {
+		name = ab_india_lha_events.6.a
+		add_prestige = 25
+		add_devotion = 10
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#Final Event Regular Speed
+country_event = {
+	id = ab_india_lha_events.7
+	title = ab_india_lha_events.5.t
+	desc = ab_india_lha_events.5.d
+	picture = GFX_ab_india_lha_events.5
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = searching_for_dalai_lama
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+	immediate = {
+		clr_country_flag = searching_for_dalai_lama
+		set_country_flag = dalai_lama_found
+	}
+	option = {
+		name = ab_india_lha_events.7.a
+		add_prestige = 25
+		add_devotion = 10
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#Nobles Resist
+country_event = {
+	id = ab_india_lha_events.8
+	title = ab_india_lha_events.8.t
+	desc = ab_india_lha_events.8.d
+	picture = GFX_ab_india_lha_events.8
+	trigger = {
+		OR = {
+			has_country_flag = searching_for_dalai_lama
+			has_country_flag = searching_for_dalai_lama_fast
+			has_country_flag = searching_for_dalai_lama_fastest
+		}
+	}
+	mean_time_to_happen = {
+		months = 14
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				set_saved_name = {
+					key = noble_reactionary
+					type = advisor
+					scope = ROOT
+				}
+				spawn_rebels = {
+					size = 1
+					leader = noble_reactionary
+					type = noble_rebels
+				}
+			}
+		}
+	}
+	option = {
+		name = ab_india_lha_events.8.a
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#Violence Between Schools
+country_event = {
+	id = ab_india_lha_events.9
+	title = ab_india_lha_events.9.t
+	desc = ab_india_lha_events.9.d
+	picture = GFX_ab_india_lha_events.9
+	trigger = {
+		OR = {
+			has_country_flag = searching_for_dalai_lama
+			has_country_flag = searching_for_dalai_lama_fast
+			has_country_flag = searching_for_dalai_lama_fastest
+		}
+	}
+	mean_time_to_happen = {
+		months = 14
+	}
+	option = {
+		name = ab_india_lha_events.9.a
+		random_owned_province = {
+			add_unrest = 10
+			add_devastation = 20
+		}
+		add_devotion = -5
+		add_prestige = -5
+	}
+}
+
+##Find the Dalai Lama Event Chain
+#Landowners Take Advantage
+country_event = {
+	id = ab_india_lha_events.10
+	title = ab_india_lha_events.10.t
+	desc = ab_india_lha_events.10.d
+	picture = GFX_ab_india_lha_events.10
+	trigger = {
+		OR = {
+			has_country_flag = searching_for_dalai_lama
+			has_country_flag = searching_for_dalai_lama_fast
+			has_country_flag = searching_for_dalai_lama_fastest
+		}
+	}
+	mean_time_to_happen = {
+		months = 14
+	}
+	option = {
+		name = ab_india_lha_events.10.a
+		random_owned_province = {
+			add_province_modifier = {
+				name = lha_landowners_take_advantage
+				duration = 1825
+			}
+			add_local_autonomy = 10
+		}
+		add_devotion = -5
 	}
 }
