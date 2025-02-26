@@ -46,4 +46,8 @@ spriteTypes = {
 		name = "government_reform_st_thomas_apostle"
 		texturefile = "gfx//interface//government_reform_icons//st_thomas_apostle.dds"
 	}
+	spriteType = {
+		name = "government_reform_realm_of_the_bodhisattva"
+		texturefile = "gfx/interface/government_reform_icons/realm_of_the_bodhisattva.dds"
+	}
 }
