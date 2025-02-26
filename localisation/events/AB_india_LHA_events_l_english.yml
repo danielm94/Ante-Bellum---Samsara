@@ -30,4 +30,9 @@
  ab_india_lha_events.10.t:0 "Defiance of the Landowners"
  ab_india_lha_events.10.d:0 "As the state devotes its resources to the grand search for the Dalai Lama, the great landowning families of Tibet have quietly begun asserting their independence. With the monastic authorities focused on spiritual matters, tax shipments have slowed, and in some regions, they have stopped entirely. Local rulers, emboldened by the absence of oversight, have begun acting as sovereign lords in their own right—settling disputes, raising small militias, and ignoring edicts from Lhasa. While some see this as a temporary shift, others fear that, if left unchecked, these landowners may permanently undermine the authority of the central government."
  ab_india_lha_events.10.a:0 "We'll deal with them later..."
- 
+ ab_india_lha_events.11.t:0 "The Monastic Council Assumes Power"
+ ab_india_lha_events.11.d:0 "With the discovery of the Sacred Child, the Dalai Lama, a Monastic Council has been established to oversee the administration of the state until he comes of age. The young Dalai Lama is to be raised and educated within the monastery, meticulously prepared for the great responsibility of spiritual and temporal leadership that awaits him. However, the abrupt shift in power dynamics has caused unrest among the nobility and common folk alike. As the Council consolidates control, uncertainty and unease have spread across Tibet, raising tensions and threatening stability. The Council must decide which skills the young Dalai Lama should focus on during his education—whether administrative, diplomatic, or military—to best prepare him to lead our nation into a prosperous future."
+ ab_india_lha_events.11.tooltip:0 "§YThe negative modifier will be removed once the Dalai Lama assumes power.§!"
+ ab_india_lha_events.11.a:0 "He shall master the arts of governance and spiritual administration! §G(+1 Adm)§!"
+ ab_india_lha_events.11.b:0 "Teach him the ways of diplomacy and the subtleties of statecraft! §G(+1 Dip)§!"
+ ab_india_lha_events.11.c:0 "Train him rigorously in martial tradition; he must defend our faith! §G(+1 Mil)§!"
