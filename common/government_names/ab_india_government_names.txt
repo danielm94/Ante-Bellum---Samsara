@@ -1,0 +1,80 @@
+gph_realm_of_the_bodhisattva = {
+	trigger = {
+		has_reform = gph_realm_of_the_bodhisattva
+		tag = GPH
+	}
+	rank = {
+		1 = GPH_MONASTIC_REALM_RANK
+		2 = GPH_GANDEN_PHODRANG_RANK
+		3 = GPH_UNIVERSAL_DHARMA_REALM_RANK
+	}
+	ruler_male = {
+		1 = GPH_DALAI_LAMA
+		2 = GPH_DALAI_LAMA
+		3 = GPH_DALAI_LAMA
+	}
+	ruler_female = {
+		1 = GPH_DALAI_LAMA
+		2 = GPH_DALAI_LAMA
+		3 = GPH_DALAI_LAMA
+	}
+	heir_male = {
+		1 = GPH_RECOGNIZED_REINCARNATION
+		2 = GPH_RECOGNIZED_REINCARNATION
+		3 = GPH_RECOGNIZED_REINCARNATION
+	}
+	heir_female = {
+		1 = GPH_RECOGNIZED_REINCARNATION
+		2 = GPH_RECOGNIZED_REINCARNATION
+		3 = GPH_RECOGNIZED_REINCARNATION
+	}
+}
+
+buddhist_theocracy = {
+	rank = {
+		1 = HOLY_PRINCIPALITY
+		2 = HOLY_STATE
+		3 = HOLY_EMPIRE
+	}
+	ruler_male = {
+		1 = LAMA
+		2 = TULKU
+		3 = GREAT_TULKU
+	}
+	ruler_female = {
+		1 = LAMA
+		2 = TULKU
+		3 = GREAT_TULKU
+	}
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		OR = {
+			religion = buddhism			#Theravada
+			religion = vajrayana
+			religion = mahayana
+		}
+		government = theocracy
+		NOT = {
+			tag = GPH
+		}
+	}
+}
