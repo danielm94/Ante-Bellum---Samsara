@@ -1,0 +1,170 @@
+namespace = ab_india_dalai_lama_events
+
+#This event file is only for events related to Ganden Phodrang's government.
+#Dalai Lama's death start
+country_event = {
+	id = ab_india_dalai_lama_events.1
+	title = ab_india_dalai_lama_events.1.t
+	desc = ab_india_dalai_lama_events.1.d
+	picture = GFX_ab_india_dalai_lama_events.1
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = dalai_lama_mechanics
+	}
+	option = {
+		name = ab_india_dalai_lama_events.1.a
+		custom_tooltip = ab_india_dalai_lama_events.1.tooltip
+		add_country_modifier = {
+			name = searching_for_the_dalai_lama_fastest
+			duration = -1
+		}
+		set_country_flag = searching_for_dalai_lama_fastest
+	}
+	option = {
+		name = ab_india_dalai_lama_events.1.b
+		custom_tooltip = ab_india_dalai_lama_events.1.tooltip
+		add_country_modifier = {
+			name = searching_for_the_dalai_lama_faster
+			duration = -1
+		}
+		set_country_flag = searching_for_dalai_lama_fast
+	}
+	option = {
+		name = ab_india_dalai_lama_events.1.c
+		custom_tooltip = ab_india_dalai_lama_events.1.c.tooltip
+		set_country_flag = searching_for_dalai_lama
+	}
+}
+
+
+#Dalai Lama Found Fastest
+country_event = {
+	id = ab_india_dalai_lama_events.2
+	title = ab_india_dalai_lama_events.2.t
+	desc = ab_india_dalai_lama_events.2.d
+	picture = GFX_ab_india_lha_events.5
+	major = yes
+	trigger = {
+		has_country_flag = searching_for_dalai_lama_fastest
+		has_country_flag = dalai_lama_mechanics
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	immediate = {
+		clr_country_flag = searching_for_dalai_lama_fastest
+		remove_country_modifier = searching_for_the_dalai_lama_fastest
+	}
+	option = {
+		name = ab_india_dalai_lama_events.2.a
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_devotion = 5
+		set_country_flag = dalai_lama_found
+		country_event = {
+			id = ab_india_dalai_lama_events.5
+		}
+	}
+}
+
+#Dalai Lama Found Fast
+country_event = {
+	id = ab_india_dalai_lama_events.3
+	title = ab_india_dalai_lama_events.2.t
+	desc = ab_india_dalai_lama_events.2.d
+	picture = GFX_ab_india_lha_events.5
+	trigger = {
+		has_country_flag = searching_for_dalai_lama_fast
+		has_country_flag = dalai_lama_mechanics
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		clr_country_flag = searching_for_dalai_lama_fast
+		remove_country_modifier = searching_for_the_dalai_lama_faster
+	}
+	option = {
+		name = ab_india_dalai_lama_events.3.a
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_devotion = 5
+		set_country_flag = dalai_lama_found
+		country_event = {
+			id = ab_india_dalai_lama_events.5
+		}
+	}
+}
+
+#Dalai Lama Found Regular Speed
+country_event = {
+	id = ab_india_dalai_lama_events.4
+	title = ab_india_dalai_lama_events.2.t
+	desc = ab_india_dalai_lama_events.2.d
+	picture = GFX_ab_india_lha_events.5
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = searching_for_dalai_lama
+		has_country_flag = dalai_lama_mechanics
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+	immediate = {
+		clr_country_flag = searching_for_dalai_lama
+	}
+	option = {
+		name = ab_india_dalai_lama_events.4.a
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+		add_devotion = 5
+		set_country_flag = dalai_lama_found
+		country_event = {
+			id = ab_india_dalai_lama_events.5
+		}
+	}
+}
+
+# Dalai Lama
+country_event = {
+	id = ab_india_dalai_lama_events.5
+	title = ab_india_lha_events.5.t
+	desc = ab_india_lha_events.5.d
+	picture = GFX_ab_india_lha_events.11
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = dalai_lama_found
+	}
+	immediate = {
+		clr_country_flag = dalai_lama_found
+		hidden_effect = {
+			kill_heir = {
+				allow_new_heir = no
+			}
+			define_heir = {
+				religion = vajrayana
+				culture = tibetan
+				age = 10
+			}
+			add_heir_personality = enlightened_personality
+		}
+	}
+	option = {
+		name = ab_india_lha_events.5.a
+		change_heir_adm = 1
+		set_country_flag = waiting_for_dalai_lama_to_come_of_age
+	}
+	option = {
+		name = ab_india_lha_events.5.b
+		change_heir_dip = 1
+		set_country_flag = waiting_for_dalai_lama_to_come_of_age
+	}
+	option = {
+		name = ab_india_lha_events.5.c
+		change_heir_mil = 1
+		set_country_flag = waiting_for_dalai_lama_to_come_of_age
+	}
+}

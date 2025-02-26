@@ -263,3 +263,7 @@
  desc_lha_landowners_take_advantage:0 "Since the state has invested so much resources into finding the Dalai Lama, landowners have begun withholding taxes and ignoring edicts from [677.GetName]"
  lha_sudden_shift_in_power_dynamics:0 "Sudden Shift In Power Dynamics"
  desc_lha_sudden_shift_in_power_dynamics:0 "The sudden shift from a Tulku to a monastic council in preparation for the Dalai Lama to assume control has created confusion and unrest amongst the nobles and common folk, weakening our ability to govern."
+ searching_for_the_dalai_lama_faster:0 "Investing Resources In Search of the Dalai Lama"
+ desc_searching_for_the_dalai_lama_faster:0 "We are investing resources in the hopes of increasing the odds of finding the Dalai Lama. As a result of this, our administration is less efficient."
+ searching_for_the_dalai_lama_fastest:0 "Investing Significant Resources In Search of the Dalai Lama"
+ desc_searching_for_the_dalai_lama_fastest:0 "We are investing significant resources in the hopes of finding the Dalai Lama as quickly as possible. Our government is significantly less efficient as a result of this."
