@@ -86,7 +86,7 @@ country_event = {
 			duration = -1
 		}
 		clr_country_flag = begin_search_for_dalai_lama
-		set_country_flag = searching_for_dalai_lama_fastest
+		set_country_flag = lha_searching_for_dalai_lama_fastest
 	}
 	option = {
 		name = ab_india_lha_events.4.b
@@ -96,18 +96,18 @@ country_event = {
 			duration = -1
 		}
 		clr_country_flag = begin_search_for_dalai_lama
-		set_country_flag = searching_for_dalai_lama_fast
+		set_country_flag = lha_searching_for_dalai_lama_fast
 	}
 	option = {
 		name = ab_india_lha_events.4.c
 		custom_tooltip = ab_india_lha_events.4.c.tooltip
 		clr_country_flag = begin_search_for_dalai_lama
-		set_country_flag = searching_for_dalai_lama
+		set_country_flag = lha_searching_for_dalai_lama
 	}
 }
 
 ##Find the Dalai Lama Event Chain
-#Final Event Fastest
+#Dalai Lama Found Fastest
 country_event = {
 	id = ab_india_lha_events.5
 	title = ab_india_lha_events.5.t
@@ -116,19 +116,21 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		has_country_flag = searching_for_dalai_lama_fastest
+		has_country_flag = lha_searching_for_dalai_lama_fastest
 	}
 	mean_time_to_happen = {
-		months = 6
+		months = 9
 	}
 	immediate = {
-		clr_country_flag = searching_for_dalai_lama_fastest
+		clr_country_flag = lha_searching_for_dalai_lama_fastest
 		remove_country_modifier = lha_searching_for_the_dalai_lama_fastest
 		set_country_flag = lha_dalai_lama_found
 	}
 	option = {
 		name = ab_india_lha_events.5.a
-		add_prestige = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
 		add_devotion = 10
 		country_event = {
 			id = ab_india_lha_events.11
@@ -137,7 +139,7 @@ country_event = {
 }
 
 ##Find the Dalai Lama Event Chain
-#Final Event Fast
+#Dalai Lama Found Fast
 country_event = {
 	id = ab_india_lha_events.6
 	title = ab_india_lha_events.5.t
@@ -145,19 +147,21 @@ country_event = {
 	picture = GFX_ab_india_lha_events.5
 	fire_only_once = yes
 	trigger = {
-		has_country_flag = searching_for_dalai_lama_fast
+		has_country_flag = lha_searching_for_dalai_lama_fast
 	}
 	mean_time_to_happen = {
-		months = 12
+		months = 18
 	}
 	immediate = {
-		clr_country_flag = searching_for_dalai_lama_fast
+		clr_country_flag = lha_searching_for_dalai_lama_fast
 		remove_country_modifier = lha_searching_for_the_dalai_lama_faster
 		set_country_flag = lha_dalai_lama_found
 	}
 	option = {
 		name = ab_india_lha_events.6.a
-		add_prestige = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
 		add_devotion = 10
 		country_event = {
 			id = ab_india_lha_events.11
@@ -166,7 +170,7 @@ country_event = {
 }
 
 ##Find the Dalai Lama Event Chain
-#Final Event Regular Speed
+#Dalai Lama Found Regular Speed
 country_event = {
 	id = ab_india_lha_events.7
 	title = ab_india_lha_events.5.t
@@ -174,18 +178,20 @@ country_event = {
 	picture = GFX_ab_india_lha_events.5
 	fire_only_once = yes
 	trigger = {
-		has_country_flag = searching_for_dalai_lama
+		has_country_flag = lha_searching_for_dalai_lama
 	}
 	mean_time_to_happen = {
-		months = 24
+		months = 36
 	}
 	immediate = {
-		clr_country_flag = searching_for_dalai_lama
+		clr_country_flag = lha_searching_for_dalai_lama
 		set_country_flag = lha_dalai_lama_found
 	}
 	option = {
 		name = ab_india_lha_events.7.a
-		add_prestige = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
 		add_devotion = 10
 		country_event = {
 			id = ab_india_lha_events.11
@@ -202,9 +208,9 @@ country_event = {
 	picture = GFX_ab_india_lha_events.8
 	trigger = {
 		OR = {
-			has_country_flag = searching_for_dalai_lama
-			has_country_flag = searching_for_dalai_lama_fast
-			has_country_flag = searching_for_dalai_lama_fastest
+			has_country_flag = lha_searching_for_dalai_lama
+			has_country_flag = lha_searching_for_dalai_lama_fast
+			has_country_flag = lha_searching_for_dalai_lama_fastest
 		}
 	}
 	mean_time_to_happen = {
@@ -240,9 +246,9 @@ country_event = {
 	picture = GFX_ab_india_lha_events.9
 	trigger = {
 		OR = {
-			has_country_flag = searching_for_dalai_lama
-			has_country_flag = searching_for_dalai_lama_fast
-			has_country_flag = searching_for_dalai_lama_fastest
+			has_country_flag = lha_searching_for_dalai_lama
+			has_country_flag = lha_searching_for_dalai_lama_fast
+			has_country_flag = lha_searching_for_dalai_lama_fastest
 		}
 	}
 	mean_time_to_happen = {
@@ -268,9 +274,9 @@ country_event = {
 	picture = GFX_ab_india_lha_events.10
 	trigger = {
 		OR = {
-			has_country_flag = searching_for_dalai_lama
-			has_country_flag = searching_for_dalai_lama_fast
-			has_country_flag = searching_for_dalai_lama_fastest
+			has_country_flag = lha_searching_for_dalai_lama
+			has_country_flag = lha_searching_for_dalai_lama_fast
+			has_country_flag = lha_searching_for_dalai_lama_fastest
 		}
 	}
 	mean_time_to_happen = {
@@ -315,19 +321,22 @@ country_event = {
 				mil = 3
 			}
 			add_ruler_personality = immortal_personality
+
+			define_heir = {
+				religion = vajrayana
+				culture = tibetan
+				age = 10
+				change_adm = 2
+				change_dip = 2
+				change_mil = 2
+			}
+			add_heir_personality = enlightened_personality
 		}
 	}
 	option = {
 		name = ab_india_lha_events.11.a
-		define_heir = {
-			religion = vajrayana
-			culture = tibetan
-			age = 10
-			change_adm = 3
-			change_dip = 2
-			change_mil = 2
-		}
-		add_heir_personality = enlightened_personality
+		
+		change_heir_adm = 1
 		set_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		add_country_modifier = {
 			name = lha_sudden_shift_in_power_dynamics
@@ -337,15 +346,8 @@ country_event = {
 	}
 	option = {
 		name = ab_india_lha_events.11.b
-		define_heir = {
-			religion = vajrayana
-			culture = tibetan
-			age = 10
-			change_adm = 2
-			change_dip = 3
-			change_mil = 2
-		}
-		add_heir_personality = enlightened_personality
+		
+		change_heir_dip = 1
 		set_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		add_country_modifier = {
 			name = lha_sudden_shift_in_power_dynamics
@@ -355,15 +357,8 @@ country_event = {
 	}
 	option = {
 		name = ab_india_lha_events.11.c
-		define_heir = {
-			religion = vajrayana
-			culture = tibetan
-			age = 10
-			change_adm = 2
-			change_dip = 2
-			change_mil = 3
-		}
-		add_heir_personality = enlightened_personality
+
+		change_heir_mil = 1
 		set_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		add_country_modifier = {
 			name = lha_sudden_shift_in_power_dynamics
@@ -379,15 +374,20 @@ country_event = {
 	id = ab_india_lha_events.12
 	title = ab_india_lha_events.12.t
 	desc = ab_india_lha_events.12.d
-	picture = GFX_ab_india_lha_events.11
+	picture = GFX_ab_india_lha_events.12
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = lha_dalai_lama_is_of_age
 	}
+	immediate = {
+		clr_country_flag = lha_dalai_lama_is_of_age
+	}
 	option = {
 		name = ab_india_lha_events.12.a
 		change_tag = GPH
-		add_prestige = 25
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
 		if = {
 			limit = {
 				has_custom_ideas = no
@@ -397,12 +397,14 @@ country_event = {
 			}
 			#Swap Ideas
 		}
+		remove_country_modifier = lha_sudden_shift_in_power_dynamics
 		add_government_reform = gph_realm_of_the_bodhisattva
 		hidden_effect = {
 			#Just in case some bullshit happened
 			kill_heir = {
 				allow_new_heir = no
 			}
+			set_country_flag = dalai_lama_mechanics
 		}
 	}
 }

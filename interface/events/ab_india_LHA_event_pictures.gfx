@@ -34,4 +34,9 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_11.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_ab_india_lha_events.12"
+		texturefile = "gfx/event_pictures/event_pictures_indiasub/LHA/lha_events_12.dds"
+		alwaystransparent = yes
+	}
 }
