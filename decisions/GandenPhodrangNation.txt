@@ -10,6 +10,7 @@ country_decisions{
 			is_free_or_tributary_trigger = yes
 		}
 		effect = {
+			add_goverment_reform = government_reform_realm_of_the_bodhisattva
 			change_tag = GPH
 			add_prestige = 25
 			if = {
