@@ -1,4 +1,6 @@
 namespace = ab_india_debug_events
+
+#Defensive war test
 country_event = {
 	id = ab_india_debug_events.1
 	title = ab_india_dalai_lama_events.1.t
@@ -16,6 +18,7 @@ country_event = {
 	}
 }
 
+#Dishonor alliance test
 country_event = {
 	id = ab_india_debug_events.2
 	title = ab_india_dalai_lama_events.1.t
