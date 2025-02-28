@@ -57,7 +57,7 @@ abi_merc_malankara_default_2 = {
 }
 
 # Gurkhas
-merc_gorkhalis = {
+merc_gurkhas = {
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
     regiments_per_development = 0.06
 	artillery_weight = 0.35
