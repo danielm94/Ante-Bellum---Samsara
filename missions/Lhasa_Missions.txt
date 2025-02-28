@@ -361,7 +361,6 @@ lha_unlocked = {
 			}
 		}
 		effect = {
-			custom_tooltip = LHA_LEGACY_OF_TRISONG_DETSEN_TOOLTIP
 			add_country_modifier = {
 				name = lha_legacy_of_trisong_detsen_effect
 				duration = -1
@@ -424,7 +423,7 @@ lha_slot_3_continued = {
 		}
 	}
 	lha_ascension_of_the_sacred_one = {
-		icon = mission_build_up_to_force_limit
+		icon = gfx_lha_ascension_of_the_sacred_one
 		position = 5
 		required_missions = {
 			lha_find_the_dalai_lama
@@ -432,10 +431,146 @@ lha_slot_3_continued = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = lha_dalai_lama_found_tooltip
-				has_country_flag = dalai_lama_found
+				has_country_flag = dalai_lama_mechanics
+				tag = GPH
 			}
 		}
 		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			yun_gui_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			chuannan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kham_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			hunan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			nepal_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			baisi_rajya_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			himalayan_hills_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kashmir_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			shanshan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kashgaria_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			tarim_basin_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
