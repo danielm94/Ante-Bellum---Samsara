@@ -59,4 +59,9 @@ spriteTypes = {
 		name = "gfx_lha_find_the_dalai_lama"
 		texturefile = "gfx/interface/missions/LHA/lha_find_the_dalai_lama.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_ascension_of_the_sacred_one"
+		texturefile = "gfx/interface/missions/LHA/lha_ascension_of_the_sacred_one.dds"
+	}
 }
