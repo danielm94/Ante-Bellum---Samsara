@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "gfx_enlist_the_sherpas"
+		texturefile = "gfx/interface/privileges/hill_clans/enlist_the_sherpas.dds"
+	}
+	spriteType = {
+		name = "gfx_expand_the_yak_herds"
+		texturefile = "gfx/interface/privileges/hill_clans/expand_the_yak_herds.dds"
+	}
+	spriteType = {
+		name = "gfx_seat_at_the_kashag"
+		texturefile = "gfx/interface/privileges/hill_clans/seat_at_the_kashag.dds"
+	}
+	spriteType ={
+		name = "gfx_enlist_the_gurkhas"
+		texturefile = "gfx/interface/privileges/hill_clans/enlist_the_gurkhas.dds"
+	}
+	spriteType ={
+		name = "gfx_train_gurkha_officers"
+		texturefile = "gfx/interface/privileges/hill_clans/train_gurkha_officers.dds"
+	}
+}

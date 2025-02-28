@@ -248,7 +248,6 @@ GPH_ideas = {
 	}
 	GPH_mandate_of_the_bodhisattva = {
 		core_creation = -0.1
-		unjustified_demands = -0.1
 	}
 	GPH_warrions_of_the_high_plains = {
 		infantry_power = 0.1
@@ -267,8 +266,8 @@ GPH_ideas = {
 		defensiveness = 0.25
 	}
 	GPH_enlist_the_gurkhas = {
-		special_unit_forcelimit = 0.1
 		discipline = 0.05
+		hill_clans_loyalty_modifier = 0.05
 	}
 }
 

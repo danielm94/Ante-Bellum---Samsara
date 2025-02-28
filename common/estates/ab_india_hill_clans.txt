@@ -1,0 +1,65 @@
+estate_hill_clans = {
+	icon = 19
+	color = {
+		204
+		102
+		0
+	}
+	# If true, country will get estate
+	trigger = {
+		tag = GPH
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		movement_speed = 0.05
+		#amount_of_gurkhas = 0.1
+	}
+	country_modifier_neutral = {
+		movement_speed = 0.025
+		#amount_of_gurkhas = 0.05
+	}
+	country_modifier_angry = {
+		#amount_of_gurkhas = -0.1
+		global_unrest = 2
+		development_cost = 0.1
+		build_cost = 0.1
+	}
+	land_ownership_modifier = {
+		hill_clans_loyalty_modifier = 0.2
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = northern_aryan
+		}
+		modifier = {
+			factor = 0.75
+			has_terrain = hills
+		}
+		modifier = {
+			factor = 0.5
+			has_terrain = mountain
+		}
+		modifier = {
+			factor = 0.25
+			has_terrain = glacier
+		}
+	}
+	# Influence modifiers
+	base_influence = 10
+
+	privileges = {
+		estate_hill_clans_land_rights
+		estate_hill_clans_enlist_the_sherpas 
+		estate_hill_clans_expand_the_yak_herds
+		estate_hill_clans_seat_at_the_kashag
+		estate_hill_clans_enlist_the_gurkhas
+		estate_hill_clans_train_gurkha_officers
+	}
+	agendas = {
+		#'agendas' includes the names of the estate privileges this estate uses.
+		#Estate agendas can be found in the {{path|common/estates_agendas/*.txt}}
+	}
+	influence_from_dev_modifier = 1	#Determines percent influence from development
+}

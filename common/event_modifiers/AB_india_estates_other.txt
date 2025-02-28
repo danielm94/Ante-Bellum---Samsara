@@ -17,3 +17,32 @@ abi_tamil_guilds_town = {
 	local_ship_repair = 0.075
 	picture = "placed_merchant_power"
 }
+
+enlist_the_sherpas_mountains = {
+	local_development_cost = -0.25
+	local_friendly_movement_speed = 0.05
+}
+
+enlist_the_sherpas_highlands = {
+	local_development_cost = -0.1
+	local_friendly_movement_speed = 0.05
+}
+
+enlist_the_sherpas_hills = {
+	local_development_cost = -0.15
+	local_friendly_movement_speed = 0.05
+}
+
+enlist_the_sherpas_glacial = {
+	local_development_cost = -0.4
+	local_friendly_movement_speed = 0.05
+}
+
+expand_the_yak_herds_arctic = {
+	local_development_cost = -0.4
+	local_friendly_movement_speed = 0.1
+}
+
+expand_the_yak_herds_regular = {
+	local_friendly_movement_speed = 0.1
+}
