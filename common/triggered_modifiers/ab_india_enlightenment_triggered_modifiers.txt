@@ -61,3 +61,13 @@ enlightenment_mechanics_attacker_in_crusade = {
 	}
 	monthly_enlightenment_power = 0.06
 }
+
+enlightenment_mechanics_dishonored_alliance = {
+	potential = {
+		has_government_mechanic = state_enlightenment_mechanic
+	}
+	trigger = {
+		has_country_modifier = dishonoured_alliance
+	}
+	monthly_enlightenment_power = -0.333
+}
