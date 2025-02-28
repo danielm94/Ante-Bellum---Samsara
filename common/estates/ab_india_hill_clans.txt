@@ -56,6 +56,7 @@ estate_hill_clans = {
 		estate_hill_clans_seat_at_the_kashag
 		estate_hill_clans_enlist_the_gurkhas
 		estate_hill_clans_train_gurkha_officers
+		estate_sages_of_the_high_passes
 	}
 	agendas = {
 		#'agendas' includes the names of the estate privileges this estate uses.
