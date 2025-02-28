@@ -31,11 +31,11 @@ lha_legacy_of_trisong_detsen_effect = {
 
 lha_tibet_unified = {
 	global_autonomy = -0.05
-	local_development_cost = -0.1
+	development_cost = -0.1
 }
 
 lha_faithful_flock_to_our_monestaries = {
-	tax_income = 12
+	tax_income = 9.5
 	local_development_cost = -0.05
 }
 
