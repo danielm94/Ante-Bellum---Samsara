@@ -11,7 +11,6 @@
  LHA_TIMED_UNLOCK:0 "\n£yes£ If we complete this mission before the year §Y1460§!, we will unlock §YLegacy of Trisong Detsen§! timed mission."
  LHA_TIMED_UNLOCK_NO:0 "\n£no£ If we complete this mission before the year §Y1460§!, we will unlock §YLegacy of Trisong Detsen§! timed mission."
  LHA_UNLOCKABLE:0 "You can unlock this mission by completing the '§YThe Sword and Dharma§!' mission before the year §Y1460§!."
- LHA_LEGACY_OF_TRISONG_DETSEN_TOOLTIP:0 "By completing this mission we will receive powerful bonuses to fuel our grand conquests!"
  lha_legacy_of_trisong_detsen_title:0 "The Legacy of Trisong Detsen"
  lha_legacy_of_trisong_detsen_desc:0 "Long ago, the great Emperor Trisong Detsen led Tibet to unparalleled heights, forging an empire that stretched from the Himalayas to the borders of China and India. He was both a warrior and a devout patron of Buddhism, securing our faith’s place in Tibet while commanding armies that humbled even the mighty Tang Dynasty. But those days of unity and strength are long past—Tibet has fractured, its people divided by petty warlords and fading traditions.\nIf we are to honor the legacy of Trisong Detsen, we must reunite the Land of Snows under one banner before it is too late. The task is arduous, but history remembers only those who dared to shape its course."
  lha_timed_1_title:0 "Timed Mission"
@@ -36,4 +35,4 @@
  lha_find_the_dalai_lama_desc:0 "With Tibet united and the Gelug School firmly established, the time has come to seek out the divine reincarnation of the supreme spiritual leader. Our scholars and monks have scoured the land, following sacred omens and prophecies that point to the child who will bear the mantle of Avalokiteshvara. Once found, this holy ruler will bring legitimacy to our faith, cementing the rule of the monastic order and guiding Tibet toward an era of spiritual and worldly authority. The Dalai Lama must ascend—Tibet's destiny depends on it."
  lha_ascension_of_the_sacred_one_title:0 "Ascension of the Sacred One"
  lha_ascension_of_the_sacred_one_desc:0 "With the discovery of the sacred child, the long search has come to an end. The people of Tibet rejoice as the rightful spiritual leader prepares to ascend to his place as both the earthly and divine guide of our nation. The monasteries welcome this moment as a sign of our faith’s triumph, while the nobility watches with wary eyes, uncertain of what this new era may bring. Now, as the sacred child is enthroned, a new chapter in Tibetan history begins—the rule of the Dalai Lama, as the head of both state and faith."
- lha_dalai_lama_found_tooltip:0 "The Dalai Lama has been found."
+ lha_dalai_lama_found_tooltip:0 "The Dalai Lama has assumed power, proclaiming §YGanden Phodrang§!"
