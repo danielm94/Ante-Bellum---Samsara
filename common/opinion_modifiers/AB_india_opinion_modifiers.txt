@@ -1,7 +1,6 @@
 #####################
 # OPINION MODIFIERS #
 #####################
-
 converted_to_malankara_1 = {
 	opinion = 50
 	yearly_decay = 2
@@ -30,4 +29,9 @@ rejected_malankara_banquet = {
 abi_accepted_malankara_missionaries = {
 	opinion = 50
 	yearly_decay = 2.5
+}
+
+lha_united_against_the_nepalese = {
+	opinion = 30
+	yearly_decay = 3
 }

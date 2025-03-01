@@ -29,7 +29,7 @@ lha_slot_1 = {
 			add_devotion = 5
 			add_country_modifier = {
 				name = lha_vajrayana_legitimized
-				duration = -1
+				duration = 10950
 			}
 		}
 	}
@@ -96,26 +96,48 @@ lha_slot_1 = {
 			}
 		}
 	}
-	lha_renaissance_city = {
-		icon = mission_build_up_to_force_limit
+	lha_the_great_monastic_awakening = {
+		icon = gfx_lha_the_great_monastic_awakening
 		position = 4
 		required_missions = {
 			lha_develop_the_holy_city
 		}
 		trigger = {
+			capital_scope = {
+				renaissance = 100
+			}
 		}
 		effect = {
-		}
-	}
-	lha_upgrade_jokhang_temple = {
-		icon = mission_build_up_to_force_limit
-		position = 5
-		required_missions = {
-			lha_renaissance_city
-		}
-		trigger = {
-		}
-		effect = {
+			custom_tooltip = lha_the_great_monastic_awakening_tooltip
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							continent = asia
+							renaissance = 100
+							NOT = {
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+				custom_tooltip = lha_the_great_monastic_awakening_tooltip_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = lha_the_great_monastic_awakening_mod_perm
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = lha_the_great_monastic_awakening_tooltip_no
+				hidden_effect = {
+					add_country_modifier = {
+						name = lha_the_great_monastic_awakening_mod
+						duration = 3650
+					}
+				}
+			}
 		}
 	}
 }
@@ -228,6 +250,35 @@ lha_slot_2 = {
 					add_center_of_trade_level = 1
 				}
 			}
+		}
+	}
+	lha_jewel_of_the_dharma = {
+		icon = gfx_lha_jewel_of_the_dharma
+		position = 5
+		required_missions = {
+			lha_crown_of_the_plateau
+		}
+		trigger = {
+			677 = {
+				has_great_project = {
+					type = jokhang_temple
+					tier = 2
+				}
+			}
+		}
+		effect = {
+			677 = {
+				add_great_project_tier = {
+					type = jokhang_temple
+					tier = 1
+				}
+				add_province_modifier = {
+					name = lha_faithful_flock_to_jokhang
+					duration = 5475
+				}
+			}
+			custom_tooltip = lha_jewel_of_the_dharma_tooltip
+			set_country_flag = pilgramage_mechanics_unlocked			# todo
 		}
 	}
 }
@@ -595,29 +646,50 @@ lha_slot_4 = {
 		required_missions = {
 		}
 		trigger = {
-			NOT = {
-				grown_by_development = 250
-			}
-			if = {
-				limit = {
+			OR = {
+				AND = {
+					NOT = {
+						grown_by_development = 250
+					}
 					any_country = {
 						is_emperor_of_china = yes
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
 					}
 				}
-				event_target:EmperorOfChina = {
-					has_opinion = {
-						who = ROOT
-						value = 100
+				NOT = {
+					any_country = {
+						is_emperor_of_china = yes
 					}
 				}
 			}
 		}
 		effect = {
-			add_prestige = -10
-			event_target:EmperorOfChina = {
-				create_subject = {
-					subject_type = tributary_state
-					subject = LHA
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							is_emperor_of_china = yes
+						}
+					}
+				}
+				custom_tooltip = lha_take_refuge_under_yuan_tooltip_emperor_exists_no
+				hidden_effect = {
+					add_prestige = 10
+				}
+			}
+			else = {
+				custom_tooltip = lha_take_refuge_under_yuan_tooltip_emperor_exists_yes
+				hidden_effect = {
+					add_prestige = -10
+					event_target:EmperorOfChina = {
+						create_subject = {
+							subject_type = tributary_state
+							subject = LHA
+						}
+					}
 				}
 			}
 		}
@@ -693,6 +765,50 @@ lha_slot_5 = {
 			add_country_modifier = {
 				name = lha_strengthening_alliances
 				duration = 5475
+			}
+		}
+	}
+	lha_the_nepalese_threat = {
+		icon = gfx_lha_forge_alliances
+		position = 1
+		required_missions = {
+			lha_forge_alliances
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = lha_the_nepalese_threat_tooltip
+				any_country = {
+					is_enemy = NPA
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_anti_nepalese_coalition
+				duration = 5475
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_enemy = NPA
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					add_trust = {
+						who = ROOT
+						value = 10
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = lha_united_against_the_nepalese
+					}
+				}
 			}
 		}
 	}

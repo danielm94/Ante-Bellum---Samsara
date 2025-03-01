@@ -36,3 +36,18 @@
  lha_ascension_of_the_sacred_one_title:0 "Ascension of the Sacred One"
  lha_ascension_of_the_sacred_one_desc:0 "With the discovery of the sacred child, the long search has come to an end. The people of Tibet rejoice as the rightful spiritual leader prepares to ascend to his place as both the earthly and divine guide of our nation. The monasteries welcome this moment as a sign of our faith’s triumph, while the nobility watches with wary eyes, uncertain of what this new era may bring. Now, as the sacred child is enthroned, a new chapter in Tibetan history begins—the rule of the Dalai Lama, as the head of both state and faith."
  lha_dalai_lama_found_tooltip:0 "The Dalai Lama has assumed power, proclaiming §YGanden Phodrang§!"
+ lha_the_nepalese_threat:0 "The Nepalese Threat"
+ lha_the_nepalese_threat_desc:0 "Nepal's growing influence poses a threat to our sovereignty. By forging strong relations with Nepal's enemies, we can create a counterbalance and ensure our continued independence."
+ lha_the_nepalese_threat_tooltip:0 "At least one country that is an enemy of Nepal has an opinion of at least §Y100§! towards us."
+ lha_the_great_monastic_awakening_title:0 "The Great Awakening"
+ lha_the_great_monastic_awakening_desc:0 "Our monastic institutions have always been centers of learning, yet as knowledge spreads across the world, we must ensure that our scholars, artists, and theologians are not left behind. If we wish to lead the Buddhist world, we must embrace these new ways of thought and governance, elevating our capital as a center of wisdom and culture."
+ lha_the_great_monastic_awakening_tooltip: "We will gain for §Y10 years§!:\nInstitution Cost: §G-20.0%§!\nReform Progress Growth: §G+10.0%§!"
+
+ lha_the_great_monastic_awakening_tooltip_yes:0 "\n\n£yes£ If our capital is the first province in §YAsia§! to have the Renaissance embraced, we will receive until the end of the game:\nInstitution Cost: §G-20.0%§!\nReform Progress Growth: §G+10.0%§!\nPrestige Decay: §G-1.0%§!"
+ lha_the_great_monastic_awakening_tooltip_no:0 "\n\n£no£ If our capital is the first province in §YAsia§! to have the Renaissance embraced, we will receive until the end of the game:\nInstitution Cost: §G-20.0%§!\nReform Progress Growth: §G+10.0%§!\nPrestige Decay: §G-1.0%§!"
+ lha_jewel_of_the_dharma_title:0 "Jewel of the Dharma"
+ lha_jewel_of_the_dharma_desc:0 "The Jokhang Temple, the spiritual heart of Tibet, stands as a testament to our devotion and faith. However, time has taken its toll on this sacred site. To honor our ancestors and inspire future generations, we must undertake a grand project to restore and enhance the Jokhang Temple. By upgrading this great project, we will not only preserve our heritage but also strengthen the spiritual foundation of our realm. Let the Jokhang Temple shine as the Jewel of the Dharma, a beacon of enlightenment and devotion for all who seek the path of wisdom."
+ lha_jewel_of_the_dharma_tooltip:0 "Enables §YBuddhist Pilgramage§! mechanics for our nation."
+ lha_take_refuge_under_yuan_tooltip_emperor_exists_yes:0 "We will lose §R10§! Prestige and become a tributary of the Emperor."
+ lha_take_refuge_under_yuan_tooltip_emperor_exists_no:0 "We will gain §G10§! Prestige for outliving the Emperor!"
+ 

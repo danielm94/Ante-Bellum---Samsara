@@ -90,3 +90,22 @@ lha_sudden_shift_in_power_dynamics = {
 	administrative_efficiency = -0.01
 	global_autonomy = 0.05
 }
+
+lha_anti_nepalese_coalition = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.1
+}
+
+lha_the_great_monastic_awakening_mod_perm = {
+	embracement_cost = -0.20
+	reform_progress_growth = 0.10
+	prestige_decay = -0.01
+}
+lha_the_great_monastic_awakening_mod = {
+	embracement_cost = -0.2
+	reform_progress_growth = 0.1
+}
+
+lha_faithful_flock_to_jokhang = {
+	local_tax_modifier = 0.3
+}
