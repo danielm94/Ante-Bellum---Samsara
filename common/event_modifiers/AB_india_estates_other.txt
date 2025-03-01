@@ -1,5 +1,4 @@
 #Modifier from estates, disasters, mechanics and also timer
-
 tamil_guilds_drafted_ships_timer = {
 	picture = "envoy_travel_time"
 }
@@ -45,4 +44,24 @@ expand_the_yak_herds_arctic = {
 
 expand_the_yak_herds_regular = {
 	local_friendly_movement_speed = 0.1
+}
+
+prioritize_yak_hair_industry = {
+	local_production_efficiency = 0.1
+	trade_goods_size = 0.5
+}
+
+estate_hill_clans_monopoly_of_cashmere_mod = {
+	local_production_efficiency = -10
+	trade_goods_size = 1
+	province_trade_power_modifier = 0.5
+}
+
+# Hidden modifier
+recent_estate_hill_clans_insult_timer = {
+}
+
+estate_hill_clans_build_roadway_reward = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
 }

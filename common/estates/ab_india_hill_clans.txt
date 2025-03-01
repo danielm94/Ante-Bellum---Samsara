@@ -11,17 +11,16 @@ estate_hill_clans = {
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		movement_speed = 0.05
-		#amount_of_gurkhas = 0.1
+		movement_speed = 0.1
+		caravan_power = 0.1
 	}
 	country_modifier_neutral = {
-		movement_speed = 0.025
-		#amount_of_gurkhas = 0.05
+		movement_speed = 0.05
+		caravan_power = 0.05
 	}
 	country_modifier_angry = {
-		#amount_of_gurkhas = -0.1
 		global_unrest = 2
-		development_cost = 0.1
+		caravan_power = -0.2
 		build_cost = 0.1
 	}
 	land_ownership_modifier = {
@@ -56,11 +55,17 @@ estate_hill_clans = {
 		estate_hill_clans_seat_at_the_kashag
 		estate_hill_clans_enlist_the_gurkhas
 		estate_hill_clans_train_gurkha_officers
-		estate_sages_of_the_high_passes
+		estate_hill_clans_sages_of_the_high_passes
+		estate_hill_clans_prioritize_yak_hair_industry
+		estate_hill_clans_pahari_mercenary_traditions
+		estate_hill_clans_monopoly_of_cashmere
 	}
 	agendas = {
-		#'agendas' includes the names of the estate privileges this estate uses.
-		#Estate agendas can be found in the {{path|common/estates_agendas/*.txt}}
+		estate_hill_clans_insult
+		estate_hill_clans_construct_roadway_in_y
+		estate_hill_clans_develop_adm_in_y
+		estate_hill_clans_develop_dip_in_y
+		estate_hill_clans_develop_mil_in_y
 	}
 	influence_from_dev_modifier = 1	#Determines percent influence from development
 }

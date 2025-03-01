@@ -67,6 +67,7 @@ merc_gurkhas = {
     trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		has_estate_privilege = estate_hill_clans_enlist_the_gurkhas
+		mil_tech = 7
 	}
 	modifier = {
 		discipline = 0.025

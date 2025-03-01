@@ -19,4 +19,12 @@ spriteTypes = {
 		name = "gfx_train_gurkha_officers"
 		texturefile = "gfx/interface/privileges/hill_clans/train_gurkha_officers.dds"
 	}
+	spriteType ={
+		name = "gfx_prioritize_yak_hair_industry"
+		texturefile = "gfx/interface/privileges/hill_clans/prioritize_yak_hair_industry.dds"
+	}
+	spriteType ={
+		name = "gfx_monopoly_of_cashmere"
+		texturefile = "gfx/interface/privileges/hill_clans/monopoly_of_cashmere.dds"
+	}
 }

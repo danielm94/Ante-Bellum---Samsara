@@ -252,12 +252,14 @@ estate_hill_clans_enlist_the_sherpas = {
 			}
 			OR = {
 				culture = tibetan
-				culture = nepali
+				culture_group = northern_aryan
 			}
 			OR = {
 				region = tibet_region
 				area = nepal_area
 				area = baisi_rajya_area
+				area = himalayan_hills_area
+				area = kashmir_area
 			}
 		}
 	}
@@ -270,12 +272,14 @@ estate_hill_clans_enlist_the_sherpas = {
 				has_terrain = mountain
 				OR = {
 					culture = tibetan
-					culture = nepali
+					culture_group = northern_aryan
 				}
 				OR = {
 					region = tibet_region
 					area = nepal_area
 					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
 				}
 			}
 			add_province_modifier = {
@@ -288,12 +292,14 @@ estate_hill_clans_enlist_the_sherpas = {
 				has_terrain = highlands
 				OR = {
 					culture = tibetan
-					culture = nepali
+					culture_group = northern_aryan
 				}
 				OR = {
 					region = tibet_region
 					area = nepal_area
 					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
 				}
 			}
 			add_province_modifier = {
@@ -306,12 +312,14 @@ estate_hill_clans_enlist_the_sherpas = {
 				has_terrain = glacier
 				OR = {
 					culture = tibetan
-					culture = nepali
+					culture_group = northern_aryan
 				}
 				OR = {
 					region = tibet_region
 					area = nepal_area
 					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
 				}
 			}
 			add_province_modifier = {
@@ -324,12 +332,14 @@ estate_hill_clans_enlist_the_sherpas = {
 				has_terrain = hills
 				OR = {
 					culture = tibetan
-					culture = nepali
+					culture_group = northern_aryan
 				}
 				OR = {
 					region = tibet_region
 					area = nepal_area
 					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
 				}
 			}
 			add_province_modifier = {
@@ -422,12 +432,14 @@ estate_hill_clans_expand_the_yak_herds = {
 			}
 			OR = {
 				culture = tibetan
-				culture = nepali
+				culture_group = northern_aryan
 			}
 			OR = {
 				region = tibet_region
 				area = nepal_area
 				area = baisi_rajya_area
+				area = himalayan_hills_area
+				area = kashmir_area
 			}
 		}
 	}
@@ -445,12 +457,14 @@ estate_hill_clans_expand_the_yak_herds = {
 			limit = {
 				OR = {
 					culture = tibetan
-					culture = nepali
+					culture_group = northern_aryan
 				}
 				OR = {
 					region = tibet_region
 					area = nepal_area
 					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
 				}
 			}
 			if = {
@@ -502,9 +516,6 @@ estate_hill_clans_expand_the_yak_herds = {
 			}
 			remove_province_modifier = expand_the_yak_herds_regular
 		}
-	}
-	mechanics = {
-		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 0
@@ -586,6 +597,9 @@ estate_hill_clans_train_gurkha_officers = {
 		army_tradition = 0.5
 		yearly_army_professionalism = 0.001
 	}
+	mechanics = {
+		exempt_from_seize_land
+	}
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -595,17 +609,24 @@ estate_hill_clans_train_gurkha_officers = {
 	}
 }
 
-estate_sages_of_the_high_passes = {
+estate_hill_clans_sages_of_the_high_passes = {
 	icon = privilege_empty_throne
 	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
 	influence = 0.05
 	loyalty = 0.05
 	penalties = {
 		stability_cost_modifier = 0.2
 	}
 	benefits = {
-		advisor_cost = -0.10
+		advisor_cost = -0.1
 	}
 	ai_will_do = {
 		factor = 9
@@ -617,5 +638,246 @@ estate_sages_of_the_high_passes = {
 			factor = 3
 			uses_meritocracy = yes
 		}
+	}
+}
+
+estate_hill_clans_prioritize_yak_hair_industry = {
+	icon = gfx_prioritize_yak_hair_industry
+	land_share = 0
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				trade_goods = wool
+			}
+			OR = {
+				region = tibet_region
+				area = nepal_area
+				area = baisi_rajya_area
+				area = himalayan_hills_area
+				area = kashmir_area
+			}
+		}
+	}
+	penalties = {
+		cavalry_cost = 0.2
+		cavalry_power = -0.2
+		cavalry_flanking = -0.1
+		movement_speed = -0.02
+	}
+	on_granted = {
+		custom_tooltip = estate_hill_clans_prioritize_yak_hair_industry_granted_tt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = wool
+				}
+				OR = {
+					region = tibet_region
+					area = nepal_area
+					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
+				}
+			}
+			add_province_modifier = {
+				name = prioritize_yak_hair_industry
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_hill_clans_prioritize_yak_hair_industry_revoked_tt
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = prioritize_yak_hair_industry
+			}
+			remove_province_modifier = prioritize_yak_hair_industry
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = prioritize_yak_hair_industry
+			}
+			remove_province_modifier = prioritize_yak_hair_industry
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_hill_clans_pahari_mercenary_traditions = {
+	icon = GFX_mercenary_cost
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	influence = 0.15
+	loyalty = 0.05
+	penalties = {
+		yearly_army_professionalism = -0.01
+		general_cost = 1
+		army_tradition_decay = 0.15
+	}
+	benefits = {
+		mercenary_manpower = 0.25
+		merc_maintenance_modifier = -0.25
+		mercenary_discipline = 0.05
+		merc_leader_army_tradition = 0.5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_hill_clans_monopoly_of_cashmere = {
+	icon = gfx_monopoly_of_cashmere
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_dlc = "Emperor"
+			has_country_flag = buffed_monopolies
+		}
+		any_owned_province = {
+			OR = {
+				trade_goods = cloth
+				trade_goods = silk
+				trade_goods = wool
+			}
+			area = kashmir_area
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = {
+				has_disaster = revolution
+			}
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = {
+				has_disaster = french_revolution
+			}
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				any_owned_province = {
+					area = kashmir_area
+				}
+				OR = {
+					cloth = 1
+					silk = 1
+					wool = 1
+				}
+			}
+			add_mercantilism = 2
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				area = kashmir_area
+				OR = {
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = wool
+				}
+			}
+			custom_tooltip = monthly_income_cashmere_desc
+		}
+		custom_tooltip = monopoly_of_cashmere_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				area = kashmir_area
+				OR = {
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = wool
+				}
+			}
+			add_province_modifier = {
+				name = estate_hill_clans_monopoly_of_cashmere_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
+			}
+			remove_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_monopoly_of_textiles_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
+			}
+			remove_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_monopoly_of_textiles_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
+			}
+			remove_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = {
+			id = hill_clans_events.1
+		}
+	}
+	ai_will_do = {
+		#having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
+		factor = 0
 	}
 }
