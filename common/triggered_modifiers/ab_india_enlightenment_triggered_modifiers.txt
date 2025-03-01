@@ -71,3 +71,34 @@ enlightenment_mechanics_dishonored_alliance = {
 	}
 	monthly_enlightenment_power = -0.333
 }
+
+enlightenment_mechanics_ahead_of_time_on_tech = {
+	potential = {
+		has_government_mechanic = state_enlightenment_mechanic
+	}
+	trigger = {
+		OR = {
+			is_ahead_of_time_in_technology = {
+				tech = adm
+			}
+			is_ahead_of_time_in_technology = {
+				tech = dip
+			}
+			is_ahead_of_time_in_technology = {
+				tech = mil
+			}
+		}
+	}
+	monthly_enlightenment_power = 0.01
+}
+
+enlightenment_mechanics_corrupt = {
+	potential = {
+		has_government_mechanic = state_enlightenment_mechanic
+	}
+	trigger = {
+		corruption = 1
+	}
+	monthly_enlightenment_power = -0.08
+}
+
