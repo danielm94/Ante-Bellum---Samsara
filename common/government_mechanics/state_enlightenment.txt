@@ -50,6 +50,11 @@ state_enlightenment_mechanic = {
 				add_years_of_income = -1
 				add_inflation = 0.5
 				random_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = state_enlightenment_well_funded_communities
+						}
+					}
 					add_devastation = -20
 					add_province_modifier = {
 						name = state_enlightenment_well_funded_communities
