@@ -7,7 +7,7 @@ estate_hill_clans = {
 	}
 	# If true, country will get estate
 	trigger = {
-		tag = GPH
+		has_country_flag = unlocked_hill_clans_estate
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {

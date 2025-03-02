@@ -103,5 +103,12 @@ spriteTypes = {
 		name = "gfx_lha_the_sands_of_tarim"
 		texturefile = "gfx/interface/missions/LHA/lha_sands_of_tarim.dds"
 	}
-	
+	spriteType = {
+		name = "gfx_lha_unite_the_hill_clans"
+		texturefile = "gfx/interface/missions/LHA/lha_unite_the_hill_clans.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_subjugate_assam"
+		texturefile = "gfx/interface/missions/LHA/lha_subjugate_assam.dds"
+	}
 }

@@ -131,7 +131,16 @@ lha_tibetan_cultural_union = {
 	manpower_in_culture_group_provinces = 0.2
 	land_morale = 0.05
 }
+
 lha_oases_of_the_silk_road = {
 	trade_efficiency = 0.15
 	caravan_power = 0.15
+}
+
+lha_united_the_hill_clans_regular = {
+	hill_clans_loyalty_modifier = 0.1
+}
+
+lha_united_the_hill_clans_bonus = {
+	num_accepted_cultures = 3
 }

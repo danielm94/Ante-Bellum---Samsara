@@ -333,3 +333,7 @@
  desc_lha_oases_of_the_silk_road:0 "We control the oases of the Tarim Basin, which is a major chokepoint in the Silk Road."
  lha_tibetan_cultural_union:0 "Tibetan Cultural Union"
  desc_lha_tibetan_cultural_union:0 "We have united the various Tibetan tribes and cultures under our rule, creating a sense of unity and shared identity among our people."
+ lha_united_the_hill_clans_bonus:0 "Integrated the Hill Clans"
+ desc_lha_united_the_hill_clans_bonus:0 "Having brought the disparate Himalayan communities into our fold, we have forged a cohesive bond that transcends local divisions. The shared identity and cooperation among the hill folk now bolster the foundations of our state, allowing us to embrace their cultures as part of our own."
+lha_united_the_hill_clans_regular:0 "Integrated the Hill Clans"
+desc_lha_united_the_hill_clans_regular:0 "Having brought the disparate Himalayan communities into our fold, we have forged a cohesive bond that transcends local divisions."
