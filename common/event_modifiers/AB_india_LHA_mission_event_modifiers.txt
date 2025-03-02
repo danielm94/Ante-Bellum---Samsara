@@ -144,3 +144,8 @@ lha_united_the_hill_clans_regular = {
 lha_united_the_hill_clans_bonus = {
 	num_accepted_cultures = 3
 }
+
+lha_prepare_to_confront_bengal = {
+	ae_impact = -0.15
+	siege_ability = 0.1
+}

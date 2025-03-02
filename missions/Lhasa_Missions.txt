@@ -181,6 +181,51 @@ lha_slot_1 = {
 					duration = 5475
 				}
 			}
+			sind_sagar_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			multan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lahore_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sirhind_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+	
 		}
 	}
 }
@@ -825,7 +870,44 @@ lha_slot_3_continued = {
 			}
 		}
 	}
-
+	lha_subjugate_assam = {
+		icon = gfx_lha_subjugate_assam
+		position = 7
+		required_missions = {
+			lha_break_nepal
+		}
+		provinces_to_highlight = {
+			area = assam_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			assam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = lha_subjugate_assam_tooltip_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owned_by = BNG
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier ={
+				name = lha_prepare_to_confront_bengal
+				duration = 5475
+			}
+		}
+	}
+}
 
 lha_slot_4 = {
 	slot = 4
