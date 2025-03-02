@@ -83,6 +83,11 @@ state_enlightenment_mechanic = {
 				}
 			}
 			effect = {
+				add_government_power = {
+					mechanic_type = state_enlightenment_mechanic
+					power_type = enlightenment_power
+					value = 16
+				}
 				add_country_modifier = {
 					name = state_enlightenment_practice_non_violence
 					duration = 1825
@@ -116,7 +121,7 @@ state_enlightenment_mechanic = {
 				add_government_power = {
 					mechanic_type = state_enlightenment_mechanic
 					power_type = enlightenment_power
-					value = 10
+					value = 8
 				}
 				add_stability = -1
 				add_prestige = -20
