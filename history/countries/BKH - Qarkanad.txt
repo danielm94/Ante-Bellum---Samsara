@@ -8,6 +8,7 @@ secondary_religion = hinduism
 technology_group = nomad_group
 capital = 4497
 historical_rival = BNG
+historical_rival = ENP
 
 
 1444.1.1 = {
