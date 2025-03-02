@@ -1,0 +1,5 @@
+lha_unified_tibet_pp = {
+	min = 0
+	power = 25
+	yearly_decay = 1.0
+}
