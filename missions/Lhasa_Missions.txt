@@ -17,6 +17,9 @@ lha_slot_1 = {
 		position = 1
 		required_missions = {
 		}
+		provinces_to_highlight = {
+			province_id = 677
+		}
 		trigger = {
 			677 = {
 				religion = vajrayana
@@ -81,6 +84,9 @@ lha_slot_1 = {
 				development = 20
 			}
 		}
+		provinces_to_highlight = {
+			province_id = 677
+		}
 		effect = {
 			custom_tooltip = lha_develop_the_holy_city_tooltip
 			677 = {
@@ -103,9 +109,12 @@ lha_slot_1 = {
 			lha_develop_the_holy_city
 		}
 		trigger = {
-			capital_scope = {
+			677 = {
 				renaissance = 100
 			}
+		}
+		provinces_to_highlight = {
+			province_id = 677
 		}
 		effect = {
 			custom_tooltip = lha_the_great_monastic_awakening_tooltip
@@ -140,6 +149,40 @@ lha_slot_1 = {
 			}
 		}
 	}
+	lha_moving_through_kashmir = {
+		icon = gfx_lha_moving_through_kashmir
+		position = 6
+		required_missions = {
+			lha_ascension_of_the_sacred_one
+		}
+		provinces_to_highlight = {
+			area = kashmir_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kashmir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_country_modifier = {
+				name = lha_control_the_cashmere_trade
+				duration = 7300
+			}
+			kashmir_area = {
+				add_province_modifier = {
+					name = lha_integrating_the_hill_clans
+					duration = 5475
+				}
+			}
+		}
+	}
 }
 
 lha_slot_2 = {
@@ -166,6 +209,7 @@ lha_slot_2 = {
 			OR = {
 				area = ngari_area
 				area = utsang_area
+				province_id = 4515
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -227,6 +271,9 @@ lha_slot_2 = {
 				has_production_building_trigger = yes
 			}
 		}
+		provinces_to_highlight = {
+			province_id = 677
+		}
 		effect = {
 			677 = {
 				add_province_modifier = {
@@ -258,6 +305,9 @@ lha_slot_2 = {
 		required_missions = {
 			lha_crown_of_the_plateau
 		}
+		provinces_to_highlight = {
+			province_id = 677
+		}
 		trigger = {
 			677 = {
 				has_great_project = {
@@ -281,6 +331,38 @@ lha_slot_2 = {
 			set_country_flag = pilgramage_mechanics_unlocked			# todo
 		}
 	}
+	lha_conquer_the_pahari = {
+		icon = gfx_lha_conquer_the_pahari
+		position = 6
+		required_missions = {
+			lha_ascension_of_the_sacred_one
+		}
+		provinces_to_highlight = {
+			area = himalayan_hills_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			himalayan_hills_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_pahari_mercenaries
+				duration = 7300
+			}
+			himalayan_hills_area = {
+				add_province_modifier = {
+					name = lha_integrating_the_hill_clans
+					duration = 5475
+				}
+			}
+		}
+	}
+	
 }
 
 lha_slot_3 = {
@@ -438,14 +520,26 @@ lha_slot_3_continued = {
 			lha_pacify_the_old_faith
 			lha_unite_the_faithful
 		}
+		provinces_to_highlight = {
+			OR = {
+				region = tibet_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 		trigger = {
 			tibet_region = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_adm_power = 75
+			add_power_projection = {
+				type = lha_unified_tibet_pp
+				amount = 25
+			}
 			add_country_modifier = {
 				name = lha_tibet_unified
 				duration = 3650
@@ -454,7 +548,7 @@ lha_slot_3_continued = {
 	}
 	lha_find_the_dalai_lama = {
 		icon = gfx_lha_find_the_dalai_lama
-		position = 3
+		position = 4
 		required_missions = {
 			lha_support_the_gelug_school
 			lha_tibet_unified
@@ -513,17 +607,6 @@ lha_slot_3_continued = {
 				add_permanent_claim = ROOT
 			}
 			chuannan_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			kham_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -624,6 +707,47 @@ lha_slot_3_continued = {
 			}
 		}
 	}
+	lha_break_nepal = {
+		icon = gfx_lha_break_nepal
+		position = 6
+		required_missions = {
+			lha_ascension_of_the_sacred_one
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = nepal_area
+				area = baisi_rajya_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			nepal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baisi_rajya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			nepal_area = {
+				add_province_modifier = {
+					name = lha_integrating_the_hill_clans
+					duration = 5475
+				}
+			}
+			baisi_rajya_area = {
+				add_province_modifier = {
+					name = lha_integrating_the_hill_clans
+					duration = 5475
+				}
+			}
+		}
+	}
 }
 
 lha_slot_4 = {
@@ -644,6 +768,9 @@ lha_slot_4 = {
 		icon = gfx_lha_take_refuge_under_yuan
 		position = 1
 		required_missions = {
+		}
+		provinces_to_highlight = {
+			owned_by = event_target:EmperorOfChina
 		}
 		trigger = {
 			OR = {
@@ -737,6 +864,123 @@ lha_slot_4 = {
 			}
 		}
 	}
+	lha_the_lost_bretheren = {
+		icon = gfx_lha_the_lost_bretheren
+		position = 6
+		required_missions = {
+			lha_ascension_of_the_sacred_one
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = yun_gui_area
+				area = yun_gui_borderland_area
+				area = chuannan_area
+				area = hunan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			yun_gui_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yun_gui_borderland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			chuannan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hunan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			guangxi_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_guangdong_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			guangdong_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_power_projection = {
+				type = lha_reclaimed_tibetan_china_pp
+				amount = 10
+			}
+			custom_tooltip = lha_the_lost_bretheren_tooltip
+			if = {
+				limit = {
+					AND = {
+						yun_gui_area = {
+							type = all
+							religion = vajrayana
+						}
+						yun_gui_borderland_area = {
+							type = all
+							religion = vajrayana
+						}
+						chuannan_area = {
+							type = all
+							religion = vajrayana
+						}
+						hunan_area = {
+							type = all
+							religion = vajrayana
+						}
+					}
+				}
+				custom_tooltip = lha_the_lost_bretheren_tooltip_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = lha_tibetan_cultural_union
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = lha_the_lost_bretheren_tooltip_no
+				hidden_effect = {
+					add_country_modifier = {
+						name = lha_tibetan_cultural_union
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
 }
 
 lha_slot_5 = {
@@ -762,51 +1006,373 @@ lha_slot_5 = {
 			num_of_allies = 2
 		}
 		effect = {
+			define_advisor = {
+				type = diplomat
+				skill = 1
+				religion = ROOT
+				cost_multiplier = 0.5
+			}
 			add_country_modifier = {
 				name = lha_strengthening_alliances
 				duration = 5475
 			}
 		}
 	}
-	lha_the_nepalese_threat = {
-		icon = gfx_lha_forge_alliances
-		position = 1
+	lha_oirat_ties = {
+		icon = mission_oirat
+		position = 2
 		required_missions = {
 			lha_forge_alliances
 		}
+		provinces_to_highlight = {
+			OR = {
+				owned_by = OIR
+				owned_by = KHT
+				owned_by = DRB
+				owned_by = TRG
+			}
+		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = lha_the_nepalese_threat_tooltip
-				any_country = {
-					is_enemy = NPA
-					has_opinion = {
-						who = ROOT
-						value = 100
+			OR = {
+				AND = {
+					NOT = {
+						exists = OIR
+					}
+					NOT = {
+						exists = KHT
+					}
+					NOT = {
+						exists = DRB
+					}
+					NOT = {
+						exists = TRG
+					}
+				}
+				KHT = {
+					religion = tengri_pagan_reformed
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						alliance_with = ROOT
+					}
+				}
+				DRB = {
+					religion = tengri_pagan_reformed
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						alliance_with = ROOT
+					}
+				}
+				TRG = {
+					religion = tengri_pagan_reformed
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						alliance_with = ROOT
+					}
+				}
+				OIR = {
+					religion = tengri_pagan_reformed
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						alliance_with = ROOT
 					}
 				}
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = lha_anti_nepalese_coalition
-				duration = 5475
+			set_country_flag = lha_oirat_ties_complete
+			if = {
+				limit = {
+					AND = {
+						NOT = {
+							exists = OIR
+						}
+						NOT = {
+							exists = KHT
+						}
+						NOT = {
+							exists = DRB
+						}
+						NOT = {
+							exists = TRG
+						}
+					}
+				}
+				add_prestige_or_monarch_power = {
+					amount = 20
+				}
 			}
-			hidden_effect = {
-				every_country = {
-					limit = {
-						is_enemy = NPA
+			else = {
+				custom_tooltip = lha_oirat_ties_tooltip
+				hidden_effect = {
+					country_event = {
+						id = ab_india_lha_events.13
+					}
+				}
+			}
+		}
+	}
+	lha_the_nepalese_threat = {
+		icon = gfx_lha_the_nepalese_threat
+		position = 3
+		required_missions = {
+			lha_oirat_ties
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = lha_the_nepalese_threat_trigger_tooltip
+				OR = {
+					AND = {
+						NOT = {
+							exists = NPL
+						}
+						NOT = {
+							exists = ENP
+						}
+					}
+					any_country = {
+						is_enemy = NPL
 						has_opinion = {
 							who = ROOT
 							value = 100
 						}
 					}
-					add_trust = {
-						who = ROOT
-						value = 10
+					any_country = {
+						is_enemy = ENP
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
 					}
-					add_opinion = {
-						who = ROOT
-						modifier = lha_united_against_the_nepalese
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = NPL
+				}
+				add_country_modifier = {
+					name = lha_anti_nepalese_coalition
+					duration = 5475
+				}
+				custom_tooltip = lha_the_nepalese_threat_reward_tooltip
+				hidden_effect = {
+					every_country = {
+						limit = {
+							is_enemy = NPL
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+						add_trust = {
+							who = ROOT
+							value = 10
+						}
+						add_opinion = {
+							who = ROOT
+							modifier = lha_united_against_the_nepalese
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENP
+				}
+				add_country_modifier = {
+					name = lha_anti_nepalese_coalition
+					duration = 5475
+				}
+				custom_tooltip = lha_the_nepalese_threat_reward_tooltip
+				hidden_effect = {
+					every_country = {
+						limit = {
+							is_enemy = ENP
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+						add_trust = {
+							who = ROOT
+							value = 10
+						}
+						add_opinion = {
+							who = ROOT
+							modifier = lha_united_against_the_nepalese
+						}
+					}
+				}
+			}
+			else = {
+				add_prestige_or_monarch_power = {
+					amount = 20
+				}
+			}
+		}
+	}
+	lha_the_sands_of_tarim = {
+		icon = gfx_lha_the_sands_of_tarim
+		position = 6
+		required_missions = {
+			lha_ascension_of_the_sacred_one
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = shanshan_area
+				area = kashgaria_area
+				area = tarim_basin_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			shanshan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tarim_basin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ghor_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			balkh_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			kabulistan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = lha_oases_of_the_silk_road
+				duration = 7300
+			}
+			custom_tooltip = lha_the_sands_of_tarim_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						739 = {
+							has_trade_building_trigger = yes
+						}
+					}
+					739 = {
+						upgrade_trade_building = yes
+						if = {
+							limit = {
+								NOT = {
+									province_has_center_of_trade_of_level = 1
+								}
+							}
+							center_of_trade = 1
+						}
+						else_if = {
+							limit = {
+								NOT = {
+									province_has_center_of_trade_of_level = 3
+								}
+							}
+							add_center_of_trade_level = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						2124 = {
+							has_trade_building_trigger = yes
+						}
+					}
+					2124 = {
+						upgrade_trade_building = yes
+						if = {
+							limit = {
+								NOT = {
+									province_has_center_of_trade_of_level = 1
+								}
+							}
+							center_of_trade = 1
+						}
+						else_if = {
+							limit = {
+								NOT = {
+									province_has_center_of_trade_of_level = 3
+								}
+							}
+							add_center_of_trade_level = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						710 = {
+							has_trade_building_trigger = yes
+						}
+					}
+					710 = {
+						upgrade_trade_building = yes
+						if = {
+							limit = {
+								NOT = {
+									province_has_center_of_trade_of_level = 1
+								}
+							}
+							center_of_trade = 1
+						}
+						else_if = {
+							limit = {
+								NOT = {
+									province_has_center_of_trade_of_level = 3
+								}
+							}
+							add_center_of_trade_level = 1
+						}
 					}
 				}
 			}

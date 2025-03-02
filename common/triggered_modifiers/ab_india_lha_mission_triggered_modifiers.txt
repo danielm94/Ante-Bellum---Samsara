@@ -1,0 +1,37 @@
+lha_oirat_friend = {
+	potential = {
+		mission_completed = lha_oirat_ties
+	}
+	trigger = {
+		if = {
+			limit ={
+				has_country_flag = lha_kht_friend
+			}
+
+			alliance_with = KHT
+		}
+		else_if = {
+			limit ={
+				has_country_flag = lha_drb_friend
+			}
+
+			alliance_with = DRB
+		}
+		else_if = {
+			limit ={
+				has_country_flag = lha_trg_friend
+			}
+
+			alliance_with = TRG
+		}
+		else_if = {
+			limit ={
+				has_country_flag = lha_oir_friend
+			}
+
+			alliance_with = OIR
+		}
+	}
+	diplomatic_upkeep = 1
+	cavalry_power = 0.10
+}

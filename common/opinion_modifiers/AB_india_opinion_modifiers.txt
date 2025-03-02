@@ -32,6 +32,6 @@ abi_accepted_malankara_missionaries = {
 }
 
 lha_united_against_the_nepalese = {
-	opinion = 30
+	opinion = 45
 	yearly_decay = 3
 }

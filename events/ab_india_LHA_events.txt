@@ -321,7 +321,6 @@ country_event = {
 				mil = 3
 			}
 			add_ruler_personality = immortal_personality
-
 			define_heir = {
 				religion = vajrayana
 				culture = tibetan
@@ -335,7 +334,6 @@ country_event = {
 	}
 	option = {
 		name = ab_india_lha_events.11.a
-		
 		change_heir_adm = 1
 		set_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		add_country_modifier = {
@@ -346,7 +344,6 @@ country_event = {
 	}
 	option = {
 		name = ab_india_lha_events.11.b
-		
 		change_heir_dip = 1
 		set_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		add_country_modifier = {
@@ -357,7 +354,6 @@ country_event = {
 	}
 	option = {
 		name = ab_india_lha_events.11.c
-
 		change_heir_mil = 1
 		set_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		add_country_modifier = {
@@ -406,5 +402,149 @@ country_event = {
 			}
 			set_country_flag = dalai_lama_mechanics
 		}
+	}
+}
+
+country_event = {
+	id = ab_india_lha_events.13
+	title = ab_india_lha_events.13.t
+	desc = ab_india_lha_events.13.desc
+	picture = GFX_ab_india_lha_events.13
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = lha_oirat_ties_complete
+	}
+	immediate = {
+		clr_country_flag = lha_oirat_ties_complete
+	}
+	option = {
+		name = ab_india_lha_events.13.a
+		trigger = {
+			KHT = {
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					alliance_with = ROOT
+				}
+			}
+		}
+		add_historical_friend = KHT
+		KHT = {
+			add_historical_friend = ROOT
+			if = {
+				limit = {
+					NOT = {
+						alliance_with = ROOT
+					}
+				}
+				create_alliance = ROOT
+			}
+			add_trust = {
+				who = ROOT
+				value = 5
+			}
+		}
+		set_country_flag = lha_kht_friend
+		custom_tooltip = ab_india_lha_events.13_tooltip
+	}
+	option = {
+		name = ab_india_lha_events.13.b
+		trigger = {
+			DRB = {
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					alliance_with = ROOT
+				}
+			}
+		}
+		add_historical_friend = DRB
+		DRB = {
+			add_historical_friend = ROOT
+			if = {
+				limit = {
+					NOT = {
+						alliance_with = ROOT
+					}
+				}
+				create_alliance = ROOT
+			}
+			add_trust = {
+				who = ROOT
+				value = 5
+			}
+		}
+		set_country_flag = lha_drb_friend
+		custom_tooltip = ab_india_lha_events.13_tooltip
+	}
+	option = {
+		name = ab_india_lha_events.13.c
+		trigger = {
+			TRG = {
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					alliance_with = ROOT
+				}
+			}
+		}
+		add_historical_friend = TRG
+		TRG = {
+			add_historical_friend = ROOT
+			if = {
+				limit = {
+					NOT = {
+						alliance_with = ROOT
+					}
+				}
+				create_alliance = ROOT
+			}
+			add_trust = {
+				who = ROOT
+				value = 5
+			}
+		}
+		set_country_flag = lha_trg_friend
+		custom_tooltip = ab_india_lha_events.13_tooltip
+	}
+	option = {
+		name = ab_india_lha_events.13.d
+		trigger = {
+			OIR = {
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					alliance_with = ROOT
+				}
+			}
+		}
+		add_historical_friend = OIR
+		OIR = {
+			add_historical_friend = ROOT
+			if = {
+				limit = {
+					NOT = {
+						alliance_with = ROOT
+					}
+				}
+				create_alliance = ROOT
+			}
+			add_trust = {
+				who = ROOT
+				value = 5
+			}
+			set_country_flag = lha_oir_friend
+		}
+	}
+	option = {
+		name = ab_india_lha_events.13.e
 	}
 }

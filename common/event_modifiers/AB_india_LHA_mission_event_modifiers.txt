@@ -97,10 +97,11 @@ lha_anti_nepalese_coalition = {
 }
 
 lha_the_great_monastic_awakening_mod_perm = {
-	embracement_cost = -0.20
-	reform_progress_growth = 0.10
+	embracement_cost = -0.2
+	reform_progress_growth = 0.1
 	prestige_decay = -0.01
 }
+
 lha_the_great_monastic_awakening_mod = {
 	embracement_cost = -0.2
 	reform_progress_growth = 0.1
@@ -108,4 +109,29 @@ lha_the_great_monastic_awakening_mod = {
 
 lha_faithful_flock_to_jokhang = {
 	local_tax_modifier = 0.3
+}
+
+lha_integrating_the_hill_clans = {
+	local_autonomy = -0.05
+	local_missionary_strength = 0.01
+}
+
+lha_pahari_mercenaries = {
+	mercenary_cost = -0.1
+	merc_maintenance_modifier = -0.1
+	mercenary_manpower = 0.1
+}
+
+lha_control_the_cashmere_trade = {
+	trade_efficiency = 0.1
+	global_trade_power = 0.05
+}
+
+lha_tibetan_cultural_union = {
+	manpower_in_culture_group_provinces = 0.2
+	land_morale = 0.05
+}
+lha_oases_of_the_silk_road = {
+	trade_efficiency = 0.15
+	caravan_power = 0.15
 }

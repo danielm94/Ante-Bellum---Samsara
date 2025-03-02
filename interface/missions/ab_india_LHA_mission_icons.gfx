@@ -34,6 +34,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/LHA/lha_forge_alliances.dds"
 	}
 
+	spriteType = {
+		name = "gfx_lha_the_nepalese_threat"
+		texturefile = "gfx/interface/missions/LHA/lha_the_nepalese_threat.dds"
+	}
 	
 	spriteType = {
 		name = "gfx_lha_take_refuge_under_yuan"
@@ -64,12 +68,40 @@ spriteTypes = {
 		name = "gfx_lha_ascension_of_the_sacred_one"
 		texturefile = "gfx/interface/missions/LHA/lha_ascension_of_the_sacred_one.dds"
 	}
+
 	spriteType = {
 		name = "gfx_lha_the_great_monastic_awakening"
 		texturefile = "gfx/interface/missions/LHA/lha_the_great_monastic_awakening.dds"
 	}
+
 	spriteType = {
 		name = "gfx_lha_jewel_of_the_dharma"
 		texturefile = "gfx/interface/missions/LHA/lha_jewel_of_the_dharma.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_moving_through_kashmir"
+		texturefile = "gfx/interface/missions/LHA/lha_moving_through_kashmir.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_conquer_the_pahari"
+		texturefile = "gfx/interface/missions/LHA/lha_conquer_the_pahari.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_break_nepal"
+		texturefile = "gfx/interface/missions/LHA/lha_break_nepal.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_the_lost_bretheren"
+		texturefile = "gfx/interface/missions/LHA/lha_the_lost_bretheren.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_the_sands_of_tarim"
+		texturefile = "gfx/interface/missions/LHA/lha_sands_of_tarim.dds"
+	}
+	
 }

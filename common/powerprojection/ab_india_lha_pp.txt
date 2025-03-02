@@ -3,3 +3,9 @@ lha_unified_tibet_pp = {
 	power = 25
 	yearly_decay = 1.0
 }
+
+lha_reclaimed_tibetan_china_pp = {
+	min = 0
+	power = 10
+	yearly_decay = 1.0
+}
