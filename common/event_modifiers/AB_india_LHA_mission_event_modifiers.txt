@@ -149,3 +149,8 @@ lha_prepare_to_confront_bengal = {
 	ae_impact = -0.15
 	siege_ability = 0.1
 }
+
+lha_secured_punjab_trade = {
+	province_trade_power_modifier = 0.3
+	local_center_of_trade_upgrade_cost = -0.5
+}

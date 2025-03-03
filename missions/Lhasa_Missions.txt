@@ -69,6 +69,7 @@ lha_slot_1 = {
 				type = theologian
 				skill = 1
 				religion = ROOT
+				culture = ROOT
 				cost_multiplier = 0.5
 			}
 		}
@@ -225,7 +226,117 @@ lha_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-	
+		}
+	}
+	lha_the_indus_corridor = {
+		icon = mission_onward_to_lahore
+		position = 7
+		required_missions = {
+			lha_moving_through_kashmir
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sind_sagar_area
+				area = multan_area
+				area = lahore_area
+				area = sirhind_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			sind_sagar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			multan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lahore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sirhind_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_years_of_income = 0.5
+			define_advisor = {
+				type = trader
+				skill = 3
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.5
+			}
+			506 = {
+				add_province_modifier = {
+					name = lha_secured_punjab_trade
+					duration = 7300
+				}
+			}
+			507 = {
+				add_province_modifier = {
+					name = lha_secured_punjab_trade
+					duration = 7300
+				}
+			}
+			510 = {
+				add_province_modifier = {
+					name = lha_secured_punjab_trade
+					duration = 7300
+				}
+			}
+			northern_sindh_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sindh_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kalat_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			2231 = {
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			5273 = {
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			5274 = {
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -901,7 +1012,7 @@ lha_slot_3_continued = {
 					add_permanent_claim = ROOT
 				}
 			}
-			add_country_modifier ={
+			add_country_modifier = {
 				name = lha_prepare_to_confront_bengal
 				duration = 5475
 			}
@@ -1169,6 +1280,7 @@ lha_slot_5 = {
 				type = diplomat
 				skill = 1
 				religion = ROOT
+				culture = ROOT
 				cost_multiplier = 0.5
 			}
 			add_country_modifier = {
