@@ -403,7 +403,6 @@ lha_slot_1 = {
 					duration = -1
 				}
 			}
-
 			add_country_modifier = {
 				name = lha_gujarati_campaign
 				duration = 7300
@@ -735,7 +734,6 @@ lha_slot_2 = {
 					remove_core = BKH
 				}
 			}
-
 			add_country_modifier = {
 				name = lha_hindustan_campaign
 				duration = 5475
@@ -1179,8 +1177,72 @@ lha_slot_3_continued = {
 			}
 		}
 	}
+	lha_confront_bengal = {
+		icon = gfx_lha_confront_bengal
+		position = 8
+		required_missions = {
+			lha_subjugate_assam
+		}
+		provinces_to_highlight = {
+			OR = {
+				owned_by = BNG
+				area = north_bengal_area
+				area = gaur_area
+				area = west_bengal_area
+				area = east_bengal_area
+				area = tripura_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			north_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gaur_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripura_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				exists = BNG
+			}
+		}
+		effect = {
+			set_country_flag = ab_trader_advisor_gives_trade_steering
+			add_country_modifier = {
+				name = lha_dharma_protector_of_india
+				duration = -1
+			}
+			add_dip_power = 100
+			custom_tooltip = PER_TRADER_SCALING
+			bengal_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 
-	
+		}
+	}
 }
 
 lha_slot_4 = {

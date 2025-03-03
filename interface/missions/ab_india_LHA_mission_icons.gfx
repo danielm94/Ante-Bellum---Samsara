@@ -119,4 +119,8 @@ spriteTypes = {
 		name = "gfx_lha_cull_the_horde"
 		texturefile = "gfx/interface/missions/LHA/lha_cull_the_horde.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_confront_bengal"
+		texturefile = "gfx/interface/missions/LHA/lha_confront_bengal.dds"
+	}
 }

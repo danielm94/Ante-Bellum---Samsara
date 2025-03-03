@@ -102,3 +102,12 @@ enlightenment_mechanics_corrupt = {
 	monthly_enlightenment_power = -0.08
 }
 
+enlightenment_mechanics_bankruptcy = {
+	potential = {
+		has_government_mechanic = state_enlightenment_mechanic
+	}
+	trigger = {
+		is_bankrupt = yes
+	}
+	monthly_enlightenment_power = -100
+}

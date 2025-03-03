@@ -100,7 +100,20 @@ on_pillaged_capital = {
 		add_government_power = {
 			mechanic_type = state_enlightenment_mechanic
 			power_type = enlightenment_power
-			value = -1
+			value = -5
+		}
+	}
+}
+
+on_bankruptcy ={
+	if = {
+		limit = {
+			has_government_mechanic = state_enlightenment_mechanic
+		}
+		add_government_power = {
+			mechanic_type = state_enlightenment_mechanic
+			power_type = enlightenment_power
+			value = -100
 		}
 	}
 }
