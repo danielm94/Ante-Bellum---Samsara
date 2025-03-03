@@ -166,3 +166,9 @@ lha_gujarati_campaign = {
 	global_missionary_strength = 0.02
 	morale_damage = 0.1
 }
+
+lha_hindustan_campaign = {
+	core_creation = -0.10
+	global_heathen_missionary_strength = 0.02
+	manpower_recovery_speed = 0.10
+}

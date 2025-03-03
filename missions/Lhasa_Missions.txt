@@ -382,21 +382,6 @@ lha_slot_1 = {
 			}
 		}
 		effect = {
-			west_india_region = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = lha_gujarati_campaign
-				duration = 7300
-			}
 			577 = {
 				add_or_upgrade_fort_building = yes
 				add_province_modifier = {
@@ -417,6 +402,22 @@ lha_slot_1 = {
 					name = lha_gates_of_india
 					duration = -1
 				}
+			}
+
+			add_country_modifier = {
+				name = lha_gujarati_campaign
+				duration = 7300
+			}
+			west_india_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -677,8 +678,8 @@ lha_slot_2 = {
 			}
 		}
 	}
-	lha_defeat_qarkanad = {
-		icon = gfx_lha_unite_the_hill_clans
+	lha_cull_the_horde = {
+		icon = gfx_lha_cull_the_horde
 		position = 8
 		required_missions = {
 			lha_unite_the_hill_clans
@@ -721,6 +722,39 @@ lha_slot_2 = {
 			}
 		}
 		effect = {
+			custom_tooltip = lha_remove_bkh_core
+			add_ruler_modifier = {
+				name = "aln_bane"
+				duration = -1
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = BKH
+					}
+					remove_core = BKH
+				}
+			}
+
+			add_country_modifier = {
+				name = lha_hindustan_campaign
+				duration = 5475
+			}
+			add_power_projection = {
+				type = lha_bane_of_the_khan
+				amount = 25
+			}
+			hindusthan_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -1145,6 +1179,8 @@ lha_slot_3_continued = {
 			}
 		}
 	}
+
+	
 }
 
 lha_slot_4 = {
