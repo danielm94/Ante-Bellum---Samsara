@@ -111,4 +111,8 @@ spriteTypes = {
 		name = "gfx_lha_subjugate_assam"
 		texturefile = "gfx/interface/missions/LHA/lha_subjugate_assam.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_the_indus_barrier"
+		texturefile = "gfx/interface/missions/LHA/lha_the_indus_barrier.dds"
+	}
 }

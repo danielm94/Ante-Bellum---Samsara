@@ -154,3 +154,15 @@ lha_secured_punjab_trade = {
 	province_trade_power_modifier = 0.3
 	local_center_of_trade_upgrade_cost = -0.5
 }
+
+lha_gates_of_india = {
+	local_defensiveness = 0.25
+	local_fort_maintenance_modifier = -0.25
+	local_garrison_size = 0.25
+}
+
+lha_gujarati_campaign = {
+	ae_impact = -0.10
+	global_missionary_strength = 0.02
+	morale_damage = 0.1
+}

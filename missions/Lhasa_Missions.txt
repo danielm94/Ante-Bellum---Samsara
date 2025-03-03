@@ -339,6 +339,87 @@ lha_slot_1 = {
 			}
 		}
 	}
+	lha_the_indus_barrier = {
+		icon = gfx_lha_the_indus_barrier
+		position = 7
+		required_missions = {
+			lha_the_indus_corridor
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_sindh_area
+				area = sindh_area
+				area = kalat_area
+				province_id = 2231
+				province_id = 5273
+				province_id = 5274
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			northern_sindh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sindh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kalat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2231 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5273 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5274 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			west_india_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = lha_gujarati_campaign
+				duration = 7300
+			}
+			577 = {
+				add_or_upgrade_fort_building = yes
+				add_province_modifier = {
+					name = lha_gates_of_india
+					duration = -1
+				}
+			}
+			5274 = {
+				add_or_upgrade_fort_building = yes
+				add_province_modifier = {
+					name = lha_gates_of_india
+					duration = -1
+				}
+			}
+			5273 = {
+				add_or_upgrade_fort_building = yes
+				add_province_modifier = {
+					name = lha_gates_of_india
+					duration = -1
+				}
+			}
+		}
+	}
 }
 
 lha_slot_2 = {
@@ -594,6 +675,52 @@ lha_slot_2 = {
 			else = {
 				custom_tooltip = lha_unite_the_hill_clans_tooltip_no
 			}
+		}
+	}
+	lha_defeat_qarkanad = {
+		icon = gfx_lha_unite_the_hill_clans
+		position = 8
+		required_missions = {
+			lha_unite_the_hill_clans
+		}
+		provinces_to_highlight = {
+			OR = {
+				owned_by = BKH
+				area = oudh_area
+				area = lower_doab_area
+				area = purvanchal_area
+				area = katehar_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			oudh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_doab_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			purvanchal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			purvanchal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			katehar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				exists = BKH
+			}
+		}
+		effect = {
 		}
 	}
 }
