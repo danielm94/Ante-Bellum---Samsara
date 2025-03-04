@@ -199,5 +199,24 @@ on_conquest = {
 				}
 			}
 		}
+		#If you return a core for a subject, you gain englightenment
+		else = {
+			if = {
+				limit = {
+					owner = {
+						is_subject = yes
+					}
+				}
+				owner = {
+					overlord = {
+						add_government_power = {
+							mechanic_type = state_enlightenment_mechanic
+							power_type = enlightenment_power
+							value = 0.3
+						}
+					}
+				}
+			}
+		}
 	}
 }
