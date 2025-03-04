@@ -206,3 +206,34 @@ lha_riches_of_gujarat = {
 	province_trade_power_modifier = 1
 	province_trade_power_value = 5
 }
+
+lha_prosperity_of_the_deccan = {
+	local_production_efficiency = 0.1
+	local_state_maintenance_modifier = -0.2
+	trade_goods_size_modifier = 0.1
+}
+
+lha_recruiting_the_marathis = {
+	army_tradition = 0.3
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.25
+}
+
+lha_cholan_shipbuilders = {
+	heavy_ship_cost = -0.1
+	galley_cost = -0.1
+	light_ship_cost = -0.1
+	naval_forcelimit_modifier = 0.15
+	ship_durability = 0.1
+}
+
+lha_hire_malankaran_explorers = {
+	colonists = 1
+	may_explore = yes
+}
+
+lha_ports_of_coromandel = {
+	local_ship_cost = -0.25
+	local_sailors_modifier = 0.25
+	province_trade_power_modifier = 0.75
+}
