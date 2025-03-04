@@ -341,7 +341,7 @@ lha_slot_1 = {
 	}
 	lha_the_indus_barrier = {
 		icon = gfx_lha_the_indus_barrier
-		position = 7
+		position = 8
 		required_missions = {
 			lha_the_indus_corridor
 		}
@@ -1240,7 +1240,57 @@ lha_slot_3_continued = {
 				}
 				add_permanent_claim = ROOT
 			}
-
+		}
+	}
+	lha_consolidate_bengal = {
+		icon = mission_unite_bengal
+		position = 9
+		required_missions = {
+			lha_confront_bengal
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = bengal_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bengal_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			bengal_region = {
+				limit = {
+					has_port = yes
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = lha_shipyards_of_bengal
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = lha_merchants_of_bengal
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			coromandel_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -1395,39 +1445,8 @@ lha_slot_4 = {
 			}
 		}
 		effect = {
-			guangxi_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			west_guangdong_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			guangdong_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
+			custom_tooltip = lha_the_lost_bretheren_unlock_eoc_tooltip
+			set_country_flag = gph_enable_eoc_tree
 			add_prestige_or_monarch_power = {
 				amount = 10
 			}
@@ -1473,6 +1492,39 @@ lha_slot_4 = {
 						duration = 7300
 					}
 				}
+			}
+			guangxi_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_guangdong_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			guangdong_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1871,6 +1923,132 @@ lha_slot_5 = {
 						}
 					}
 				}
+			}
+		}
+	}
+	lha_protect_the_afghans = {
+		icon = gfx_lha_protect_the_afghans
+		position = 7
+		required_missions = {
+			lha_the_sands_of_tarim
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = balkh_area
+				area = kabulistan_area
+				area = ghor_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			balkh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabulistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ghor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			2225 = {
+				add_or_upgrade_fort_building = yes
+				add_province_modifier = {
+					name = lha_gates_of_india
+					duration = -1
+				}
+			}
+			2226 = {
+				add_or_upgrade_fort_building = yes
+				add_province_modifier = {
+					name = lha_gates_of_india
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				skill = 3
+				religion = ROOT
+				culture = afghani
+				cost_multiplier = 0.35
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			add_mil_power = 50
+		}
+	}
+	lha_buddhas_of_bamyan = {
+		icon = gfx_lha_buddhas_of_bamyan
+		position = 8
+		required_missions = {
+			lha_protect_the_afghans
+		}
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					677 = {
+						has_great_project = {
+							type = buddha_statues
+						}
+					}
+				}
+				province_id = 677
+			}
+			else = {
+				province_id = 2225
+			}
+		}
+		trigger = {
+			OR = {
+				2225 = {
+					has_great_project = {
+						type = buddha_statues
+						tier = 1
+					}
+				}
+				677 = {
+					has_great_project = {
+						type = buddha_statues
+						tier = 1
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					677 = {
+						has_great_project = {
+							type = buddha_statues
+						}
+					}
+				}
+				677 = {
+					add_great_project_tier = {
+						type = buddha_statues
+						tier = 1
+					}
+				}
+			}
+			else = {
+				2225 = {
+					add_great_project_tier = {
+						type = buddha_statues
+						tier = 1
+					}
+				}
+			}
+			custom_tooltip = lha_buddhas_of_bamyan_tooltip
+			set_country_flag = ned_artist_is_architect_flag
+			add_prestige_or_monarch_power = {
+				amount = 20
 			}
 		}
 	}

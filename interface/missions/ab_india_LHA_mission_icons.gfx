@@ -123,4 +123,13 @@ spriteTypes = {
 		name = "gfx_lha_confront_bengal"
 		texturefile = "gfx/interface/missions/LHA/lha_confront_bengal.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_protect_the_afghans"
+		texturefile = "gfx/interface/missions/LHA/lha_protect_the_afghans.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_buddhas_of_bamyan"
+		texturefile = "gfx/interface/missions/LHA/lha_buddhas_of_bamyan.dds"
+	}
 }
