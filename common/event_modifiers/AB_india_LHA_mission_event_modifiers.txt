@@ -201,3 +201,8 @@ lha_breadbasket_of_india = {
 lha_recruit_the_hindustanis = {
 	local_manpower_modifier = 0.5
 }
+
+lha_riches_of_gujarat = {
+	province_trade_power_modifier = 1
+	province_trade_power_value = 5
+}

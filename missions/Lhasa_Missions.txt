@@ -420,7 +420,68 @@ lha_slot_1 = {
 			}
 		}
 	}
-	
+	lha_consolidate_gujarat = {
+		icon = mission_conquer_gujarat_dlh
+		position = 9
+		required_missions = {
+			lha_the_indus_barrier
+		}
+		provinces_to_highlight = {
+			region = west_india_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_india_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = lha_consolidate_gujarat_propgate_tooltip
+			set_country_flag = can_use_propagate_religion
+			custom_tooltip = lha_consolidate_gujarat_upgrade_tooltip
+			hidden_effect = {
+				for = {
+					amount = 6
+					effect = "random_owned_province = {
+				limit = {
+					region = west_india_region
+					has_trade_building_trigger = yes
+					NOT = {
+						has_province_flag = lha_consolidate_gujarat_upgraded
+					}
+				}
+				add_province_modifier = {
+					name = lha_riches_of_gujarat
+					duration = -1
+				}
+				set_province_flag = lha_consolidate_gujarat_upgraded
+				if = {
+					limit = {
+						has_building = greatmarket
+					}
+					add_base_production = 2
+				}
+				else = {
+					add_or_upgrade_trade_building = yes
+				}
+			}"
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 15
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				religion = ROOT
+				culture = ROOT
+				cost_multiplier = 0.4
+			}
+		}
+	}
 }
 
 lha_slot_2 = {
@@ -786,7 +847,7 @@ lha_slot_2 = {
 			hidden_effect = {
 				for = {
 					amount = 10
-					effect = "		random_owned_province = {
+					effect = "random_owned_province = {
 				limit = {
 					region = hindusthan_region
 					has_manpower_building_trigger = yes
@@ -811,7 +872,6 @@ lha_slot_2 = {
 			}"
 				}
 			}
-	
 			deccan_region = {
 				limit = {
 					NOT = {
