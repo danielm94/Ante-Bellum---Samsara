@@ -132,4 +132,9 @@ spriteTypes = {
 		name = "gfx_lha_buddhas_of_bamyan"
 		texturefile = "gfx/interface/missions/LHA/lha_buddhas_of_bamyan.dds"
 	}
+
+	spriteType = {
+		name = "lha_the_charkravartis_triumph"
+		texturefile = "gfx/interface/missions/LHA/lha_the_charkravartis_triumph.dds"
+	}
 }

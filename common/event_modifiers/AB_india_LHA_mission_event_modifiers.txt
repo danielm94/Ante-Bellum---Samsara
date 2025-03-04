@@ -237,3 +237,7 @@ lha_ports_of_coromandel = {
 	local_sailors_modifier = 0.25
 	province_trade_power_modifier = 0.75
 }
+
+lha_the_charkravartis_triumph_mod = {
+	administrative_efficiency = 0.05
+}

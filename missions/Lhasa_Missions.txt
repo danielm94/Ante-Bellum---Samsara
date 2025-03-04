@@ -1252,6 +1252,17 @@ lha_slot_3_continued = {
 				}
 				add_permanent_claim = ROOT
 			}
+			kachin_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	lha_break_nepal = {
@@ -1292,6 +1303,17 @@ lha_slot_3_continued = {
 					name = lha_integrating_the_hill_clans
 					duration = 5475
 				}
+			}
+			assam_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1511,6 +1533,43 @@ lha_slot_3_continued = {
 				set_province_flag = lha_coromandel_upgraded
 			}"
 				}
+			}
+		}
+	}
+	lha_the_charkravartis_triumph = {
+		icon = lha_the_charkravartis_triumph
+		position = 11
+		required_missions = {
+			lha_conquer_deccan
+			lha_the_southern_coast
+		}
+		provinces_to_highlight = {
+			superregion = india_superregion
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			india_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_ruler_personality = legendary_conqueror_personality
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			custom_tooltip = lha_the_charkravartis_triumph_pp_tooltip
+			hidden_effect = {
+				add_power_projection = {
+					type = lha_the_charkravartis_triumph_pp
+					amount = 25
+				}
+			}
+			add_country_modifier = {
+				name = lha_the_charkravartis_triumph_mod
+				duration = -1
 			}
 		}
 	}
