@@ -162,15 +162,15 @@ lha_gates_of_india = {
 }
 
 lha_gujarati_campaign = {
-	ae_impact = -0.10
+	ae_impact = -0.1
 	global_missionary_strength = 0.02
 	morale_damage = 0.1
 }
 
 lha_hindustan_campaign = {
-	core_creation = -0.10
+	core_creation = -0.1
 	global_heathen_missionary_strength = 0.02
-	manpower_recovery_speed = 0.10
+	manpower_recovery_speed = 0.1
 }
 
 lha_dharma_protector_of_india = {
@@ -190,4 +190,14 @@ lha_merchants_of_bengal = {
 	merchants = 1
 	trade_company_investment_cost = -0.1
 	trade_efficiency = 0.1
+}
+
+lha_breadbasket_of_india = {
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.05
+	global_supply_limit_modifier = 0.1
+}
+
+lha_recruit_the_hindustanis = {
+	local_manpower_modifier = 0.5
 }

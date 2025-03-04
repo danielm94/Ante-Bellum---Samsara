@@ -420,6 +420,7 @@ lha_slot_1 = {
 			}
 		}
 	}
+	
 }
 
 lha_slot_2 = {
@@ -743,6 +744,75 @@ lha_slot_2 = {
 				amount = 25
 			}
 			hindusthan_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lha_consolidate_hindustan = {
+		icon = mission_the_grand_trunk_road_dlh
+		position = 9
+		required_missions = {
+			lha_cull_the_horde
+		}
+		provinces_to_highlight = {
+			region = hindusthan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hindusthan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_breadbasket_of_india
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			custom_tooltip = lha_consolidate_hindustan_tooltip
+			hidden_effect = {
+				for = {
+					amount = 10
+					effect = "		random_owned_province = {
+				limit = {
+					region = hindusthan_region
+					has_manpower_building_trigger = yes
+					NOT = {
+						has_province_flag = lha_consolidate_hindustan_upgraded
+					}
+				}
+				add_province_modifier = {
+					name = lha_recruit_the_hindustanis
+					duration = -1
+				}
+				set_province_flag = lha_consolidate_hindustan_upgraded
+				if = {
+					limit = {
+						has_building = training_fields
+					}
+					add_base_manpower = 2
+				}
+				else = {
+					add_or_upgrade_manpower_building = yes
+				}
+			}"
+				}
+			}
+	
+			deccan_region = {
 				limit = {
 					NOT = {
 						is_core = ROOT
