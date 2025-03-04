@@ -134,7 +134,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "lha_the_charkravartis_triumph"
+		name = "gfx_lha_the_charkravartis_triumph"
 		texturefile = "gfx/interface/missions/LHA/lha_the_charkravartis_triumph.dds"
+	}
+
+	spriteType = {
+		name = "gfx_lha_the_dharma_raj"
+		texturefile = "gfx/interface/missions/LHA/lha_the_dharma_raj.dds"
 	}
 }

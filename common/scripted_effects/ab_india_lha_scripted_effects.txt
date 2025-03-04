@@ -1,0 +1,91 @@
+lha_upgrade_idea_set = {
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					tag = LHA
+					tag = GPH
+				}
+			}
+		}
+		#Guard clause
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = lha_idea_level
+				value = 0
+			}
+			NOT = {
+				check_variable = {
+					which = lha_idea_level
+					value = 1
+				}
+			}
+		}
+		#Increment idea improvement level
+		hidden_effect = {
+			change_variable = {
+				which = lha_idea_level
+				value = 1
+			}
+		}
+		custom_tooltip = lha_upgrade_idea_set_tooltip_1
+		hidden_effect = {
+			swap_free_idea_group = yes
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = lha_idea_level
+				value = 1
+			}
+			NOT = {
+				check_variable = {
+					which = lha_idea_level
+					value = 2
+				}
+			}
+		}
+		#Increment idea improvement level
+		hidden_effect = {
+			change_variable = {
+				which = lha_idea_level
+				value = 1
+			}
+		}
+		custom_tooltip = lha_upgrade_idea_set_tooltip_2
+		hidden_effect = {
+			swap_free_idea_group = yes
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = lha_idea_level
+				value = 2
+			}
+			NOT = {
+				check_variable = {
+					which = lha_idea_level
+					value = 3
+				}
+			}
+		}
+		#Increment idea improvement level
+		hidden_effect = {
+			change_variable = {
+				which = lha_idea_level
+				value = 1
+			}
+		}
+		custom_tooltip = lha_upgrade_idea_set_tooltip_3
+		hidden_effect = {
+			swap_free_idea_group = yes
+		}
+	}
+	else = {
+		custom_tooltip = lha_upgrade_idea_set_tooltip_max
+	}
+}

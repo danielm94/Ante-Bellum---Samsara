@@ -6,6 +6,12 @@ religion = vajrayana
 technology_group = chinese
 capital = 677
 fixed_capital = 677
+export_to_variable = {
+	which = lha_idea_level
+	value = 0
+	who = ROOT
+}
+
 change_estate_land_share = {
 	estate = estate_church
 	share = 40

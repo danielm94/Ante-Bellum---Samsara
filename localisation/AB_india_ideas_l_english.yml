@@ -93,24 +93,39 @@
  COA_new_chola_empire_desc:0 "Chola Empire is reborn once again. We rule both the sea and the coast. Our development is prime."
  
  #GPH
- GPH_ideas:0 "Phodrangian Ideas"
- GPH_ideas_start:0 "Phodrangian Traditions"
- GPH_ideas_bonus:0 "Phodrangian Ambition"
+ GPH_ideas_0:0 "Phodrangian Ideas"
+ GPH_ideas_0_start:0 "Phodrangian Traditions"
+ GPH_ideas_0_bonus:0 "Phodrangian Ambition"
+ GPH_ideas_1:0 "§YPhodrangian Ideas§!"
+ GPH_ideas_1_start:0 "Phodrangian Traditions"
+ GPH_ideas_1_bonus:0 "Phodrangian Ambition"
+ GPH_ideas_2:0 "§YPhodrangian Ideas§!"
+ GPH_ideas_2_start:0 "Phodrangian Traditions"
+ GPH_ideas_2_bonus:0 "Phodrangian Ambition"
+ GPH_ideas_3:0 "§YPhodrangian Ideas§!"
+ GPH_ideas_3_start:0 "Phodrangian Traditions"
+ GPH_ideas_3_bonus:0 "Phodrangian Ambition"
  
  GPH_highland_ingenuity:0 "Highland Ingenuity"
  GPH_highland_ingenuity_desc:0 "Building and developing in the Himalayas is no easy feat, but our people have long adapted to these harsh conditions. Through innovative engineering and efficient construction techniques, we have mastered the art of thriving where others would falter."
  
  GPH_mandate_of_the_bodhisattva:0 "Mandate of the Bodhisattva"
  GPH_mandate_of_the_bodhisattva_desc:0 "The Dalai Lama’s authority extends beyond mere earthly rule; it is a divine responsibility to guide and protect the faithful. Those who resist our enlightened governance will find that their lands, once claimed, are quickly and justly incorporated into our growing spiritual empire."
+ GPH_mandate_of_the_bodhisattva_improved:0 "Mandate of the Bodhisattva"
+ GPH_mandate_of_the_bodhisattva_improved_desc:0 "§YThe Dalai Lama’s authority extends beyond mere earthly rule; it is a divine responsibility to guide and protect the faithful. Those who resist our enlightened governance will find that their lands, once claimed, are quickly and justly incorporated into our growing spiritual empire.§!"
 
  GPH_warrions_of_the_high_plains:0 "Warriors of the High Plains"
  GPH_warrions_of_the_high_plains_desc:0 "Enduring the unforgiving climate of the Tibetan plateau, our warriors are molded into resilient and swift fighters. Their familiarity with rugged terrain gives them an edge in battle, allowing them to strike hard and move fast, outmaneuvering their foes."
 
  GPH_mandate_of_the_dharma:0 "Mandate of the Dharma"
  GPH_mandate_of_the_dharma_desc:0 "It is our sacred duty to spread the Dharma and enlighten those lost in ignorance. Our resolve in this holy mission grants us the strength to bring even the most distant lands into our fold, ensuring the faith flourishes under our watch."
+ GPH_mandate_of_the_dharma_improved:0 "Mandate of the Dharma"
+ GPH_mandate_of_the_dharma_improved_desc:0 "§YIt is our sacred duty to spread the Dharma and enlighten those lost in ignorance. Our resolve in this holy mission grants us the strength to bring even the most distant lands into our fold, ensuring the faith flourishes under our watch.§!"
 
  GPH_harmonious_governance:0 "Harmonious Governance"
  GPH_harmonious_governance_desc:0 "Guided by the wisdom of the Dharma, our administration blends spiritual harmony with pragmatic governance. Through careful reform and deliberate policy, we ensure a stable and enlightened rule that fosters prosperity and progress."
+ GPH_harmonious_governance_improved:0 "Harmonious Governance"
+ GPH_harmonious_governance_improved_desc:0 "§YGuided by the wisdom of the Dharma, our administration blends spiritual harmony with pragmatic governance. Through careful reform and deliberate policy, we ensure a stable and enlightened rule that fosters prosperity and progress.§!"
 
  GPH_bastions_of_the_roof:0 "Bastions of the Roof"
  GPH_bastions_of_the_roof_desc:0 "Nestled among the peaks of the world, our fortresses stand as unshakable strongholds against invaders. Built to withstand sieges and fortified with the blessings of our monks, they are not mere defenses but sacred bastions of our faith."

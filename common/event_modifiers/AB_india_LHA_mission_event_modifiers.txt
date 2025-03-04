@@ -179,6 +179,12 @@ lha_dharma_protector_of_india = {
 	global_missionary_strength = 0.02
 }
 
+lha_dharma_protector_of_india_enhanced = {
+	tolerance_own = 3
+	yearly_karma_decay = 0.15
+	global_missionary_strength = 0.03
+}
+
 lha_shipyards_of_bengal = {
 	ship_recruit_speed = -0.25
 	local_ship_cost = -0.25

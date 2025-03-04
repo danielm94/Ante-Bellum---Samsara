@@ -111,3 +111,25 @@ enlightenment_mechanics_bankruptcy = {
 	}
 	monthly_enlightenment_power = -100
 }
+
+enlightenment_mechanics_stability = {
+	potential = {
+		has_government_mechanic = state_enlightenment_mechanic
+	}
+	trigger = {
+		stability = 1
+	}
+	monthly_enlightenment_power = 0.01
+}
+
+enlightenment_mechanics_instability = {
+	potential = {
+		has_government_mechanic = state_enlightenment_mechanic
+	}
+	trigger = {
+		NOT = {
+			stability = 0
+		}
+	}
+	monthly_enlightenment_power = -0.02
+}
