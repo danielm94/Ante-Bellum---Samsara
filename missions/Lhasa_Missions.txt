@@ -723,10 +723,7 @@ lha_slot_2 = {
 						culture = kashmiri
 						dip_reward = yes
 					}
-					add_country_modifier = {
-						name = lha_united_the_hill_clans_bonus
-						duration = -1
-					}
+					set_country_flag = lha_united_the_hill_clans_bonus_enabled
 				}
 			}
 			else = {
@@ -2172,72 +2169,56 @@ lha_slot_4 = {
 			}
 			609 = {
 				add_province_modifier = {
-					name = lha_restore_angkor_wat
+					name = lha_restore_angkor_wat_mod
 					duration = -1
 				}
 			}
 		}
 	}
-
-		lha_break_the_kouprey = {
-		icon = gfx_lha_break_the_kouprey
-		position = 10
+	lha_restore_angkor_wat = {
+		icon = gfx_lha_restore_angkor_wat
+		position = 11
 		required_missions = {
-			lha_topple_the_elephant
+			lha_break_the_kouprey
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = angkor_area
-				area = cambodia_area
-				area = mekong_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			province_id = 609
 		}
 		trigger = {
-			angkor_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			cambodia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mekong_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			609 = {
+				has_great_project = {
+					type = angkor_wat
+					tier = 2
+				}
 			}
 		}
 		effect = {
-			add_mil_power = 100
-			angkor_area = {
-				add_province_modifier = {
-					name = lha_khmer_hydrolic_engineering
-					duration = -1
+			609 = {
+				add_great_project_tier = {
+					type = angkor_wat
+					tier = 1
 				}
 			}
-			cambodia_area = {
-				add_province_modifier = {
-					name = lha_khmer_hydrolic_engineering
-					duration = -1
+			custom_tooltip = lha_restore_angkor_wat_separatism_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = khmer
+					}
+					add_nationalism = -20
 				}
 			}
-			mekong_area = {
-				add_province_modifier = {
-					name = lha_khmer_hydrolic_engineering
-					duration = -1
+			custom_tooltip = lha_restore_angkor_wat_khmer_culture_tooltip
+			hidden_effect = {
+				set_country_flag = lha_gratitude_of_the_khmer_enabled
+				add_accepted_culture_or_dip_power = {
+					culture = khmer
+					dip_reward = yes
 				}
 			}
 			add_country_modifier = {
-				name = lha_great_works_of_cambodia
-				duration = -1
-			}
-			609 = {
-				add_province_modifier = {
-					name = lha_restore_angkor_wat
-					duration = -1
-				}
+				name = lha_stewards_of_the_buddhist_world
+				duration = 7300
 			}
 		}
 	}

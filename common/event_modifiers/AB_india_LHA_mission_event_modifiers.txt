@@ -141,10 +141,6 @@ lha_united_the_hill_clans_regular = {
 	hill_clans_loyalty_modifier = 0.1
 }
 
-lha_united_the_hill_clans_bonus = {
-	num_accepted_cultures = 3
-}
-
 lha_prepare_to_confront_bengal = {
 	ae_impact = -0.15
 	siege_ability = 0.1
@@ -287,7 +283,7 @@ lha_great_works_of_cambodia = {
 	great_project_upgrade_time = -0.05
 }
 
-lha_restore_angkor_wat = {
+lha_restore_angkor_wat_mod = {
 	local_great_project_upgrade_cost = -0.33
 	local_great_project_upgrade_time = -0.33
 }
@@ -308,4 +304,9 @@ lha_indochinese_economic_expansion = {
 	province_trade_power_modifier = 0.5
 	local_production_efficiency = 0.25
 	trade_goods_size = 0.25
+}
+
+lha_stewards_of_the_buddhist_world = {
+	prestige = 1
+	tolerance_own = 1
 }
