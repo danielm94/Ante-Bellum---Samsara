@@ -150,4 +150,12 @@ spriteTypes = {
 		name = "gfx_lha_skewer_the_peacock"
 		texturefile = "gfx/interface/missions/LHA/lha_skewer_the_peacock.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_topple_the_elephant"
+		texturefile = "gfx/interface/missions/LHA/lha_topple_the_elephant.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_skin_the_naga"
+		texturefile = "gfx/interface/missions/LHA/lha_skin_the_naga.dds"
+	}
 }

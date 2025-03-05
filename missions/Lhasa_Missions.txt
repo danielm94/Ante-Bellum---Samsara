@@ -1925,6 +1925,9 @@ lha_slot_4 = {
 			}
 		}
 		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
 			add_country_modifier = {
 				name = lha_adopt_the_mandala_system
 				duration = -1
@@ -1963,6 +1966,188 @@ lha_slot_4 = {
 				add_permanent_claim = ROOT
 			}
 			northern_thai_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_laos_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			vientiane_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			champasak_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			khorat_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			tenasserim_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lha_topple_the_elephant = {
+		icon = gfx_lha_topple_the_elephant
+		position = 9
+		required_missions = {
+			lha_skewer_the_peacock
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_thai_area
+				area = central_thai_area
+				area = sukhothai_area
+				area = north_tenasserim_area
+				area = tenasserim_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			northern_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sukhothai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_tenasserim_area = {
+			}
+			tenasserim_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = lha_topple_the_elephant_enhance_modifier_tooltip
+			hidden_effect = {
+				remove_country_modifier = lha_adopt_the_mandala_system
+				add_country_modifier = {
+					name = lha_adopt_the_mandala_system_enhanced
+					duration = -1
+				}
+			}
+			add_adm_power = 100
+			cambodia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			angkor_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			mekong_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_malaya_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			malacca_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			malaya_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			johor_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -2496,6 +2681,120 @@ lha_slot_5 = {
 			set_country_flag = ned_artist_is_architect_flag
 			add_prestige_or_monarch_power = {
 				amount = 20
+			}
+		}
+	}
+	lha_skin_the_naga = {
+		icon = gfx_lha_skin_the_naga
+		position = 9
+		required_missions = {
+			lha_skewer_the_peacock
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_laos_area
+				area = vientiane_area
+				area = champasak_area
+				area = khorat_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			north_laos_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vientiane_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			champasak_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khorat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_lao_mountain_warfare
+				duration = -1
+			}
+			north_laos_area = {
+				type = random
+				add_province_modifier = {
+					name = lha_mekong_river_trade_outposts
+					duration = -1
+				}
+			}
+			vientiane_area = {
+				type = random
+				add_province_modifier = {
+					name = lha_mekong_river_trade_outposts
+					duration = -1
+				}
+			}
+			champasak_area = {
+				type = random
+				add_province_modifier = {
+					name = lha_mekong_river_trade_outposts
+					duration = -1
+				}
+			}
+			khorat_area = {
+				type = random
+				add_province_modifier = {
+					name = lha_mekong_river_trade_outposts
+					duration = -1
+				}
+			}
+			red_river_delta_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			vietnam_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			champa_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			tay_nguyen_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
