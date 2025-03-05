@@ -89,3 +89,26 @@ lha_upgrade_idea_set = {
 		custom_tooltip = lha_upgrade_idea_set_tooltip_max
 	}
 }
+
+lha_rule_indochina_upgrade_effect ={
+	random_owned_province = {
+		limit = {
+			OR = {
+				region = indo_china_region
+				region = burma_region
+				area = north_tenasserim_area
+				area = tenasserim_area
+			}
+			has_production_building_trigger = yes
+			NOT = {
+				has_province_flag = lha_rule_indochina_upgraded
+			}
+		}
+		set_province_flag = lha_rule_indochina_upgraded
+		add_province_modifier = {
+			name = lha_indochinese_economic_expansion
+			duration = -1
+		}
+		add_or_upgrade_production_building = yes
+	}
+}

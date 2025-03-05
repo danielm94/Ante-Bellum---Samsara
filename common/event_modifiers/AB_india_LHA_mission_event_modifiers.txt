@@ -303,3 +303,9 @@ lha_ricebasket_of_indochina = {
 	trade_goods_size = 1
 	local_development_cost_modifier = -0.1
 }
+
+lha_indochinese_economic_expansion = {
+	province_trade_power_modifier = 0.5
+	local_production_efficiency = 0.25
+	trade_goods_size = 0.25
+}

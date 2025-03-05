@@ -166,4 +166,8 @@ spriteTypes = {
 		name = "gfx_lha_tame_the_buffalo"
 		texturefile = "gfx/interface/missions/LHA/lha_tame_the_buffalo.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_rule_indochina"
+		texturefile = "gfx/interface/missions/LHA/lha_rule_indochina.dds"
+	}
 }
