@@ -272,7 +272,34 @@ lha_lao_mountain_warfare = {
 	infantry_power = 0.05
 }
 
-lha_mekong_river_trade_outposts ={
+lha_mekong_river_trade_outposts = {
 	province_trade_power_modifier = 0.5
 	province_trade_power_value = 2.5
+}
+
+lha_khmer_hydrolic_engineering = {
+	local_development_cost = -0.1
+	trade_goods_size_modifier = 0.1
+}
+
+lha_great_works_of_cambodia = {
+	great_project_upgrade_cost = -0.05
+	great_project_upgrade_time = -0.05
+}
+
+lha_restore_angkor_wat = {
+	local_great_project_upgrade_cost = -0.33
+	local_great_project_upgrade_time = -0.33
+}
+
+lha_viet_guerrilla_tactics = {
+	hostile_attrition = 1
+	max_hostile_attrition = 1
+}
+
+lha_ricebasket_of_indochina = {
+	local_manpower_modifier = 1
+	local_production_efficiency = 0.1
+	trade_goods_size = 1
+	local_development_cost_modifier = -0.1
 }

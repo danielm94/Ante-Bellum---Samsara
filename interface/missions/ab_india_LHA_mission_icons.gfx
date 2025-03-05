@@ -158,4 +158,12 @@ spriteTypes = {
 		name = "gfx_lha_skin_the_naga"
 		texturefile = "gfx/interface/missions/LHA/lha_skin_the_naga.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_break_the_kouprey"
+		texturefile = "gfx/interface/missions/LHA/lha_break_the_kouprey.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_tame_the_buffalo"
+		texturefile = "gfx/interface/missions/LHA/lha_tame_the_buffalo.dds"
+	}
 }

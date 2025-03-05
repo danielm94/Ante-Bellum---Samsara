@@ -2160,6 +2160,68 @@ lha_slot_4 = {
 			}
 		}
 	}
+	lha_break_the_kouprey = {
+		icon = gfx_lha_break_the_kouprey
+		position = 10
+		required_missions = {
+			lha_topple_the_elephant
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = angkor_area
+				area = cambodia_area
+				area = mekong_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			angkor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cambodia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mekong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			angkor_area = {
+				add_province_modifier = {
+					name = lha_khmer_hydrolic_engineering
+					duration = -1
+				}
+			}
+			cambodia_area = {
+				add_province_modifier = {
+					name = lha_khmer_hydrolic_engineering
+					duration = -1
+				}
+			}
+			mekong_area = {
+				add_province_modifier = {
+					name = lha_khmer_hydrolic_engineering
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = lha_great_works_of_cambodia
+				duration = -1
+			}
+			609 = {
+				add_province_modifier = {
+					name = lha_restore_angkor_wat
+					duration = -1
+				}
+			}
+		}
+	}
 }
 
 lha_slot_5 = {
@@ -2724,29 +2786,25 @@ lha_slot_5 = {
 				name = lha_lao_mountain_warfare
 				duration = -1
 			}
-			north_laos_area = {
-				type = random
+			615 = {
 				add_province_modifier = {
 					name = lha_mekong_river_trade_outposts
 					duration = -1
 				}
 			}
-			vientiane_area = {
-				type = random
+			2384 = {
 				add_province_modifier = {
 					name = lha_mekong_river_trade_outposts
 					duration = -1
 				}
 			}
-			champasak_area = {
-				type = random
+			4839 = {
 				add_province_modifier = {
 					name = lha_mekong_river_trade_outposts
 					duration = -1
 				}
 			}
-			khorat_area = {
-				type = random
+			4836 = {
 				add_province_modifier = {
 					name = lha_mekong_river_trade_outposts
 					duration = -1
@@ -2795,6 +2853,73 @@ lha_slot_5 = {
 					}
 				}
 				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lha_tame_the_buffalo = {
+		icon = gfx_lha_tame_the_buffalo
+		position = 10
+		required_missions = {
+			lha_skin_the_naga
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+				area = champa_area
+				area = tay_nguyen_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			red_river_delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			champa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tay_nguyen_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_viet_guerrilla_tactics
+				duration = -1
+			}
+
+			custom_tooltip = lha_tame_the_buffalo_ricebasket_tooltip
+			hidden_effect = {
+				red_river_delta_area = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = lha_ricebasket_of_indochina
+						duration = -1
+					}
+				}
+				vietnam_area = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = lha_ricebasket_of_indochina
+						duration = -1
+					}
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
 			}
 		}
 	}
