@@ -182,4 +182,8 @@ spriteTypes = {
 		name = "gfx_lha_buddhist_hegemon"
 		texturefile = "gfx/interface/missions/LHA/lha_buddhist_hegemon.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_on_to_sumatra"
+		texturefile = "gfx/interface/missions/LHA/lha_on_to_sumatra.dds"
+	}
 }
