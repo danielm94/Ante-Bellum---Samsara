@@ -142,4 +142,12 @@ spriteTypes = {
 		name = "gfx_lha_the_dharma_raj"
 		texturefile = "gfx/interface/missions/LHA/lha_the_dharma_raj.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_pacify_kachin"
+		texturefile = "gfx/interface/missions/LHA/lha_pacify_kachin.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_skewer_the_peacock"
+		texturefile = "gfx/interface/missions/LHA/lha_skewer_the_peacock.dds"
+	}
 }

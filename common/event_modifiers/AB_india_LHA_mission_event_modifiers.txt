@@ -247,3 +247,14 @@ lha_ports_of_coromandel = {
 lha_the_charkravartis_triumph_mod = {
 	administrative_efficiency = 0.05
 }
+
+lha_push_into_burma = {
+	ae_impact = -0.1
+	siege_ability = 0.1
+}
+
+lha_adopt_the_mandala_system = {
+	vassal_forcelimit_bonus = 0.75
+	vassal_naval_forcelimit_bonus = 0.75
+	vassal_income = 0.1
+}

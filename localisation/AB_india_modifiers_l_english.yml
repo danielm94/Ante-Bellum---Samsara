@@ -382,3 +382,7 @@
  desc_enlightenment_mechanics_stability:0 "Our country is stable, giving our citizens peace of mind and prosperity."
  enlightenment_mechanics_instability:0 "We Are Unstable"
  desc_enlightenment_mechanics_instability:0 "Our country is unstable, which is causing our citizens to suffer."
+ lha_push_into_burma:0 "Push Into Burma"
+ desc_lha_push_into_burma:0 "Now that we have established a base of operations in Burma, we must now push forward and conquer the rest of it!"
+ lha_adopt_the_mandala_system:0 "Adopt the Mandala System"
+ desc_lha_adopt_the_mandala_system:0 "Through the conquest of Burma, we have come to understand the strength of the Mandala System, where power flows outward in concentric circles of loyalty and obligation. By integrating its principles into our rule, we can better manage our tributaries and vassals, ensuring their loyalty while maximizing their contributions to our great endeavor."

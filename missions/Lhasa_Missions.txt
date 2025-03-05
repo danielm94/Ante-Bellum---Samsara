@@ -518,7 +518,9 @@ lha_slot_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
 			add_country_modifier = {
 				name = lha_subdue_the_unorthodox
 				duration = 5475
@@ -1685,7 +1687,9 @@ lha_slot_4 = {
 				}
 				custom_tooltip = lha_take_refuge_under_yuan_tooltip_emperor_exists_no
 				hidden_effect = {
-					add_prestige = 10
+					add_prestige_or_monarch_power = {
+						amount = 10
+					}
 				}
 			}
 			else = {
@@ -1738,7 +1742,9 @@ lha_slot_4 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
 			add_country_modifier = {
 				name = lha_faithful_united
 				duration = 5475
@@ -1852,6 +1858,111 @@ lha_slot_4 = {
 				add_permanent_claim = ROOT
 			}
 			guangdong_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lha_pacify_kachin = {
+		icon = gfx_lha_pacify_kachin
+		position = 7
+		required_missions = {
+			lha_break_nepal
+		}
+		provinces_to_highlight = {
+			area = kachin_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kachin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_push_into_burma
+				duration = 3650
+			}
+			burma_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lha_skewer_the_peacock = {
+		icon = gfx_lha_skewer_the_peacock
+		position = 8
+		required_missions = {
+			lha_pacify_kachin
+		}
+		provinces_to_highlight = {
+			region = burma_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			burma_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_adopt_the_mandala_system
+				duration = -1
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sukhothai_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_thai_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_thai_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT
