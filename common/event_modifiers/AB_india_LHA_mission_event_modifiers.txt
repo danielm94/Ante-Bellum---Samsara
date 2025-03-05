@@ -310,3 +310,16 @@ lha_stewards_of_the_buddhist_world = {
 	prestige = 1
 	tolerance_own = 1
 }
+
+lha_victory_over_heresy = {
+	global_heretic_missionary_strength = 0.02
+	yearly_karma_decay = 0.2
+	tolerance_own = 1
+}
+
+lha_buddhist_hegemon_mod = {
+	cb_on_religious_enemies = yes
+	missionaries = 1
+	global_missionary_strength = 0.02
+	tolerance_own = 2
+}

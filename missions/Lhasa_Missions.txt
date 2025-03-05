@@ -1628,6 +1628,45 @@ lha_slot_3_continued = {
 			set_karma = 0
 		}
 	}
+	lha_buddhist_hegemon = {
+		icon = gfx_lha_buddhist_hegemon
+		position = 13
+		required_missions = {
+			lha_the_dharma_raj
+			lha_illuminate_indochina
+		}
+		trigger = {
+			india_superregion = {
+				type = all
+				religion = vajrayana
+			}
+			indo_china_region = {
+				type = all
+				religion = vajrayana
+			}
+			burma_region = {
+				type = all
+				religion = vajrayana
+			}
+			north_tenasserim_area = {
+				type = all
+				religion = vajrayana
+			}
+			tenasserim_area = {
+				type = all
+				religion = vajrayana
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_buddhist_hegemon_mod
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 100
+			}
+		}
+	}
 }
 
 lha_slot_4 = {
@@ -2220,6 +2259,62 @@ lha_slot_4 = {
 				name = lha_stewards_of_the_buddhist_world
 				duration = 7300
 			}
+		}
+	}
+	lha_illuminate_indochina = {
+		icon = gfx_lha_illuminate_indochina
+		position = 12
+		required_missions = {
+			lha_rule_indochina
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = indo_china_region
+				region = burma_region
+				area = north_tenasserim_area
+				area = tenasserim_area
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = vajrayana
+				}
+			}
+		}
+		trigger = {
+			indo_china_region = {
+				type = all
+				religion = vajrayana
+			}
+			burma_region = {
+				type = all
+				religion = vajrayana
+			}
+			north_tenasserim_area = {
+				type = all
+				religion = vajrayana
+			}
+			tenasserim_area = {
+				type = all
+				religion = vajrayana
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					mission_completed = lha_illuminate_indochina
+				}
+				custom_tooltip = lha_your_ideas_have_been_upgraded_tooltip
+			}
+			else = {
+				lha_upgrade_idea_set = yes
+			}
+			add_country_modifier = {
+				name = lha_victory_over_heresy
+				duration = -1
+			}
+			add_devotion = 20
+			set_karma = 0
 		}
 	}
 }
