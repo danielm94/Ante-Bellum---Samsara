@@ -35,3 +35,8 @@ lha_united_against_the_nepalese = {
 	opinion = 45
 	yearly_decay = 3
 }
+
+lha_converted_religious_monuments = {
+	opinion = -50
+	yearly_decay = 1.0
+}

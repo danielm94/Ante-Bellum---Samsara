@@ -1,0 +1,7 @@
+is_islamic = {
+	OR = {
+		religion = ibadi
+		religion = sunni
+		religion = shiite
+	}
+}

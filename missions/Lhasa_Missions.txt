@@ -1592,10 +1592,10 @@ lha_slot_3_continued = {
 		provinces_to_highlight = {
 			superregion = india_superregion
 			NOT = {
-				religion = vajrayana
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = vajrayana
+				}
 			}
 		}
 		trigger = {
@@ -2317,6 +2317,124 @@ lha_slot_4 = {
 			set_karma = 0
 		}
 	}
+	lha_secure_borneo = {
+		icon = mission_mnd_maj_rein_in_brunei
+		position = 13
+		required_missions = {
+			lha_conquer_malacca
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kalimantan_area
+				area = brunei_area
+				area = sabah_area
+				area = kutai_area
+				area = banjar_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 20
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						area = kalimantan_area
+						area = brunei_area
+						area = sabah_area
+						area = kutai_area
+						area = banjar_area
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = lha_on_secure_borneo_spice_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						AND = {
+							OR = {
+								area = kalimantan_area
+								area = brunei_area
+								area = sabah_area
+								area = kutai_area
+								area = banjar_area
+							}
+							trade_goods = spices
+						}
+					}
+					add_province_modifier = {
+						name = lha_develop_the_spice_plantations
+						duration = 10950
+					}
+				}
+			}
+			add_mercantilism = 4
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			banten_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_java_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_java_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			surabaya_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_java_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	
 }
 
 lha_slot_5 = {
@@ -3244,7 +3362,7 @@ lha_slot_5 = {
 	}
 	lha_on_to_sumatra = {
 		icon = gfx_lha_on_to_sumatra
-		position = 12
+		position = 13
 		required_missions = {
 			lha_conquer_malacca
 		}
@@ -3296,7 +3414,7 @@ lha_slot_5 = {
 					}
 					add_province_modifier = {
 						name = lha_develop_the_spice_plantations
-						duration = 18250
+						duration = 10950
 					}
 				}
 			}
@@ -3306,6 +3424,64 @@ lha_slot_5 = {
 			}
 			add_prestige_or_monarch_power = {
 				amount = 10
+			}
+		}
+	}
+	lha_convert_the_mosque = {
+		icon = gfx_lha_convert_the_mosque
+		position = 14
+		required_missions = {
+			lha_on_to_sumatra
+		}
+		provinces_to_highlight = {
+			province_id = 617
+		}
+		trigger = {
+			617 = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					religion = vajrayana
+				}
+			}
+			religion = vajrayana
+			treasury = 1500
+		}
+		effect = {
+			add_treasury = -1500
+			custom_tooltip = lha_convert_the_mosque_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_islamic = yes
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = lha_converted_religious_monuments
+					}
+				}
+				destroy_great_project = {
+					type = baiturrahman_grand_mosque
+				}
+				617 = {
+					set_province_flag = converted_baiturrahman_grand_mosque
+					add_great_project = {
+						type = rahmana_vihara
+						instant = no
+					}
+				}
+				spawn_islamic_rebels_in_location_type = {
+					location_type = superregion
+					super_region = east_indies_superregion
+				}
+			}
+			add_devotion = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 15
 			}
 		}
 	}

@@ -186,4 +186,8 @@ spriteTypes = {
 		name = "gfx_lha_on_to_sumatra"
 		texturefile = "gfx/interface/missions/LHA/lha_on_to_sumatra.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_convert_the_mosque"
+		texturefile = "gfx/interface/missions/LHA/lha_convert_the_mosque.dds"
+	}
 }
