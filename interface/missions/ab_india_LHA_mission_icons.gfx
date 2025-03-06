@@ -190,4 +190,9 @@ spriteTypes = {
 		name = "gfx_lha_convert_the_mosque"
 		texturefile = "gfx/interface/missions/LHA/lha_convert_the_mosque.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_dominate_malaccan_trade"
+		texturefile = "gfx/interface/missions/LHA/lha_dominate_malaccan_trade.dds"
+	}
+
 }

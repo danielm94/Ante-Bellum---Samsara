@@ -5,3 +5,73 @@ is_islamic = {
 		religion = shiite
 	}
 }
+
+# All the provinces except the uncolonized ones at the start of the game
+owned_inhabited_provinces_of_sumatra = {
+	custom_trigger_tooltip = {
+		tooltip = owned_inhabited_provinces_of_sumatra_tooltip
+		south_sumatra_area = {
+			type = all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		jambi_area = {
+			country_or_non_sovereign_subject_holds = ROOT
+			type = all
+		}
+		central_sumatra_area = {
+			country_or_non_sovereign_subject_holds = ROOT
+			type = all
+		}
+		north_sumatra_area = {
+			country_or_non_sovereign_subject_holds = ROOT
+			type = all
+		}
+		batak_area = {
+			type= all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		minangkabau_area = {
+			type= all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+	}
+}
+
+# All the provinces except the uncolonized ones at the start of the game
+owned_inhabited_provinces_of_borneo = {
+	custom_trigger_tooltip = {
+		tooltip = owned_inhabited_provinces_of_borneo_tooltip
+		kalimantan_area = {
+			type = all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		brunei_area = {
+			type = all
+		}
+		sabah_area = {
+			type = all
+		}
+		kutai_area = {
+			type = all
+		}
+		banjar_area = {
+			type = all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+	}
+}

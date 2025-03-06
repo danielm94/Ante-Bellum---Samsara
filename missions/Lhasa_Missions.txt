@@ -2336,19 +2336,7 @@ lha_slot_4 = {
 			}
 		}
 		trigger = {
-			calc_true_if = {
-				amount = 20
-				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
-					OR = {
-						area = kalimantan_area
-						area = brunei_area
-						area = sabah_area
-						area = kutai_area
-						area = banjar_area
-					}
-				}
-			}
+			owned_inhabited_provinces_of_borneo = yes
 		}
 		effect = {
 			custom_tooltip = lha_on_secure_borneo_spice_tooltip
@@ -2376,60 +2364,111 @@ lha_slot_4 = {
 			add_prestige_or_monarch_power = {
 				amount = 10
 			}
-			banten_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
+		}
+	}
+	lha_dominate_malaccan_trade = {
+		icon = gfx_lha_dominate_malaccan_trade
+		position = 14
+		required_missions = {
+			lha_on_to_sumatra
+			lha_secure_borneo
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kalimantan_area
+				area = brunei_area
+				area = sabah_area
+				area = kutai_area
+				area = banjar_area
+				area = south_sumatra_area
+				area = jambi_area
+				area = central_sumatra_area
+				area = north_sumatra_area
+				area = batak_area
+				area = minangkabau_area
+				area = north_malaya_area
+				area = malacca_area
+				area = malaya_area
+				area = johor_area
 			}
-			west_java_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			central_java_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
+		}
+		trigger = {
+			owned_inhabited_provinces_of_borneo = yes
+			owned_inhabited_provinces_of_sumatra = yes
+			north_malaya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			surabaya_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
+			malacca_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			east_java_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
+			malaya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			johor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = lha_dominate_malaccan_trade_perm_mod_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						superregion = east_indies_superregion
 					}
-					NOT = {
-						owned_by = ROOT
+					if = {
+						limit = {
+							AND = {
+								has_province_modifier = lha_develop_the_spice_plantations
+								development = 15
+							}
+						}
+						remove_province_modifier = lha_develop_the_spice_plantations
+						add_province_modifier = {
+							name = lha_develop_the_spice_plantations
+							duration = -1
+						}
 					}
 				}
-				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = lha_dominating_malaccan_trade
+				duration = -1
+			}
+			add_mercantilism = 2
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			custom_tooltip = lha_dominate_malaccan_trade_claims_tooltip
+			hidden_effect = {
+				indonesia_region = {
+					limit = {
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				moluccas_region = {
+					limit = {
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -3380,20 +3419,7 @@ lha_slot_5 = {
 			}
 		}
 		trigger = {
-			calc_true_if = {
-				amount = 22
-				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
-					OR = {
-						area = south_sumatra_area
-						area = jambi_area
-						area = central_sumatra_area
-						area = north_sumatra_area
-						area = batak_area
-						area = minangkabau_area
-					}
-				}
-			}
+			owned_inhabited_provinces_of_sumatra = yes
 		}
 		effect = {
 			custom_tooltip = lha_on_to_sumatra_spice_tooltip

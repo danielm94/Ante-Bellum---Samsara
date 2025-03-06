@@ -336,3 +336,9 @@ lha_develop_the_spice_plantations = {
 	local_build_cost = -0.1
 	local_production_efficiency = 0.1
 }
+
+lha_dominating_malaccan_trade = {
+	trade_steering = 0.1
+	global_own_trade_power = 0.1
+	trade_company_investment_cost = -0.05
+}
