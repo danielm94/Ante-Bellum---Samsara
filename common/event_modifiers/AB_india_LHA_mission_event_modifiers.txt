@@ -342,3 +342,15 @@ lha_dominating_malaccan_trade = {
 	global_own_trade_power = 0.1
 	trade_company_investment_cost = -0.05
 }
+
+lha_introduce_clove_cultivation_cooldown = {
+	#Just used a cooldown, not meant to have any effects...
+}
+
+
+lha_efficient_spice_plantations = {
+	local_development_cost_modifier = -0.1
+	local_build_cost = -0.1
+	local_production_efficiency = 0.1
+	trade_goods_size_modifier = 0.1
+}

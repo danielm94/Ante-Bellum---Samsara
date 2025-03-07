@@ -909,6 +909,65 @@ lha_slot_2 = {
 			}
 		}
 	}
+	lha_besakih_vihara = {
+		icon = gfx_lha_besakih_vihara
+		position = 15
+		required_missions = {
+			lha_dominate_malaccan_trade
+		}
+		provinces_to_highlight = {
+			province_id = 2690
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			631 = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = vajrayana
+				}
+			}
+			treasury = 1500
+		}
+		effect = {
+			add_treasury = -1500
+			custom_tooltip = lha_besakih_vihara_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_dharmic = yes
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = lha_converted_religious_monuments
+					}
+				}
+				destroy_great_project = {
+					type = pura_besakih
+				}
+				631 = {
+					set_province_flag = converted_pura_besakih
+					add_great_project = {
+						type = pura_besakih_converted
+						instant = no
+					}
+				}
+				spawn_dharmic_rebels_in_location_type = {
+					location_type = superregion
+					location = east_indies_superregion
+				}
+			}
+			add_devotion = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 15
+			}
+		}
+	}
 }
 
 lha_slot_3 = {
@@ -1667,6 +1726,101 @@ lha_slot_3_continued = {
 			}
 		}
 	}
+	lha_cross_the_sulu_sea = {
+		icon = gfx_lha_cross_the_sulu_sea
+		position = 15
+		required_missions = {
+			lha_dominate_malaccan_trade
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = west_mindanao_area
+					area = mindanao_area
+					area = visayas_area
+					area = palawan_area
+					area = southern_luzon_area
+					area = luzon_area
+				}
+				is_empty = no
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_mindanao_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			mindanao_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			visayas_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			palawan_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			southern_luzon_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+			luzon_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = lha_cross_the_sulu_sea_privilege_tooltip
+			custom_tooltip = lha_cross_the_sulu_sea_colony_reward_tooltip
+			custom_tooltip = lha_cross_the_sulu_sea_spicy_reward_tooltip
+			hidden_effect = {
+				lha_cross_the_sulu_sea_reward = yes
+				every_province = {
+					limit = {
+						OR = {
+							area = west_mindanao_area
+							area = mindanao_area
+							area = visayas_area
+							area = palawan_area
+							area = southern_luzon_area
+							area = luzon_area
+						}
+						OR = {
+							trade_goods = spices
+							trade_goods = cloves
+						}
+					}
+					add_province_modifier = {
+						name = lha_efficient_spice_plantations
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 }
 
 lha_slot_4 = {
@@ -2336,7 +2490,7 @@ lha_slot_4 = {
 			}
 		}
 		trigger = {
-			owned_inhabited_provinces_of_borneo = yes
+			owns_inhabited_provinces_of_borneo = yes
 		}
 		effect = {
 			custom_tooltip = lha_on_secure_borneo_spice_tooltip
@@ -2396,8 +2550,8 @@ lha_slot_4 = {
 			}
 		}
 		trigger = {
-			owned_inhabited_provinces_of_borneo = yes
-			owned_inhabited_provinces_of_sumatra = yes
+			owns_inhabited_provinces_of_borneo = yes
+			owns_inhabited_provinces_of_sumatra = yes
 			north_malaya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2472,8 +2626,65 @@ lha_slot_4 = {
 			}
 		}
 	}
-
-	
+	lha_prambanan_vihara = {
+		icon = gfx_lha_prambanan_vihara
+		position = 15
+		required_missions = {
+			lha_dominate_malaccan_trade
+		}
+		provinces_to_highlight = {
+			province_id = 2690
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			2690 = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = vajrayana
+				}
+			}
+			treasury = 1500
+		}
+		effect = {
+			add_treasury = -1500
+			custom_tooltip = lha_prambanan_vihara_tooltip
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_dharmic = yes
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = lha_converted_religious_monuments
+					}
+				}
+				destroy_great_project = {
+					type = prambanan_temple
+				}
+				2690 = {
+					set_province_flag = converted_prambanan_temple
+					add_great_project = {
+						type = prambanan_temple_converted
+						instant = no
+					}
+				}
+				spawn_dharmic_rebels_in_location_type = {
+					location_type = superregion
+					location = east_indies_superregion
+				}
+			}
+			add_devotion = 10
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 15
+			}
+		}
+	}
 }
 
 lha_slot_5 = {
@@ -3419,7 +3630,7 @@ lha_slot_5 = {
 			}
 		}
 		trigger = {
-			owned_inhabited_provinces_of_sumatra = yes
+			owns_inhabited_provinces_of_sumatra = yes
 		}
 		effect = {
 			custom_tooltip = lha_on_to_sumatra_spice_tooltip
@@ -3498,7 +3709,7 @@ lha_slot_5 = {
 				}
 				spawn_islamic_rebels_in_location_type = {
 					location_type = superregion
-					super_region = east_indies_superregion
+					location = east_indies_superregion
 				}
 			}
 			add_devotion = 10
@@ -3508,6 +3719,97 @@ lha_slot_5 = {
 			add_estate_loyalty = {
 				estate = estate_church
 				loyalty = 15
+			}
+		}
+	}
+	lha_moluccan_trade = {
+		icon = gfx_lha_moluccan_trade
+		position = 15
+		required_missions = {
+			lha_dominate_malaccan_trade
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = banten_area
+				area = west_java_area
+				area = central_java_area
+				area = surabaya_area
+				area = east_java_area
+				area = lesser_sunda_islands_area
+				area = timor_area
+				area = makassar_area
+				area = sulawesi_area
+				area = south_sulawesi_area
+				area = molluca_area
+				area = spice_islands_area
+				area = vogelkop_area
+				area = papua_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns_inhabited_provinces_of_moluccan_trade_node = yes
+		}
+		effect = {
+			custom_tooltip = lha_moluccan_trade_decision_tooltip
+			if = {
+				limit = {
+					molluca_area = {
+						type = all
+						AND = {
+							is_empty = no
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					spice_islands_area = {
+						type = all
+						AND = {
+							is_empty = no
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				custom_tooltip = lha_moluccan_trade_cloves_bonus_yes
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = molluca_area
+								area = spice_islands_area
+							}
+						}
+						change_trade_goods = cloves
+					}
+				}
+			}
+			else = {
+				custom_tooltip = lha_moluccan_trade_cloves_bonus_no
+			}
+			custom_tooltip = lha_moluccan_trade_dev_bonus
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						same_trade_node_as = 1357
+						OR = {
+							trade_goods = spices
+							trade_goods = cloves
+						}
+						development = 12
+					}
+					add_province_modifier = {
+						name = lha_efficient_spice_plantations
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = lha_1yr_trade_income_tooltip
+			add_years_of_trade_income = {
+				years = 1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
 			}
 		}
 	}

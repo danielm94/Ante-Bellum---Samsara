@@ -1,3 +1,6 @@
 ﻿l_english:
- owned_inhabited_provinces_of_sumatra_tooltip:0 "All provinces, ignoring the uncolonized ones, on the island of Sumatra are owned by or our non tributary subjects."
- owned_inhabited_provinces_of_borneo_tooltip:0 "All provinces, ignoring the uncolonized ones, on the island of Borneo are owned by or our non tributary subjects."
+ owns_inhabited_provinces_of_sumatra_tooltip:0 "All provinces, ignoring the uncolonized ones, on the island of Sumatra are owned by or our non tributary subjects."
+ owns_inhabited_provinces_of_borneo_tooltip:0 "All provinces, ignoring the uncolonized ones, on the island of Borneo are owned by or our non tributary subjects."
+ owns_inhabited_provinces_of_moluccan_trade_node_tooltip:0 "All provinces, ignoring the uncolonized ones, in the Moluccan trade node are owned by you or your non tributary subjects."
+ is_islamic:0 "The province or country is Islamic."
+ is_dharmic:0 "The province or country is of a Dharmic religion."

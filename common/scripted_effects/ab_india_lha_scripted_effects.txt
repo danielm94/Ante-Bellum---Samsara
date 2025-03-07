@@ -90,7 +90,7 @@ lha_upgrade_idea_set = {
 	}
 }
 
-lha_rule_indochina_upgrade_effect ={
+lha_rule_indochina_upgrade_effect = {
 	random_owned_province = {
 		limit = {
 			OR = {
@@ -110,5 +110,45 @@ lha_rule_indochina_upgrade_effect ={
 			duration = -1
 		}
 		add_or_upgrade_production_building = yes
+	}
+}
+
+lha_cross_the_sulu_sea_reward = {
+	every_province = {
+		limit = {
+			OR = {
+				area = west_mindanao_area
+				area = mindanao_area
+				area = visayas_area
+				area = palawan_area
+				area = southern_luzon_area
+				area = luzon_area
+			}
+			is_empty = yes
+		}
+		random_variable = {
+			which = rand_var
+			value = 20
+		}
+		add_siberian_construction = 0
+		change_religion = ROOT
+		if = {
+			limit = {
+				check_variable = {
+					which = rand_var
+					value = 0
+				}
+				NOT = {
+					check_variable = {
+						which = rand_var
+						value = 1
+					}
+				}
+			}
+			change_trade_goods = cloves
+		}
+		else = {
+			change_trade_goods = spices
+		}
 	}
 }

@@ -194,5 +194,21 @@ spriteTypes = {
 		name = "gfx_lha_dominate_malaccan_trade"
 		texturefile = "gfx/interface/missions/LHA/lha_dominate_malaccan_trade.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_besakih_vihara"
+		texturefile = "gfx/interface/missions/LHA/lha_besakih_vihara.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_prambanan_vihara"
+		texturefile = "gfx/interface/missions/LHA/lha_prambanan_vihara.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_moluccan_trade"
+		texturefile = "gfx/interface/missions/LHA/lha_moluccan_trade.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_cross_the_sulu_sea"
+		texturefile = "gfx/interface/missions/LHA/lha_cross_the_sulu_sea.dds"
+	}
 
 }
