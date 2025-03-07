@@ -210,5 +210,9 @@ spriteTypes = {
 		name = "gfx_lha_cross_the_sulu_sea"
 		texturefile = "gfx/interface/missions/LHA/lha_cross_the_sulu_sea.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_unify_nusantara"
+		texturefile = "gfx/interface/missions/LHA/lha_unify_nusantara.dds"
+	}
 
 }

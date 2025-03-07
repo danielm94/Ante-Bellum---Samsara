@@ -347,10 +347,23 @@ lha_introduce_clove_cultivation_cooldown = {
 	#Just used a cooldown, not meant to have any effects...
 }
 
-
 lha_efficient_spice_plantations = {
 	local_development_cost_modifier = -0.1
 	local_build_cost = -0.1
 	local_production_efficiency = 0.1
 	trade_goods_size_modifier = 0.1
+}
+
+lha_nusantara_trade_dominance = {
+	trade_company_governing_cost = -0.1
+	ship_power_propagation = 0.2
+	naval_tradition_from_trade = 0.5
+}
+
+lha_temp_cultures_boost_hill_clans = {
+	num_accepted_cultures = 3
+}
+
+lha_temp_cultures_boost_khmer = {
+	num_accepted_cultures = 1
 }

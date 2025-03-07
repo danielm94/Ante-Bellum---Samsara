@@ -439,8 +439,6 @@ lha_slot_1 = {
 			}
 		}
 		effect = {
-			custom_tooltip = lha_consolidate_gujarat_propgate_tooltip
-			set_country_flag = can_use_propagate_religion
 			custom_tooltip = lha_consolidate_gujarat_upgrade_tooltip
 			hidden_effect = {
 				for = {
@@ -711,6 +709,14 @@ lha_slot_2 = {
 				}
 				custom_tooltip = lha_unite_the_hill_clans_tooltip_yes
 				hidden_effect = {
+					#This is so if the user doesn't have 3 available accepted culture slots,
+					#they will still gain these accepted cultures. After the next month tic,
+					#they will gain the triggered modifier, and this will expire.
+					add_country_modifier = {
+						name = lha_temp_cultures_boost_hill_clans
+						duration = 32
+						hidden = yes
+					}
 					add_accepted_culture_or_dip_power = {
 						culture = nepali
 						dip_reward = yes
@@ -2404,6 +2410,14 @@ lha_slot_4 = {
 			custom_tooltip = lha_restore_angkor_wat_khmer_culture_tooltip
 			hidden_effect = {
 				set_country_flag = lha_gratitude_of_the_khmer_enabled
+				#This is so if the user doesn't have 1 available accepted culture slot,
+				#they will still gain this accepted cultures. After the next month tic,
+				#they will gain the triggered modifier, and this will expire.
+				add_country_modifier = {
+					name = lha_temp_cultures_boost_khmer
+					duration = 32
+					hidden = yes
+				}
 				add_accepted_culture_or_dip_power = {
 					culture = khmer
 					dip_reward = yes
@@ -2682,6 +2696,110 @@ lha_slot_4 = {
 			add_estate_loyalty = {
 				estate = estate_church
 				loyalty = 15
+			}
+		}
+	}
+	lha_unify_nusantara = {
+		icon = gfx_lha_unify_nusantara
+		position = 16
+		required_missions = {
+			lha_moluccan_trade
+			lha_cross_the_sulu_sea
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+			AND = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					is_empty = yes
+				}
+				NOT = {
+					area = indian_ocean_islands_area					# Paradox geography lmao
+				}
+			}
+		}
+		trigger = {
+			malaya_region = {
+				type = all
+				OR = {
+					is_empty = yes
+					country_or_non_sovereign_subject_holds = ROOT
+					area = indian_ocean_islands_area					# Paradox geography lmao
+				}
+			}
+			indonesia_region = {
+				type = all
+				OR = {
+					is_empty = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			moluccas_region = {
+				type = all
+				OR = {
+					is_empty = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_nusantara_trade_dominance
+				duration = -1
+			}
+			custom_tooltip = lha_1yr_trade_income_tooltip
+			add_years_of_trade_income = {
+				years = 1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+			add_mercantilism = 5
+			if = {
+				limit = {
+					malaya_region = {
+						type = all
+						OR = {
+							AND = {
+								country_or_non_sovereign_subject_holds = ROOT
+								religion = ROOT
+							}
+							is_empty = yes
+							area = indian_ocean_islands_area							# paradox geography lmao
+						}
+					}
+					indonesia_region = {
+						type = all
+						OR = {
+							AND = {
+								country_or_non_sovereign_subject_holds = ROOT
+								religion = ROOT
+							}
+							is_empty = yes
+						}
+					}
+					moluccas_region = {
+						type = all
+						OR = {
+							AND = {
+								country_or_non_sovereign_subject_holds = ROOT
+								religion = ROOT
+							}
+							is_empty = yes
+						}
+					}
+				}
+				custom_tooltip = lha_unify_nusantara_propagate_reward_tooltip_yes
+				set_country_flag = can_use_propagate_religion
+			}
+			else = {
+				custom_tooltip = lha_unify_nusantara_propagate_reward_tooltip_no
 			}
 		}
 	}

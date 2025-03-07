@@ -1,5 +1,5 @@
 ﻿l_english:
  lha_spread_cloves_title:0 "Introduce Clove Cultivation"
- lha_spread_cloves_desc:0 "A random §YSpice§! producing province will have its trade good replaced with §YCloves§!.\nThis will §Rpermanently§! decrease the price of §YCloves§! by §R-1.5%§!.\nWe can only take this decision every §Y7 years§!."
+ lha_spread_cloves_desc:0 "A random §YSpice§! producing province will have its trade good replaced with §YCloves§!.\nThis will §Rpermanently§! decrease the price of §YCloves§! by §R-1.0%§!.\nWe can only take this decision every §Y7 years§!."
  lha_spread_cloves_key:0 "Global Supply Increase"
  lha_spread_cloves_cooldown_tooltip:0 "It has been at least §Y7 years§! since we have last taken this decision."
