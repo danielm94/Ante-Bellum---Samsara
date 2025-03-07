@@ -1,7 +1,7 @@
 spawn_islamic_rebels_in_location_type = {
 	every_owned_province = {
 		limit = {
-			$location_type$ = $super_region$
+			$location_type$ = $location$
 		}
 		if = {
 			limit = {
@@ -27,7 +27,7 @@ spawn_islamic_rebels_in_location_type = {
 spawn_dharmic_rebels_in_location_type = {
 	every_owned_province = {
 		limit = {
-			$location_type$ = $super_region$
+			$location_type$ = $location$
 		}
 		if = {
 			limit = {
