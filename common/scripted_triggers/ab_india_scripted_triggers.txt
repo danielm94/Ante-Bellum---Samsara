@@ -6,10 +6,17 @@ is_islamic = {
 	}
 }
 
+is_dharmic = {
+	OR = {
+		religion = hinduism
+		religion = sikhism
+		religion = zunist
+	}
+}
 # All the provinces except the uncolonized ones at the start of the game
-owned_inhabited_provinces_of_sumatra = {
+owns_inhabited_provinces_of_sumatra = {
 	custom_trigger_tooltip = {
-		tooltip = owned_inhabited_provinces_of_sumatra_tooltip
+		tooltip = owns_inhabited_provinces_of_sumatra_tooltip
 		south_sumatra_area = {
 			type = all
 			OR = {
@@ -30,14 +37,14 @@ owned_inhabited_provinces_of_sumatra = {
 			type = all
 		}
 		batak_area = {
-			type= all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		minangkabau_area = {
-			type= all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
@@ -47,9 +54,9 @@ owned_inhabited_provinces_of_sumatra = {
 }
 
 # All the provinces except the uncolonized ones at the start of the game
-owned_inhabited_provinces_of_borneo = {
+owns_inhabited_provinces_of_borneo = {
 	custom_trigger_tooltip = {
-		tooltip = owned_inhabited_provinces_of_borneo_tooltip
+		tooltip = owns_inhabited_provinces_of_borneo_tooltip
 		kalimantan_area = {
 			type = all
 			OR = {
@@ -68,6 +75,92 @@ owned_inhabited_provinces_of_borneo = {
 		}
 		banjar_area = {
 			type = all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+	}
+}
+
+owns_inhabited_provinces_of_moluccan_trade_node = {
+	custom_trigger_tooltip = {
+		tooltip = owns_inhabited_provinces_of_moluccan_trade_node_tooltip
+		banten_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		west_java_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		central_java_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		surabaya_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		east_java_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		lesser_sunda_islands_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		timor_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		makassar_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		sulawesi_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		south_sulawesi_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		molluca_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		spice_islands_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		vogelkop_area = {
+			type=all
+			OR = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_empty = yes
+			}
+		}
+		papua_area = {
+			type=all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
