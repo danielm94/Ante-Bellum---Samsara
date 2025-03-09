@@ -251,15 +251,25 @@ estate_hill_clans_enlist_the_sherpas = {
 				has_terrain = glacier
 			}
 			OR = {
-				culture = tibetan
-				culture_group = northern_aryan
-			}
-			OR = {
-				region = tibet_region
-				area = nepal_area
-				area = baisi_rajya_area
-				area = himalayan_hills_area
-				area = kashmir_area
+				AND = {
+					OR = {
+						culture_group = tibetan_group
+						culture_group = northern_aryan
+					}
+					OR = {
+						region = tibet_region
+						area = nepal_area
+						area = baisi_rajya_area
+						area = himalayan_hills_area
+						area = kashmir_area
+					}
+				}
+				AND = {
+					owner = {
+						has_country_flag = lha_sherpas_in_xinan
+					}
+					region = xinan_region
+				}
 			}
 		}
 	}
@@ -271,15 +281,25 @@ estate_hill_clans_enlist_the_sherpas = {
 			limit = {
 				has_terrain = mountain
 				OR = {
-					culture = tibetan
-					culture_group = northern_aryan
-				}
-				OR = {
-					region = tibet_region
-					area = nepal_area
-					area = baisi_rajya_area
-					area = himalayan_hills_area
-					area = kashmir_area
+					AND = {
+						OR = {
+							culture_group = tibetan_group
+							culture_group = northern_aryan
+						}
+						OR = {
+							region = tibet_region
+							area = nepal_area
+							area = baisi_rajya_area
+							area = himalayan_hills_area
+							area = kashmir_area
+						}
+					}
+					AND = {
+						owner = {
+							has_country_flag = lha_sherpas_in_xinan
+						}
+						region = xinan_region
+					}
 				}
 			}
 			add_province_modifier = {
@@ -291,15 +311,25 @@ estate_hill_clans_enlist_the_sherpas = {
 			limit = {
 				has_terrain = highlands
 				OR = {
-					culture = tibetan
-					culture_group = northern_aryan
-				}
-				OR = {
-					region = tibet_region
-					area = nepal_area
-					area = baisi_rajya_area
-					area = himalayan_hills_area
-					area = kashmir_area
+					AND = {
+						OR = {
+							culture_group = tibetan_group
+							culture_group = northern_aryan
+						}
+						OR = {
+							region = tibet_region
+							area = nepal_area
+							area = baisi_rajya_area
+							area = himalayan_hills_area
+							area = kashmir_area
+						}
+					}
+					AND = {
+						owner = {
+							has_country_flag = lha_sherpas_in_xinan
+						}
+						region = xinan_region
+					}
 				}
 			}
 			add_province_modifier = {
@@ -311,15 +341,25 @@ estate_hill_clans_enlist_the_sherpas = {
 			limit = {
 				has_terrain = glacier
 				OR = {
-					culture = tibetan
-					culture_group = northern_aryan
-				}
-				OR = {
-					region = tibet_region
-					area = nepal_area
-					area = baisi_rajya_area
-					area = himalayan_hills_area
-					area = kashmir_area
+					AND = {
+						OR = {
+							culture_group = tibetan_group
+							culture_group = northern_aryan
+						}
+						OR = {
+							region = tibet_region
+							area = nepal_area
+							area = baisi_rajya_area
+							area = himalayan_hills_area
+							area = kashmir_area
+						}
+					}
+					AND = {
+						owner = {
+							has_country_flag = lha_sherpas_in_xinan
+						}
+						region = xinan_region
+					}
 				}
 			}
 			add_province_modifier = {
@@ -331,15 +371,25 @@ estate_hill_clans_enlist_the_sherpas = {
 			limit = {
 				has_terrain = hills
 				OR = {
-					culture = tibetan
-					culture_group = northern_aryan
-				}
-				OR = {
-					region = tibet_region
-					area = nepal_area
-					area = baisi_rajya_area
-					area = himalayan_hills_area
-					area = kashmir_area
+					AND = {
+						OR = {
+							culture_group = tibetan_group
+							culture_group = northern_aryan
+						}
+						OR = {
+							region = tibet_region
+							area = nepal_area
+							area = baisi_rajya_area
+							area = himalayan_hills_area
+							area = kashmir_area
+						}
+					}
+					AND = {
+						owner = {
+							has_country_flag = lha_sherpas_in_xinan
+						}
+						region = xinan_region
+					}
 				}
 			}
 			add_province_modifier = {
@@ -431,7 +481,7 @@ estate_hill_clans_expand_the_yak_herds = {
 				has_climate = arctic
 			}
 			OR = {
-				culture = tibetan
+				culture_group = tibetan_group
 				culture_group = northern_aryan
 			}
 			OR = {
@@ -456,7 +506,7 @@ estate_hill_clans_expand_the_yak_herds = {
 		if = {
 			limit = {
 				OR = {
-					culture = tibetan
+					culture_group = tibetan_group
 					culture_group = northern_aryan
 				}
 				OR = {

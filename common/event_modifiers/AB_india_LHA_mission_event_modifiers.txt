@@ -393,4 +393,11 @@ lha_consolidate_gains_in_china = {
 	local_unrest = -1
 }
 
-
+lha_fortresses_of_the_mountain_lords = {
+	local_fort_maintenance_modifier = -0.9
+	local_defensiveness = 0.2
+	local_garrison_size = 0.2
+	min_local_autonomy = 30
+	province_trade_power_modifier = 0.5
+	local_unrest = -2
+}

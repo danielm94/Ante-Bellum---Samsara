@@ -3986,65 +3986,83 @@ lha_china_slot_2 = {
 			add_mil_power = 50
 		}
 	}
-		lha_the_heartland_beckons = {
-		icon = gfx_lha_the_heartland_beckons
-		position = 19
+	lha_the_western_marches = {
+		icon = gfx_lha_the_western_marches
+		position = 21
 		required_missions = {
-			lha_secure_canton
+			lha_secure_the_south
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = hunan_area
-				area = jiangxi_area
-				area = huguang_area
-			}
+			region = xinan_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			hunan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			jiangxi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			huguang_area = {
+			xinan_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = lha_granaries_of_hunan
-				duration = 7300
-			}
-			custom_tooltip = lha_the_heartland_beckons_tooltip
+			custom_tooltip = lha_tame_the_western_marches_province_bonus_tooltip
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						OR = {
-							area = hunan_area
-							area = jiangxi_area
-							area = huguang_area
-						}
-						trade_goods = grain
+				2169 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = lha_fortresses_of_the_mountain_lords
+						duration = -1
 					}
-					add_or_upgrade_manpower_building = yes
+				}
+				5090 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = lha_fortresses_of_the_mountain_lords
+						duration = -1
+					}
+				}
+				673 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = lha_fortresses_of_the_mountain_lords
+						duration = -1
+					}
+				}
+				663 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = lha_fortresses_of_the_mountain_lords
+						duration = -1
+					}
+				}
+				661 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = lha_fortresses_of_the_mountain_lords
+						duration = -1
+					}
 				}
 			}
-			define_advisor = {
-				type = recruitmaster
-				age = 30
-				cost_multiplier = 0.5
-				skill = 3
-				culture = xiang
-				religion = confucianism
+			if = {
+				limit = {
+					OR = {
+						num_of_estate_agendas_completed = {
+							estate = estate_hill_clans
+							value = 2
+						}
+						court_ideas = 7
+					}
+				}
+				custom_tooltip = lha_the_western_marches_sherpas_bonus_tooltip_yes
+				set_country_flag = lha_sherpas_in_xinan
 			}
-			add_manpower = 5
-			add_mil_power = 50
+			else = {
+				custom_tooltip = lha_the_western_marches_sherpas_bonus_tooltip_no
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			add_mil_power = 100
 		}
 	}
 }
