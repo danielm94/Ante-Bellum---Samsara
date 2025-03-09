@@ -13,6 +13,7 @@ is_dharmic = {
 		religion = zunist
 	}
 }
+
 # All the provinces except the uncolonized ones at the start of the game
 owns_inhabited_provinces_of_sumatra = {
 	custom_trigger_tooltip = {
@@ -107,14 +108,14 @@ owns_inhabited_provinces_of_moluccan_trade_node = {
 			country_or_non_sovereign_subject_holds = ROOT
 		}
 		lesser_sunda_islands_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		timor_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
@@ -125,46 +126,52 @@ owns_inhabited_provinces_of_moluccan_trade_node = {
 			country_or_non_sovereign_subject_holds = ROOT
 		}
 		sulawesi_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		south_sulawesi_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		molluca_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		spice_islands_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		vogelkop_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
 		papua_area = {
-			type=all
+			type = all
 			OR = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_empty = yes
 			}
 		}
+	}
+}
+
+has_exempt_from_seize_land_for_estate_hill_clans = {
+	OR = {
+		has_estate_privilege = estate_hill_clans_train_gurkha_officers
 	}
 }

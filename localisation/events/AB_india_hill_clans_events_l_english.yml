@@ -5,3 +5,4 @@
  hill_clans_events.1.a:0 "Renew their monopoly for another ten years."
  hill_clans_events.1.b:0 "We shall resume direct control of production."
  hill_clans_events.1.b.tooltip:0 "Cancel the Cashmere Monopoly and regain production income from wool, cloth, and silk in Kashmir. The production bonuses from the monopoly will be lost."
+ estate_privileges_and_agendas_events.7.q:0 "Seize it from the Hill Clans."

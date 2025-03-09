@@ -1638,6 +1638,22 @@ country_event = {
 			factor = 0
 		}
 	}
+	#Seize from hill clans
+	option = {
+		name = estate_privileges_and_agendas_events.7.q
+		trigger = {
+			has_estate = estate_hill_clans
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_hill_clans } }
+			estate_territory = {
+				estate = estate_hill_clans
+				territory = 5
+			}
+		}
+		seize_land_estate_effect = { estate = estate_hill_clans }
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 #Select Grand Vizier from Estate
