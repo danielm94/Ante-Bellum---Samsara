@@ -572,11 +572,13 @@ province_event = {
 		}
 		owner = {
 			OR = {
-				NOT = { has_country_flag = lha_tibetanized_recently }
+				NOT = {
+					has_country_flag = lha_tibetanized_recently
+				}
 				had_country_flag = {
-						flag = lha_tibetanized_recently
-						days = 730
-					}
+					flag = lha_tibetanized_recently
+					days = 730
+				}
 			}
 		}
 		OR = {
@@ -633,7 +635,55 @@ country_event = {
 	}
 	option = {
 		name = ab_india_lha_events.15.a
-
 		set_country_flag = lha_tibetanization_of_china
+	}
+}
+
+country_event = {
+	id = ab_india_lha_events.16
+	title = ab_india_lha_events.16.t
+	desc = ab_india_lha_events.16.d
+	picture = GFX_ab_india_lha_events.16
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = lha_move_capital_event
+	}
+	option = {
+		name = ab_india_lha_events.16.a
+		677 = {
+			add_province_modifier = {
+				name = lha_sacred_seat_of_the_dharma
+				duration = -1
+			}
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		1816 = {
+			add_province_modifier = {
+				name = lha_pecing_winter_palace
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = ab_india_lha_events.16.b
+		set_country_flag = lha_tibetanization_of_china
+		set_capital = 1816
+		1816 = {
+			add_province_modifier = {
+				name = lha_sacred_seat_of_the_middle_kingdom
+				duration = -1
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		677 = {
+			add_province_modifier = {
+				name = lha_lhasa_summer_palace
+				duration = -1
+			}
+		}
 	}
 }

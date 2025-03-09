@@ -4290,6 +4290,56 @@ lha_china_slot_4 = {
 			}
 		}
 	}
+	lha_break_the_yuan = {
+		icon = gfx_lha_break_the_yuan
+		position = 21
+		required_missions = {
+			lha_secure_the_south
+		}
+		provinces_to_highlight = {
+			region = north_china_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			north_china_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1816 = {
+				add_core = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+				change_province_name = "Pecing"
+				rename_capital = "Pecing Grong Khyer"
+				set_province_flag = build_pecing_potala
+				custom_tooltip = lha_break_the_yuan_renovate_forbidden_city_tooltip
+				hidden_effect = {
+					destroy_great_project = {
+						type = forbidden_city
+					}
+					add_great_project = {
+						type = pecing_potala
+						instant = no
+					}
+				}	
+			}
+			add_power_projection = {
+				type = lha_crippled_the_emperor_pp
+				amount = 15
+			}
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			set_country_flag = lha_move_capital_event
+			country_event = {
+				id = ab_india_lha_events.16
+			}
+		}
+	}
 }
 
 lha_china_slot_5 = {

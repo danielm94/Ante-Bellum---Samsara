@@ -131,5 +131,9 @@ spriteTypes = {
 		name = "GFX_great_project_pura_besakih_converted"
 		texturefile = "gfx//interface//great_projects//great_project_pura_besakih_converted.dds"
 	}
+    spriteType = {
+		name = "GFX_great_project_pecing_potala"
+		texturefile = "gfx//interface//great_projects//great_project_pecing_potala.dds"
+	}
 }
 	

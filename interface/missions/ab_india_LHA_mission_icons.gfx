@@ -213,4 +213,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/LHA/lha_the_western_marches.dds"
 	}
 	
+	spriteType = {
+		name = "gfx_lha_break_the_yuan"
+		texturefile = "gfx/interface/missions/LHA/lha_break_the_yuan.dds"
+	}
 }

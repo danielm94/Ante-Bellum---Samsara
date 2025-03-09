@@ -27,3 +27,15 @@ lha_victory_in_the_south_pp = {
 	power = 1
 	yearly_decay = 1
 }
+
+lha_crippled_the_emperor_pp = {
+	min = 15
+	power = 1
+	yearly_decay = 1
+}
+
+lha_crippled_by_gph_pp = {
+	min = -15
+	power = 1
+	yearly_descay = 1
+}

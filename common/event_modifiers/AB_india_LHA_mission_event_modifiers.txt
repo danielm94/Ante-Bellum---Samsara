@@ -401,3 +401,36 @@ lha_fortresses_of_the_mountain_lords = {
 	province_trade_power_modifier = 0.5
 	local_unrest = -2
 }
+
+lha_sacred_seat_of_the_dharma = {
+	church_loyalty_modifier = 0.1
+	missionaries = 1
+	global_missionary_strength = 0.01
+	local_development_cost = -0.2
+	local_build_cost = -0.2
+}
+
+lha_sacred_seat_of_the_middle_kingdom = {
+	#TODO gya_loyalty_modifier = 0.1
+	local_development_cost = -0.2
+	local_build_cost = -0.2
+	statewide_governing_cost = -1
+	advisor_cost = -0.1
+	advisor_pool = 1
+	local_great_project_upgrade_cost = -0.1
+	local_great_project_upgrade_time = -0.1
+}
+
+lha_pecing_winter_palace = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_governing_cost = -0.5
+	statewide_governing_cost = -0.25
+}
+
+lha_lhasa_summer_palace = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_governing_cost = -0.5
+	statewide_governing_cost = -0.25
+}
