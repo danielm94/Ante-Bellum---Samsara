@@ -47,3 +47,6 @@
  ab_india_lha_events.13.d:0 "The Oirats, naturally."
  ab_india_lha_events.13.e:0 "On second though, an alliance with the Oirats is not necessary."
  ab_india_lha_events.13_tooltip:0 "If we maintain our alliance with them, we will receive a §Gunique reward§! if we claim the Mandate of Heaven."
+ ab_india_lha_events.15.t:0 "The Tibetanization of China"
+ ab_india_lha_events.15.d:0 "With the conquest of southern China, our language, faith, and customs have begun to take root, spreading from the peaks of the Himalayas to the fertile plains of the Middle Kingdom. The people, long divided by the chaos of war, now find unity under the Dharma, embracing the wisdom of our rule. Yet, not all are willing to cast aside their old ways—pockets of resistance remain, clinging to traditions that once led them to ruin. It will take time, patience, and the guidance of the sangha to bring true enlightenment to all.\n\n§RChinese culture group provinces in China that follow the Vajrayana faith will begin adopting the Gya culture, reflecting their integration into our sacred order. Likewise, Tai culture group provinces will shift toward Bai culture. Provinces that have been developed 3 times, have ports, have taxation buildings, or have courthouse buildings are more likely to embrace this transformation.§!"
+ ab_india_lha_events.15.a:0 "Wonderful!"

@@ -443,22 +443,7 @@ lha_slot_1 = {
 			hidden_effect = {
 				for = {
 					amount = 6
-					effect = "random_owned_province = {
-				limit = {
-					region = west_india_region
-					has_trade_building_trigger = yes
-					NOT = {
-						has_province_flag = lha_consolidate_gujarat_upgraded
-					}
-				}
-				add_province_modifier = {
-					name = lha_riches_of_gujarat
-					duration = -1
-				}
-				set_province_flag = lha_consolidate_gujarat_upgraded
-	            add_or_upgrade_trade_building = yes
-
-			}"
+					effect = "lha_consolidate_gujarat_reward = yes"
 				}
 			}
 			add_prestige_or_monarch_power = {
@@ -799,7 +784,7 @@ lha_slot_2 = {
 				duration = 5475
 			}
 			add_power_projection = {
-				type = lha_bane_of_the_khan
+				type = lha_bane_of_the_khan_pp
 				amount = 25
 			}
 			hindusthan_region = {
@@ -1195,49 +1180,21 @@ lha_slot_3_continued = {
 			add_prestige_or_monarch_power = {
 				amount = 25
 			}
-			yun_gui_area = {
+			custom_tooltip = lha_ascension_of_the_sacred_one_all_tibetan_provinces_claim_tooltip
+			every_province = {
 				limit = {
 					NOT = {
-						is_core = ROOT
+						AND = {
+							is_core = ROOT
+							owned_by = ROOT
+						}
 					}
-					NOT = {
-						owned_by = ROOT
-					}
+					continent = asia
+					culture_group = tibetan_group
 				}
-				add_permanent_claim = ROOT
-			}
-			yun_gui_borderland_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
+				hidden_effect = {
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			chuannan_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			hunan_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
 			}
 			nepal_area = {
 				limit = {
@@ -1954,63 +1911,42 @@ lha_slot_4 = {
 			lha_ascension_of_the_sacred_one
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = yun_gui_area
-				area = yun_gui_borderland_area
-				area = chuannan_area
-				area = hunan_area
-			}
+			superregion = china_superregion
+			culture_group = tibetan_group
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			yun_gui_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			yun_gui_borderland_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			chuannan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			hunan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = lha_the_lost_bretheren_trigger_tooltip
+				china_superregion = {
+					type = all
+					OR = {
+						NOT = {
+							culture_group = tibetan_group
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
 			custom_tooltip = lha_the_lost_bretheren_unlock_eoc_tooltip
 			set_country_flag = gph_enable_eoc_tree
-			add_prestige_or_monarch_power = {
-				amount = 10
-			}
-			add_power_projection = {
-				type = lha_reclaimed_tibetan_china_pp
-				amount = 10
-			}
 			custom_tooltip = lha_the_lost_bretheren_tooltip
 			if = {
 				limit = {
-					AND = {
-						yun_gui_area = {
-							type = all
-							religion = vajrayana
-						}
-						yun_gui_borderland_area = {
-							type = all
-							religion = vajrayana
-						}
-						chuannan_area = {
-							type = all
-							religion = vajrayana
-						}
-						hunan_area = {
-							type = all
-							religion = vajrayana
+					china_superregion = {
+						type = all
+						OR = {
+							NOT = {
+								culture_group = tibetan_group
+							}
+							AND = {
+								religion = ROOT
+								country_or_non_sovereign_subject_holds = ROOT
+							}
 						}
 					}
 				}
@@ -2030,6 +1966,32 @@ lha_slot_4 = {
 						duration = 7300
 					}
 				}
+			}
+			set_country_flag = lha_china_missions_unlocked
+			hidden_effect = {
+				swap_non_generic_missions = yes
+			}
+			custom_tooltip = lha_the_lost_bretheren_ae_tooltip
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							superregion = china_superregion
+						}
+					}
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -10
+						apply_calc = no
+					}
+				}
+			}
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_power_projection = {
+				type = lha_reclaimed_tibetan_china_pp
+				amount = 10
 			}
 			guangxi_area = {
 				limit = {
@@ -3929,6 +3891,401 @@ lha_slot_5 = {
 			add_prestige_or_monarch_power = {
 				amount = 20
 			}
+		}
+	}
+}
+
+lha_china_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			tag = GPH
+			has_country_flag = lha_china_missions_unlocked
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+}
+
+lha_china_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			tag = GPH
+			has_country_flag = lha_china_missions_unlocked
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	lha_the_heartland_beckons = {
+		icon = gfx_lha_the_heartland_beckons
+		position = 19
+		required_missions = {
+			lha_secure_canton
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hunan_area
+				area = jiangxi_area
+				area = huguang_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hunan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jiangxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			huguang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_granaries_of_hunan
+				duration = 7300
+			}
+			custom_tooltip = lha_the_heartland_beckons_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = hunan_area
+							area = jiangxi_area
+							area = huguang_area
+						}
+						trade_goods = grain
+					}
+					add_or_upgrade_manpower_building = yes
+				}
+			}
+			define_advisor = {
+				type = recruitmaster
+				age = 30
+				cost_multiplier = 0.5
+				skill = 3
+				culture = xiang
+				religion = confucianism
+			}
+			add_manpower = 5
+			add_mil_power = 50
+		}
+	}
+		lha_the_heartland_beckons = {
+		icon = gfx_lha_the_heartland_beckons
+		position = 19
+		required_missions = {
+			lha_secure_canton
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hunan_area
+				area = jiangxi_area
+				area = huguang_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			hunan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jiangxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			huguang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_granaries_of_hunan
+				duration = 7300
+			}
+			custom_tooltip = lha_the_heartland_beckons_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = hunan_area
+							area = jiangxi_area
+							area = huguang_area
+						}
+						trade_goods = grain
+					}
+					add_or_upgrade_manpower_building = yes
+				}
+			}
+			define_advisor = {
+				type = recruitmaster
+				age = 30
+				cost_multiplier = 0.5
+				skill = 3
+				culture = xiang
+				religion = confucianism
+			}
+			add_manpower = 5
+			add_mil_power = 50
+		}
+	}
+}
+
+lha_china_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			tag = GPH
+			has_country_flag = lha_china_missions_unlocked
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	lha_secure_canton = {
+		icon = gfx_lha_secure_canton
+		position = 18
+		provinces_to_highlight = {
+			OR = {
+				area = guangxi_area
+				area = guangdong_area
+				area = west_guangdong_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			guangxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = lha_push_into_the_south
+				duration = 7300
+			}
+			custom_tooltip = lha_construct_the_pacfic_fleet_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = guangdong_area
+							area = west_guangdong_area
+						}
+						has_port = yes
+					}
+					add_province_modifier = {
+						name = lha_construct_the_pacific_fleet
+						duration = 7300
+					}
+				}
+			}
+			667 = {
+				add_unit_construction = {
+					type = heavy_ship
+					amount = 2
+					speed = 0.5
+					cost = 0
+				}
+			}
+			5106 = {
+				add_unit_construction = {
+					type = light_ship
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+			}
+			add_adm_power = 50
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			add_permanent_claim_multi_provinces = {
+				target = south_china_region
+			}
+		}
+	}
+	lha_secure_the_south = {
+		icon = gfx_lha_secure_the_south
+		position = 20
+		required_missions = {
+			lha_the_eastern_gate
+			lha_the_heartland_beckons
+		}
+		provinces_to_highlight = {
+			AND = {
+				is_empty = no
+				region = south_china_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			south_china_region = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		}
+		effect = {
+			set_country_flag = lha_tibetanization_explain
+			custom_tooltip = lha_secure_the_south_province_bonus_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						superregion = china_superregion
+					}
+					add_province_modifier = {
+						name = lha_consolidate_gains_in_china
+						duration = 5475
+					}
+				}
+			}
+			country_event = {
+				id = ab_india_lha_events.15
+			}
+			add_power_projection = {
+				type = lha_victory_in_the_south_pp
+				amount = 10
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			add_permanent_claim_multi_provinces = {
+				target = china_superregion
+			}
+		}
+	}
+}
+
+lha_china_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			tag = GPH
+			has_country_flag = lha_china_missions_unlocked
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	lha_the_eastern_gate = {
+		icon = gfx_lha_the_eastern_gate
+		position = 19
+		required_missions = {
+			lha_secure_canton
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = fujian_area
+				area = zhejiang_area
+				area = south_anhui_area
+				area = south_jiangsu_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			fujian_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			zhejiang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_anhui_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_jiangsu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = lha_the_eastern_gate_upgrade_tooltip
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "lha_the_eastern_gate_reward = yes"
+				}
+			}
+			add_mercantilism = 2
+			define_advisor = {
+				type = trader
+				cost_multiplier = 0.5
+				skill = 3
+				religion = confucianism
+				culture = wu
+			}
+			upgrade_center_of_trade = {
+				province = 684
+			}
+			upgrade_center_of_trade = {
+				province = 1821
+			}
+			upgrade_center_of_trade = {
+				province = 2149
+			}
+			add_dip_power = 50
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+		}
+	}
+}
+
+lha_china_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		AND = {
+			tag = GPH
+			has_country_flag = lha_china_missions_unlocked
+		}
+		NOT = {
+			map_setup = map_setup_random
 		}
 	}
 }

@@ -548,3 +548,92 @@ country_event = {
 		name = ab_india_lha_events.13.e
 	}
 }
+
+# Avert your gaze if Chinese
+province_event = {
+	id = ab_india_lha_events.14
+	title = ab_india_lha_events.14.t
+	desc = ab_india_lha_events.14.d
+	picture = FARMING_eventPicture
+	hidden = yes
+	trigger = {
+		owner = {
+			tag = GPH
+			has_country_flag = lha_tibetanization_of_china
+		}
+		NOT = {
+			culture_group = tibetan_group
+		}
+		any_neighbor_province = {
+			owner = {
+				tag = ROOT
+			}
+			culture_group = tibetan_group
+		}
+		owner = {
+			OR = {
+				NOT = { has_country_flag = lha_tibetanized_recently }
+				had_country_flag = {
+						flag = lha_tibetanized_recently
+						days = 730
+					}
+			}
+		}
+		OR = {
+			area = liaoning_area
+			superregion = china_superregion
+		}
+		religion = owner
+	}
+	goto = ROOT
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.33
+			has_port = yes
+		}
+		modifier = {
+			factor = 0.33
+			num_of_times_improved_by_owner = 3
+		}
+		modifier = {
+			factor = 0.33
+			has_courthouse_building_trigger = yes
+		}
+		modifier = {
+			factor = 0.33
+			has_tax_building_trigger = yes
+		}
+	}
+	option = {
+		name = FU_Byzantium_Events.55.a
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			clr_country_flag = lha_tibetanized_recently
+			set_country_flag = lha_tibetanized_recently
+		}
+		lha_tibetanize_china = yes
+	}
+}
+
+country_event = {
+	id = ab_india_lha_events.15
+	title = ab_india_lha_events.15.t
+	desc = ab_india_lha_events.15.d
+	picture = GFX_ab_india_lha_events.15
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = lha_tibetanization_explain
+	}
+	immediate = {
+		clr_country_flag = lha_tibetanization_explain
+	}
+	option = {
+		name = ab_india_lha_events.15.a
+
+		set_country_flag = lha_tibetanization_of_china
+	}
+}

@@ -152,3 +152,55 @@ lha_cross_the_sulu_sea_reward = {
 		}
 	}
 }
+
+lha_the_eastern_gate_reward = {
+	random_owned_province = {
+		limit = {
+			OR = {
+				area = fujian_area
+				area = zhejiang_area
+				area = south_anhui_area
+				area = south_jiangsu_area
+			}
+			has_trade_building_trigger = yes
+			NOT = {
+				has_province_flag = lha_the_eastern_gate_upgraded
+			}
+		}
+		add_or_upgrade_trade_building = yes
+		set_province_flag = lha_the_eastern_gate_upgraded
+	}
+}
+
+lha_consolidate_gujarat_reward = {
+	random_owned_province = {
+		limit = {
+			region = west_india_region
+			has_trade_building_trigger = yes
+			NOT = {
+				has_province_flag = lha_consolidate_gujarat_upgraded
+			}
+		}
+		add_province_modifier = {
+			name = lha_riches_of_gujarat
+			duration = -1
+		}
+		set_province_flag = lha_consolidate_gujarat_upgraded
+		add_or_upgrade_trade_building = yes
+	}
+}
+
+lha_tibetanize_china = {
+	if = {
+		limit = {
+			culture_group = thai_group
+		}
+		change_culture = bai
+	}
+	else_if = {
+		limit = {
+			culture_group = chinese_culture
+		}
+		change_culture = gya
+	}
+}

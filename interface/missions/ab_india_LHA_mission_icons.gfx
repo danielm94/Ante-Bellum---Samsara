@@ -3,102 +3,82 @@ spriteTypes = {
 		name = "gfx_lha_sword_and_dharma"
 		texturefile = "gfx/interface/missions/LHA/lha_sword_and_dharma.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_unite_the_faithful"
 		texturefile = "gfx/interface/missions/LHA/lha_unite_the_faithful.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_pacify_the_old_faith"
 		texturefile = "gfx/interface/missions/LHA/lha_pacify_the_old_faith.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_purify_the_holy_city"
 		texturefile = "gfx/interface/missions/LHA/lha_purify_the_holy_city.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_tibet_unified"
 		texturefile = "gfx/interface/missions/LHA/lha_tibet_unified.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_legacy_of_trisong_detsen"
 		texturefile = "gfx/interface/missions/LHA/lha_legacy_of_trisong_detsen.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_forge_alliances"
 		texturefile = "gfx/interface/missions/LHA/lha_forge_alliances.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_the_nepalese_threat"
 		texturefile = "gfx/interface/missions/LHA/lha_the_nepalese_threat.dds"
 	}
-	
 	spriteType = {
 		name = "gfx_lha_take_refuge_under_yuan"
 		texturefile = "gfx/interface/missions/LHA/lha_take_refuge_under_yuan.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_develop_the_holy_city"
 		texturefile = "gfx/interface/missions/LHA/lha_develop_the_holy_city.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_support_the_gelug_school"
 		texturefile = "gfx/interface/missions/LHA/lha_support_the_gelug_school.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_crown_of_the_plateau"
 		texturefile = "gfx/interface/missions/LHA/lha_crown_of_the_plateau.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_find_the_dalai_lama"
 		texturefile = "gfx/interface/missions/LHA/lha_find_the_dalai_lama.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_ascension_of_the_sacred_one"
 		texturefile = "gfx/interface/missions/LHA/lha_ascension_of_the_sacred_one.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_the_great_monastic_awakening"
 		texturefile = "gfx/interface/missions/LHA/lha_the_great_monastic_awakening.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_jewel_of_the_dharma"
 		texturefile = "gfx/interface/missions/LHA/lha_jewel_of_the_dharma.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_moving_through_kashmir"
 		texturefile = "gfx/interface/missions/LHA/lha_moving_through_kashmir.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_conquer_the_pahari"
 		texturefile = "gfx/interface/missions/LHA/lha_conquer_the_pahari.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_break_nepal"
 		texturefile = "gfx/interface/missions/LHA/lha_break_nepal.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_the_lost_bretheren"
 		texturefile = "gfx/interface/missions/LHA/lha_the_lost_bretheren.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_the_sands_of_tarim"
 		texturefile = "gfx/interface/missions/LHA/lha_sands_of_tarim.dds"
@@ -127,17 +107,14 @@ spriteTypes = {
 		name = "gfx_lha_protect_the_afghans"
 		texturefile = "gfx/interface/missions/LHA/lha_protect_the_afghans.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_buddhas_of_bamyan"
 		texturefile = "gfx/interface/missions/LHA/lha_buddhas_of_bamyan.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_the_charkravartis_triumph"
 		texturefile = "gfx/interface/missions/LHA/lha_the_charkravartis_triumph.dds"
 	}
-
 	spriteType = {
 		name = "gfx_lha_the_dharma_raj"
 		texturefile = "gfx/interface/missions/LHA/lha_the_dharma_raj.dds"
@@ -214,5 +191,20 @@ spriteTypes = {
 		name = "gfx_lha_unify_nusantara"
 		texturefile = "gfx/interface/missions/LHA/lha_unify_nusantara.dds"
 	}
-
+	spriteType = {
+		name = "gfx_lha_secure_canton"
+		texturefile = "gfx/interface/missions/LHA/lha_secure_canton.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_the_eastern_gate"
+		texturefile = "gfx/interface/missions/LHA/lha_the_eastern_gate.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_the_heartland_beckons"
+		texturefile = "gfx/interface/missions/LHA/lha_the_heartland_beckons.dds"
+	}
+	spriteType = {
+		name = "gfx_lha_secure_the_south"
+		texturefile = "gfx/interface/missions/LHA/lha_secure_the_south.dds"
+	}
 }
