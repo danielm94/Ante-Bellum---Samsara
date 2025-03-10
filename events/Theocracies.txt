@@ -79,6 +79,7 @@ country_event = {
 		}
 		NOT = {
 			has_reform = gph_realm_of_the_bodhisattva
+			has_reform = gph_eternal_throne_of_the_chakravartin
 		}
 		NOT = {
 			OR = {

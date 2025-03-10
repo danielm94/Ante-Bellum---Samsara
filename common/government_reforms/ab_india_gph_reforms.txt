@@ -24,3 +24,38 @@ gph_realm_of_the_bodhisattva = {
 		state_enlightenment_mechanic
 	}
 }
+
+gph_eternal_throne_of_the_chakravartin = {
+	icon = "eternal_throne_of_the_chakravartin"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	fixed_rank = 3
+	
+	potential = {
+		has_country_flag = lha_chakravartin_gov_enabled
+		tag = GPH
+		religion = vajrayana
+	}
+	modifiers = {
+		monarch_military_power = 2
+		monarch_diplomatic_power = 2
+		monarch_admin_power = 2
+		max_absolutism = 15
+		prestige = 0.25
+		church_influence_modifier = -0.05
+		nobles_influence_modifier = -0.05
+		burghers_influence_modifier = -0.05
+		hill_clans_influence_modifier = -0.05
+		governing_capacity = 250
+	}
+	conditional = {
+		has_parliament = yes
+		queen = no
+		allow = {
+		}
+	}
+	government_abilities = {
+		state_enlightenment_mechanic
+	}
+}

@@ -459,3 +459,7 @@ lha_purified_china = {
 	manpower_in_true_faith_provinces = 0.2
 	yearly_karma_decay = 0.2
 }
+
+lha_reign_of_the_chakravartin = {
+	administrative_efficiency = 0.05
+}

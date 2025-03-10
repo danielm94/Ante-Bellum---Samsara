@@ -4326,6 +4326,43 @@ lha_china_slot_3 = {
 			}
 		}
 	}
+	lha_chakravartin_ascendant = {
+		icon = gfx_lha_chakravartin_ascendant
+		position = 24
+		required_missions = {
+			lha_slay_the_dragon
+			lha_purify_china
+		}
+		provinces_to_highlight = {
+			AND = {
+				superregion = china_superregion
+				NOT = {
+					AND = {
+						country_or_non_sovereign_subject_holds = ROOT
+						religion = vajrayana
+					}
+				}
+			}
+		}
+		trigger = {
+			china_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = vajrayana
+			}
+		}
+		effect = {
+			set_country_flag = lha_chakravartin_gov_enabled
+			add_government_reform = gph_eternal_throne_of_the_chakravartin
+			add_country_modifier = {
+				name = lha_reign_of_the_chakravartin
+				duration = -1
+			}
+			add_permanent_claim_multi_provinces = {
+				target = far_east_superregion
+			}
+		}
+	}
 }
 
 lha_china_slot_4 = {

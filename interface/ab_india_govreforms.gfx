@@ -50,4 +50,8 @@ spriteTypes = {
 		name = "government_reform_realm_of_the_bodhisattva"
 		texturefile = "gfx/interface/government_reform_icons/realm_of_the_bodhisattva.dds"
 	}
+	spriteType = {
+		name = "government_reform_eternal_throne_of_the_chakravartin"
+		texturefile = "gfx/interface/government_reform_icons/eternal_throne_of_the_chakravartin.dds"
+	}
 }

@@ -230,4 +230,8 @@ spriteTypes = {
 		name = "gfx_lha_purify_china"
 		texturefile = "gfx/interface/missions/LHA/lha_purify_china.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_chakravartin_ascendant"
+		texturefile = "gfx/interface/missions/LHA/lha_chakravartin_ascendant.dds"
+	}
 }
