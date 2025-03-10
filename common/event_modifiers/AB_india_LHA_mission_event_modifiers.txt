@@ -449,3 +449,13 @@ lha_gya_administrators = {
 	core_creation = -0.1
 	governing_capacity_modifier = 0.05
 }
+
+lha_dragon_slayer = {
+	army_tradition_from_battle = 0.5
+	discipline = 0.05
+}
+
+lha_purified_china = {
+	manpower_in_true_faith_provinces = 0.2
+	yearly_karma_decay = 0.2
+}

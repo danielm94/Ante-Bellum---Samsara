@@ -34,8 +34,8 @@ lha_crippled_the_emperor_pp = {
 	yearly_decay = 1
 }
 
-lha_crippled_by_gph_pp = {
-	min = -15
+lha_dragon_slayed_pp = {
+	min = 25
 	power = 1
-	yearly_descay = 1
+	yearly_decay = 0.001
 }

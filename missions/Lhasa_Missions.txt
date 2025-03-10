@@ -4065,6 +4065,45 @@ lha_china_slot_2 = {
 			add_mil_power = 100
 		}
 	}
+	lha_slay_the_dragon = {
+		icon = gfx_lha_slay_the_dragon
+		position = 23
+		required_missions = {
+			lha_secure_china
+		}
+		provinces_to_highlight = {
+			owned_by = event_target:EmperorOfChina
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = lha_slay_the_dragon_pp_tooltip
+			hidden_effect = {
+				add_power_projection = {
+					type = lha_dragon_slayed_pp
+					amount = 25
+				}
+			}
+			add_ruler_modifier = {
+				name = lha_dragon_slayer
+				duration = -1
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+		}
+	}
 }
 
 lha_china_slot_3 = {
@@ -4282,6 +4321,9 @@ lha_china_slot_3 = {
 			add_prestige_or_monarch_power = {
 				amount = 40
 			}
+			add_permanent_claim_multi_provinces = {
+				target = mongolia_region
+			}
 		}
 	}
 }
@@ -4414,6 +4456,46 @@ lha_china_slot_4 = {
 			country_event = {
 				id = ab_india_lha_events.16
 			}
+		}
+	}
+	lha_purify_china = {
+		icon = gfx_lha_break_the_yuan
+		position = 23
+		required_missions = {
+			lha_secure_china
+		}
+		provinces_to_highlight = {
+			superregion = china_superregion
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = vajrayana
+				}
+			}
+		}
+		trigger = {
+			china_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = vajrayana
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					mission_completed = lha_purify_china
+				}
+				custom_tooltip = lha_your_ideas_have_been_upgraded_tooltip
+			}
+			else = {
+				lha_upgrade_idea_set = yes
+			}
+			add_country_modifier = {
+				name = lha_purified_china
+				duration = -1
+			}
+			add_devotion = 20
+			set_karma = 0
 		}
 	}
 }
