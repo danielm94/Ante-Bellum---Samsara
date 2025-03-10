@@ -204,3 +204,70 @@ lha_tibetanize_china = {
 		change_culture = gya
 	}
 }
+
+lha_subjugate_oirat_friend = {
+	if = {
+		limit = {
+			still_buddies_with_drb = yes
+		}
+		create_subject = {
+			subject_type = mongol_brother_realm
+			subject = DRB
+		}
+		DRB = {
+			change_religion = vajrayana
+			add_country_modifier = {
+				name = lha_reveres_the_dalai_lama
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			still_buddies_with_kht = yes
+		}
+		create_subject = {
+			subject_type = mongol_brother_realm
+			subject = KHT
+		}
+		KHT = {
+			change_religion = vajrayana
+			add_country_modifier = {
+				name = lha_reveres_the_dalai_lama
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			still_buddies_with_trg = yes
+		}
+		create_subject = {
+			subject_type = mongol_brother_realm
+			subject = TRG
+		}
+		TRG = {
+			change_religion = vajrayana
+			add_country_modifier = {
+				name = lha_reveres_the_dalai_lama
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			still_buddies_with_oir = yes
+		}
+		create_subject = {
+			subject_type = mongol_brother_realm
+			subject = OIR
+		}
+		OIR = {
+			change_religion = vajrayana
+			add_country_modifier = {
+				name = lha_reveres_the_dalai_lama
+				duration = -1
+			}
+		}
+	}
+}

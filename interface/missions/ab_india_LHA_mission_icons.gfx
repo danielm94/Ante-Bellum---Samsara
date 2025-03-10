@@ -217,4 +217,9 @@ spriteTypes = {
 		name = "gfx_lha_break_the_yuan"
 		texturefile = "gfx/interface/missions/LHA/lha_break_the_yuan.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_secure_china"
+		texturefile = "gfx/interface/missions/LHA/lha_secure_china.dds"
+	}
 }

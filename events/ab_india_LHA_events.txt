@@ -575,9 +575,18 @@ province_event = {
 				NOT = {
 					has_country_flag = lha_tibetanized_recently
 				}
-				had_country_flag = {
-					flag = lha_tibetanized_recently
-					days = 730
+				OR = {
+					had_country_flag = {
+						flag = lha_tibetanized_recently
+						days = 730
+					}
+					AND = {
+						has_country_flag = lha_faster_culture_spread
+						had_country_flag = {
+							flag = lha_tibetanized_recently
+							days = 365
+						}
+					}
 				}
 			}
 		}
@@ -648,6 +657,9 @@ country_event = {
 	trigger = {
 		has_country_flag = lha_move_capital_event
 	}
+	immediate = {
+		clr_country_flag = lha_move_capital_event
+	}
 	option = {
 		name = ab_india_lha_events.16.a
 		677 = {
@@ -684,6 +696,65 @@ country_event = {
 				name = lha_lhasa_summer_palace
 				duration = -1
 			}
+		}
+	}
+}
+
+country_event = {
+	id = ab_india_lha_events.17
+	title = ab_india_lha_events.17.t
+	desc = ab_india_lha_events.17.d
+	picture = GFX_ab_india_lha_events.17
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = lha_oirat_submits_event
+	}
+	immediate = {
+		clr_country_flag = lha_oirat_submits_event
+	}
+	option = {
+		name = ab_india_lha_events.17.a
+		set_country_flag = lha_oirat_submits_event_contd
+		hidden_effect = {
+			country_event = {
+				id = ab_india_lha_events.18
+			}
+		}
+	}
+	option = {
+		name = ab_india_lha_events.17.b
+		highlight = yes
+		lha_subjugate_oirat_friend = yes
+	}
+}
+
+country_event = {
+	id = ab_india_lha_events.18
+	title = ab_india_lha_events.18.t
+	desc = ab_india_lha_events.18.d
+	picture = GFX_ab_india_lha_events.17
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = lha_oirat_submits_event_contd
+	}
+	immediate = {
+		clr_country_flag = lha_oirat_submits_event_contd
+	}
+	option = {
+		name = ab_india_lha_events.18.a
+		set_country_flag = lha_oirat_submits_event
+		hidden_effect={
+			country_event = {
+				id = ab_india_lha_events.17
+			}
+		}
+	}
+	option = {
+		name = ab_india_lha_events.18.b
+		highlight = yes
+		lha_subjugate_oirat_friend = yes
+		add_ruler_modifier = {
+			name = lha_avid_reader
 		}
 	}
 }

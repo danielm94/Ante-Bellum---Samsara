@@ -175,3 +175,47 @@ has_exempt_from_seize_land_for_estate_hill_clans = {
 		has_estate_privilege = estate_hill_clans_train_gurkha_officers
 	}
 }
+
+still_buddies_with_kht = {
+	has_country_flag = lha_kht_friend
+	AND = {
+		exists = KHT
+		OR = {
+			alliance_with = KHT
+			overlord_of = KHT
+		}
+	}
+}
+
+still_buddies_with_drb = {
+	has_country_flag = lha_drb_friend
+	AND = {
+		exists = DRB
+		OR = {
+			alliance_with = DRB
+			overlord_of = DRB
+		}
+	}
+}
+
+still_buddies_with_trg = {
+	has_country_flag = lha_trg_friend
+	AND = {
+		exists = TRG
+		OR = {
+			alliance_with = TRG
+			overlord_of = TRG
+		}
+	}
+}
+
+still_buddies_with_oir = {
+	has_country_flag = lha_oir_friend
+	AND = {
+		exists = OIR
+		OR = {
+			alliance_with = OIR
+			overlord_of = OIR
+		}
+	}
+}

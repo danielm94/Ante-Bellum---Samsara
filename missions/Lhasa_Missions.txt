@@ -4208,6 +4208,82 @@ lha_china_slot_3 = {
 			}
 		}
 	}
+	lha_secure_china = {
+		icon = gfx_lha_secure_china
+		position = 22
+		required_missions = {
+			lha_the_western_marches
+			lha_break_the_yuan
+		}
+		provinces_to_highlight = {
+			AND = {
+				is_empty = no
+				superregion = china_superregion
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			china_superregion = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
+			}
+		}
+		effect = {
+			set_country_flag = lha_faster_culture_spread
+			custom_tooltip = lha_faster_culture_spread_tooltip
+			custom_tooltip = lha_secure_the_south_province_bonus_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						superregion = china_superregion
+					}
+					if = {
+						limit = {
+							has_province_modifier = lha_consolidate_gains_in_china
+						}
+						remove_province_modifier = lha_consolidate_gains_in_china
+					}
+					add_province_modifier = {
+						name = lha_consolidate_gains_in_china
+						duration = 5475
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						still_buddies_with_drb = yes
+						still_buddies_with_kht = yes
+						still_buddies_with_trg = yes
+						still_buddies_with_oir = yes
+					}
+				}
+				custom_tooltip = lha_secure_china_oirat_tooltip_yes
+				set_country_flag = lha_oirat_submits_event
+				hidden_effect = {
+					country_event = {
+						id = ab_india_lha_events.17
+					}
+				}
+			}
+			else = {
+				custom_tooltip = lha_secure_china_oirat_tooltip_no
+			}
+			add_country_modifier = {
+				name = lha_gya_administrators
+				duration = -1
+			}
+			add_ruler_personality = legendary_conqueror_personality
+			add_prestige_or_monarch_power = {
+				amount = 40
+			}
+		}
+	}
 }
 
 lha_china_slot_4 = {
@@ -4325,7 +4401,7 @@ lha_china_slot_4 = {
 						type = pecing_potala
 						instant = no
 					}
-				}	
+				}
 			}
 			add_power_projection = {
 				type = lha_crippled_the_emperor_pp
