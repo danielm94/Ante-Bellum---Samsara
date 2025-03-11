@@ -411,7 +411,6 @@ lha_sacred_seat_of_the_dharma = {
 }
 
 lha_sacred_seat_of_the_middle_kingdom = {
-	#TODO gya_loyalty_modifier = 0.1
 	local_development_cost = -0.2
 	local_build_cost = -0.2
 	statewide_governing_cost = -1
@@ -419,6 +418,7 @@ lha_sacred_seat_of_the_middle_kingdom = {
 	advisor_pool = 1
 	local_great_project_upgrade_cost = -0.1
 	local_great_project_upgrade_time = -0.1
+	gya_loyalty_modifier = 0.1
 }
 
 lha_pecing_winter_palace = {

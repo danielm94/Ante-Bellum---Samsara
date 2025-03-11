@@ -4221,6 +4221,8 @@ lha_china_slot_3 = {
 		effect = {
 			set_country_flag = lha_tibetanization_explain
 			custom_tooltip = lha_secure_the_south_province_bonus_tooltip
+			custom_tooltip = lha_unlocked_the_gya_tooltip
+			set_country_flag = unlocked_gya_estate
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -4465,7 +4467,6 @@ lha_china_slot_4 = {
 		}
 		effect = {
 			1816 = {
-				add_core = ROOT
 				change_religion = ROOT
 				change_culture = ROOT
 				change_province_name = "Pecing"

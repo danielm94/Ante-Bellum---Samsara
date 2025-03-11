@@ -176,6 +176,12 @@ has_exempt_from_seize_land_for_estate_hill_clans = {
 	}
 }
 
+has_exempt_from_seize_land_for_estate_gya = {
+	OR ={
+		has_estate_privilege = estate_gya_civil_administration
+	}
+}
+
 still_buddies_with_kht = {
 	has_country_flag = lha_kht_friend
 	AND = {

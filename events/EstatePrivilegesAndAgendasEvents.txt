@@ -242,6 +242,7 @@ country_event = {
 		clr_country_flag = estate_qizilbash_present_agenda
 		clr_country_flag = estate_ghulams_present_agenda
 		clr_country_flag = estate_hill_clans_present_agenda
+		clr_country_flag = estate_gya_present_agenda
 		clear_estate_agenda_cache = ROOT
 	}
 
@@ -995,6 +996,52 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = estate_privileges_and_agendas_events.3.q
+		trigger = { has_country_flag = estate_gya_present_agenda }
+		start_estate_agenda = estate_gya
+		goto = estate_gya
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_gya
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_gya
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_gya
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_gya
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_gya
+					higher_than_influence = no
+				}
+			}
+		}
+	}
 }
 
 country_event = {
@@ -1650,6 +1697,22 @@ country_event = {
 			}
 		}
 		seize_land_estate_effect = { estate = estate_hill_clans }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	#Seize from Gya
+	option = {
+		name = estate_privileges_and_agendas_events.7.r
+		trigger = {
+			has_estate = estate_gya
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_gya } }
+			estate_territory = {
+				estate = estate_gya
+				territory = 5
+			}
+		}
+		seize_land_estate_effect = { estate = estate_gya }
 		ai_chance = {
 			factor = 0
 		}

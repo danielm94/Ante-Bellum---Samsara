@@ -31,3 +31,20 @@ estate_hill_clans = {
 		}
 	}
 }
+
+estate_gya = {
+	modifier_definition = {
+		type = loyalty
+		key = gya_loyalty_modifier
+		trigger = {
+			has_estate = estate_gya
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = gya_influence_modifier
+		trigger = {
+			has_estate = estate_gya
+		}
+	}
+}

@@ -3919,6 +3919,16 @@ pick_random_estate_if_present = {
 			$estate_action$ = estate_hill_clans
 			]
 		}
+		1 = { 
+			trigger = {
+				has_estate = estate_gya
+				NOT = { has_country_flag = estate_gya_$flag$ }
+			}
+			set_country_flag = estate_gya_$flag$
+			[[estate_action]
+			$estate_action$ = estate_gya
+			]
+		}
 	}
 }
 
@@ -4121,6 +4131,7 @@ re_add_loyalty_from_seized_land = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_qizilbash } }		add_estate_loyalty = { estate = estate_qizilbash		 loyalty = 15 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghulams } }		add_estate_loyalty = { estate = estate_ghulams			 loyalty = 15 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_hill_clans } }		add_estate_loyalty = { estate = estate_hill_clans		 loyalty = 15 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_gya } }		    add_estate_loyalty = { estate = estate_gya		         loyalty = 15 } }
 		}
 		else = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_nobles } }			add_estate_loyalty = { estate = estate_nobles			 loyalty = 20 } }
@@ -4139,6 +4150,7 @@ re_add_loyalty_from_seized_land = {
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_qizilbash } }		add_estate_loyalty = { estate = estate_qizilbash		 loyalty = 20 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_ghulams } }		add_estate_loyalty = { estate = estate_ghulams			 loyalty = 20 } }
 			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_hill_clans } }		add_estate_loyalty = { estate = estate_hill_clans		 loyalty = 20 } }
+			if = { limit = { estate_has_exempt_from_seize_land_privilege = { estate = estate_gya } }		    add_estate_loyalty = { estate = estate_gya       		 loyalty = 20 } }
 		}
 	}
 }
@@ -4764,6 +4776,8 @@ on_completed_agenda_effect_estate_ghulams = {
 }
 on_completed_agenda_effect_estate_hill_clans = {}
 ab_on_completed_agenda_effect_estate_hill_clans = {}
+on_completed_agenda_effect_estate_gya = {}
+ab_on_completed_agenda_effect_estate_gya = {}
 on_completed_agenda_effect = {
 	on_completed_agenda_effect_$estate$ = yes
 	# AB [[[

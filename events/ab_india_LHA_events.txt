@@ -627,6 +627,18 @@ province_event = {
 			set_country_flag = lha_tibetanized_recently
 		}
 		lha_tibetanize_china = yes
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_gya_banners
+				}
+			}
+			add_province_modifier = {
+				name = gya_banners
+				duration = -1
+				hidden = yes
+			}
+		}
 	}
 }
 
@@ -683,6 +695,7 @@ country_event = {
 		set_country_flag = lha_tibetanization_of_china
 		set_capital = 1816
 		1816 = {
+			add_core = ROOT
 			add_province_modifier = {
 				name = lha_sacred_seat_of_the_middle_kingdom
 				duration = -1
@@ -690,6 +703,10 @@ country_event = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
+		}
+		add_estate_loyalty = {
+			estate = estate_gya
+			loyalty = 20
 		}
 		677 = {
 			add_province_modifier = {
@@ -743,7 +760,7 @@ country_event = {
 	option = {
 		name = ab_india_lha_events.18.a
 		set_country_flag = lha_oirat_submits_event
-		hidden_effect={
+		hidden_effect = {
 			country_event = {
 				id = ab_india_lha_events.17
 			}

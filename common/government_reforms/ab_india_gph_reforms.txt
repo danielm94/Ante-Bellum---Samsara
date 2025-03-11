@@ -47,6 +47,7 @@ gph_eternal_throne_of_the_chakravartin = {
 		nobles_influence_modifier = -0.05
 		burghers_influence_modifier = -0.05
 		hill_clans_influence_modifier = -0.05
+		gya_influence_modifier = -0.05
 		governing_capacity = 250
 	}
 	conditional = {
