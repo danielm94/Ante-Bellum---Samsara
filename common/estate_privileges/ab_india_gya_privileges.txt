@@ -296,7 +296,6 @@ estate_gya_civil_administration = {
 		exempt_from_seize_land
 	}
 	cooldown_years = 25
-
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -357,7 +356,6 @@ estate_gya_autonymous_guild_cities = {
 				gya_upgrade_guild_modifier_effect = yes
 			}
 		}
-
 		hidden_effect = {
 			gya_autonymous_guild_privilege_effect = yes
 		}
@@ -421,6 +419,131 @@ estate_gya_autonymous_guild_cities = {
 	on_cooldown_expires = {
 		country_event = {
 			id = gya_events.1
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_gya_monastic_administrators = {
+	icon = gfx_estate_gya_monastic_administrators
+	loyalty = 0.05
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	is_valid = {
+		mission_completed = lha_qufu_vihara
+	}
+	on_granted = {
+		custom_tooltip = estate_gya_monastic_administrators_temple_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = estate_gya_monastic_administration_temple
+				duration = -1
+			}
+		}
+		custom_tooltip = estate_gya_monastic_administrators_gtemple_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = estate_gya_monastic_administration_great_temple
+				duration = -1
+			}
+		}
+		custom_tooltip = estate_gya_monastic_administrators_destroy_tooltip
+		tooltip = {
+			add_estate_loyalty = {
+				estate = estate_gya
+				loyalty = -5
+			}
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_gya_monastic_administrators_revoke_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				superregion = china_superregion
+				has_owner_religion = yes
+				has_tax_building_trigger = yes
+			}
+			if = {
+				limit = {
+					has_building = temple
+				}
+				add_province_modifier = {
+					name = estate_gya_monastic_administration_temple
+					duration = -1
+				}
+			}
+			else = {
+				add_province_modifier = {
+					name = estate_gya_monastic_administration_great_temple
+					duration = -1
+				}
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_gya_monastic_administration_temple
+			}
+			remove_province_modifier = estate_gya_monastic_administration_temple
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_gya_monastic_administration_great_temple
+			}
+			remove_province_modifier = estate_gya_monastic_administration_great_temple
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_gya_monastic_administration_temple
+			}
+			remove_province_modifier = estate_gya_monastic_administration_temple
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_gya_monastic_administration_great_temple
+			}
+			remove_province_modifier = estate_gya_monastic_administration_great_temple
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
 		}
 	}
 	ai_will_do = {

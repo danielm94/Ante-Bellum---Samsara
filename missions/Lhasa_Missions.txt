@@ -4338,6 +4338,12 @@ lha_china_slot_3 = {
 				custom_tooltip = lha_revive_the_guilds_no
 			}
 			custom_tooltip = lha_revive_the_guilds_upgrade_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = lha_thriving_local_maritime_guild
+					duration = -1
+				}
+			}
 			hidden_effect = {
 				lha_maritime_guild_effect = {
 					province_id = 667
@@ -4490,6 +4496,11 @@ lha_china_slot_3 = {
 			add_estate_loyalty = {
 				estate = estate_gya
 				loyalty = 15
+			}
+
+			custom_tooltip = lha_qufu_vihara_privilege_tooltip
+			tooltip = {
+				set_estate_privilege = estate_gya_monastic_administrators
 			}
 		}
 	}

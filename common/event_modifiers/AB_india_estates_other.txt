@@ -79,3 +79,19 @@ estate_gya_thriving_guild_city = {
 estate_gya_autonomy_granted_to_guild_city = {
 	min_local_autonomy = 90
 }
+
+estate_gya_monastic_administration_temple = {
+	local_governing_cost = -0.1
+	local_state_maintenance_modifier = -0.05
+}
+
+estate_gya_monastic_administration_great_temple = {
+	local_governing_cost = -0.15
+	local_state_maintenance_modifier = -0.1
+}
+
+estate_gya_transitioning_provincial_governance = {
+	local_governing_cost = 0.3
+	local_unrest = 5
+	local_state_maintenance_modifier = 0.2
+}

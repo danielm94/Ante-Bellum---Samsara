@@ -207,6 +207,18 @@ temple = {
 		# AB [[[
 		ab_building_tax_effect = yes
 		# ]]]
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_gya_monastic_administrators
+				}
+				superregion = china_superregion
+			}
+			add_province_modifier = {
+				name = estate_gya_monastic_administration_temple
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -273,6 +285,26 @@ temple = {
 		# AB [[[
 		ab_removing_tax_effect = yes
 		# ]]]
+		if = {
+			limit = {
+				superregion = china_superregion
+				owner = {
+					has_estate_privilege = estate_gya_monastic_administrators
+				}
+				has_province_modifier = estate_gya_monastic_administration_temple
+			}
+			remove_province_modifier = estate_gya_monastic_administration_temple
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_gya
+					loyalty = -5
+				}
+			}
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
 	}
 	on_obsolete = {
 	}
@@ -1269,6 +1301,24 @@ cathedral = {
 		# AB [[[
 		ab_building_tax_effect = yes
 		# ]]]
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_gya_monastic_administrators
+				}
+				superregion = china_superregion
+			}
+			add_province_modifier = {
+				name = estate_gya_monastic_administration_great_temple
+				duration = -1
+			}
+			if = {
+				limit = {
+					has_province_modifier = estate_gya_monastic_administration_temple
+				}
+				remove_province_modifier = estate_gya_monastic_administration_temple
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -1335,6 +1385,27 @@ cathedral = {
 		# AB [[[
 		ab_removing_tax_effect = yes
 		# ]]]
+		if = {
+			limit = {
+				superregion = china_superregion
+				FROM = {
+					has_estate_privilege = estate_gya_monastic_administrators
+				}
+				has_province_modifier = estate_gya_monastic_administration_great_temple
+			}
+
+			remove_province_modifier = estate_gya_monastic_administration_great_temple
+			FROM = {
+				add_estate_loyalty = {
+					estate = estate_gya
+					loyalty = -5
+				}
+			}
+			add_province_modifier = {
+				name = estate_gya_transitioning_provincial_governance
+				duration = 3650
+			}
+		}
 	}
 	on_obsolete = {
 	}
