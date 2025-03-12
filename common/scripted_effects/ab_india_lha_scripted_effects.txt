@@ -271,3 +271,118 @@ lha_subjugate_oirat_friend = {
 		}
 	}
 }
+
+lha_maritime_guild_effect = {
+	$province_id$ = {
+		if = {
+			limit = {
+				NOT = {
+					province_has_center_of_trade_of_level = 1
+				}
+			}
+			center_of_trade = 1
+		}
+		upgrade_center_of_trade = {
+			province = $province_id$
+		}
+	}
+	$province_id$ = {
+		upgrade_trade_building = yes
+		if = {
+			limit = {
+				has_dock_building_trigger = yes
+			}
+			upgrade_dock_building = yes
+		}
+		else_if = {
+			limit = {
+				has_shipyard_building_trigger = yes
+			}
+			upgrade_shipyard_building = yes
+		}
+		add_province_modifier = {
+			name = lha_thriving_local_maritime_guild
+			duration = -1
+		}
+	}
+}
+
+gya_autonymous_guild_privilege_effect = {
+	every_province = {
+		limit = {
+			superregion = china_superregion
+			has_port = yes
+			owned_by = ROOT
+			NOT = {
+				has_province_modifier = lha_thriving_local_maritime_guild
+			}
+			NOT = {
+				has_province_modifier = estate_gya_thriving_guild_city				#Boosted modifier
+			}
+		}
+		set_variable = {
+			which = currentTradePower
+			value = 0
+		}
+		export_to_variable = {
+			which = provinceTradePower
+			value = modifier:province_trade_power_value
+		}
+		change_variable = {
+			which = currentTradePower
+			which = provinceTradePower
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_event_target = highest_trade_province
+				}
+			}
+			save_event_target_as = highest_trade_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = currentTradePower
+						which = event_target:highest_trade_province
+					}
+				}
+				save_event_target_as = highest_trade_province
+			}
+		}
+	}
+	event_target:highest_trade_province = {
+		add_province_modifier = {
+			name = estate_gya_thriving_guild_city
+			duration = -1
+		}
+		if = {
+			limit = {
+				NOT = {
+					province_has_center_of_trade_of_level = 1
+				}
+			}
+			center_of_trade = 1
+		}
+		upgrade_center_of_trade = {
+			province = event_target:highest_trade_province
+		}
+	}
+}
+
+gya_upgrade_guild_modifier_effect = {
+	every_owned_province = {
+		limit = {
+			superregion = china_superregion
+			has_port = yes
+			has_province_modifier = lha_thriving_local_maritime_guild
+		}
+		remove_province_modifier = lha_thriving_local_maritime_guild
+		add_province_modifier = {
+			name = estate_gya_thriving_guild_city
+			duration = -1
+		}
+	}
+	set_country_flag = gya_upgraded_guild_modifiers
+}

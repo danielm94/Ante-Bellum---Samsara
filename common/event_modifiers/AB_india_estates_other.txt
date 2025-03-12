@@ -65,3 +65,17 @@ estate_hill_clans_build_roadway_reward = {
 	local_development_cost = -0.1
 	local_build_cost = -0.1
 }
+
+estate_gya_thriving_guild_city = {
+	local_sailors_modifier = 1
+	local_ship_cost = -0.25
+	local_ship_repair = 0.5
+	ship_recruit_speed = -0.25
+	province_trade_power_modifier = 0.5
+	trade_goods_size = 0.3
+	trade_goods_size_modifier = 0.1
+}
+
+estate_gya_autonomy_granted_to_guild_city = {
+	min_local_autonomy = 90
+}

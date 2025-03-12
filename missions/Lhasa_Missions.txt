@@ -4193,6 +4193,188 @@ lha_china_slot_3 = {
 			}
 		}
 	}
+	lha_revive_the_guilds = {
+		icon = gfx_lha_revive_the_guilds
+		position = 19
+		required_missions = {
+			lha_secure_canton
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = lha_revive_the_guilds_trigger_tooltip
+				guangdong_area = {
+					type = all
+					OR = {
+						has_port = no
+						AND = {
+							development = 10
+							OR = {
+								has_shipyard_building_trigger = yes
+								has_dock_building_trigger = yes
+							}
+							has_trade_building_trigger = yes
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				west_guangdong_area = {
+					type = all
+					OR = {
+						has_port = no
+						AND = {
+							development = 10
+							OR = {
+								has_shipyard_building_trigger = yes
+								has_dock_building_trigger = yes
+							}
+							has_trade_building_trigger = yes
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				fujian_area = {
+					type = all
+					OR = {
+						has_port = no
+						AND = {
+							development = 10
+							OR = {
+								has_shipyard_building_trigger = yes
+								has_dock_building_trigger = yes
+							}
+							has_trade_building_trigger = yes
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				zhejiang_area = {
+					type = all
+					OR = {
+						has_port = no
+						AND = {
+							development = 10
+							OR = {
+								has_shipyard_building_trigger = yes
+								has_dock_building_trigger = yes
+							}
+							has_trade_building_trigger = yes
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				south_jiangsu_area = {
+					type = all
+					OR = {
+						has_port = no
+						AND = {
+							development = 10
+							OR = {
+								has_shipyard_building_trigger = yes
+								has_dock_building_trigger = yes
+							}
+							has_trade_building_trigger = yes
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = lha_revive_the_guilds_taiwan_frontier_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						area = taiwan_area
+					}
+					add_siberian_construction = 0
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = unlocked_gya_estate
+				}
+				custom_tooltip = lha_revive_the_guilds_taiwan_gya_culture_tooltip_yes
+				every_province = {
+					limit = {
+						area = taiwan_area
+					}
+					hidden_effect = {
+						change_culture = gya
+					}
+				}
+			}
+			else = {
+				custom_tooltip = lha_revive_the_guilds_taiwan_gya_culture_tooltip_no
+				every_province = {
+					limit = {
+						area = taiwan_area
+					}
+					hidden_effect = {
+						change_culture = chimin
+					}
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = lha_moluccan_trade
+				}
+				custom_tooltip = lha_revive_the_guilds_yes
+				hidden_effect = {
+					738 = {
+						change_trade_goods = cloves
+					}
+				}
+			}
+			else = {
+				custom_tooltip = lha_revive_the_guilds_no
+			}
+
+			custom_tooltip = lha_revive_the_guilds_upgrade_tooltip
+			hidden_effect = {
+				lha_maritime_guild_effect = {
+					province_id = 667
+				}
+				lha_maritime_guild_effect = {
+					province_id = 668
+				}
+				lha_maritime_guild_effect = {
+					province_id = 669 
+				}
+				lha_maritime_guild_effect = {
+					province_id = 2149 
+				}
+				lha_maritime_guild_effect = {
+					province_id = 684 
+				}
+				lha_maritime_guild_effect = {
+					province_id = 1821 
+				}
+				lha_maritime_guild_effect = {
+					province_id = 1822 
+				}
+				lha_maritime_guild_effect = {
+					province_id = 5106
+				}
+				lha_maritime_guild_effect = {
+					province_id = 5106
+				}
+				lha_maritime_guild_effect = {
+					province_id = 2159
+				}
+			}
+
+			custom_tooltip = lha_revive_the_guilds_estate_tooltip
+		}
+	}
 	lha_secure_the_south = {
 		icon = gfx_lha_secure_the_south
 		position = 20

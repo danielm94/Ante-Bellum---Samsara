@@ -463,3 +463,11 @@ lha_purified_china = {
 lha_reign_of_the_chakravartin = {
 	administrative_efficiency = 0.05
 }
+
+lha_thriving_local_maritime_guild ={
+	local_sailors_modifier = 1
+	local_ship_cost = -0.25
+	local_ship_repair = 0.5
+	ship_recruit_speed = -0.25
+	province_trade_power_modifier = 0.5
+}

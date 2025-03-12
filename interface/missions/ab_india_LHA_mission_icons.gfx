@@ -234,4 +234,8 @@ spriteTypes = {
 		name = "gfx_lha_chakravartin_ascendant"
 		texturefile = "gfx/interface/missions/LHA/lha_chakravartin_ascendant.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_revive_the_guilds"
+		texturefile = "gfx/interface/missions/LHA/lha_revive_the_guilds.dds"
+	}
 }
