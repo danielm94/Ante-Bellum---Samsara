@@ -887,12 +887,6 @@ estate_hill_clans_monopoly_of_cashmere = {
 				duration = -1
 			}
 		}
-		else_if = {
-			limit = {
-				has_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
-			}
-			remove_province_modifier = estate_hill_clans_monopoly_of_cashmere_mod
-		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_monopoly_of_textiles_revoke_tooltip
