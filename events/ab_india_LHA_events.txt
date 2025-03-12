@@ -627,18 +627,6 @@ province_event = {
 			set_country_flag = lha_tibetanized_recently
 		}
 		lha_tibetanize_china = yes
-		if = {
-			limit = {
-				owner = {
-					has_estate_privilege = estate_gya_banners
-				}
-			}
-			add_province_modifier = {
-				name = gya_banners
-				duration = -1
-				hidden = yes
-			}
-		}
 	}
 }
 
