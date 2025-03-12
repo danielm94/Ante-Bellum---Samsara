@@ -135,5 +135,9 @@ spriteTypes = {
 		name = "GFX_great_project_pecing_potala"
 		texturefile = "gfx//interface//great_projects//great_project_pecing_potala.dds"
 	}
+    spriteType = {
+		name = "GFX_great_project_qufu_vihara"
+		texturefile = "gfx//interface//great_projects//great_project_qufu_vihara.dds"
+	}
 }
 	

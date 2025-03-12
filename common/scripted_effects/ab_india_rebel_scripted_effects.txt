@@ -49,3 +49,17 @@ spawn_dharmic_rebels_in_location_type = {
 		}
 	}
 }
+
+spawn_confucian_rebels_in_location_type = {
+	every_owned_province = {
+		limit = {
+			$location_type$ = $location$
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			confucianism_rebels = 1
+		}
+	}
+}

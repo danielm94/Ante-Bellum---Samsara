@@ -238,4 +238,8 @@ spriteTypes = {
 		name = "gfx_lha_revive_the_guilds"
 		texturefile = "gfx/interface/missions/LHA/lha_revive_the_guilds.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_qufu_vihara"
+		texturefile = "gfx/interface/missions/LHA/lha_qufu_vihara.dds"
+	}
 }
