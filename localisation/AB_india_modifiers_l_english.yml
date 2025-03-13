@@ -467,3 +467,11 @@
  desc_estate_gya_transitioning_provincial_governance:0 "The dissolution of the temple has thrown local administration into disarray. Monks who once oversaw governance have been displaced, and the absence of their structured rule has led to rising unrest and inefficiency. Until new officials can restore order, the province remains burdened by instability and bureaucratic dysfunction"
  lha_ricebasket_of_asia:0 "Ricebasket of Asia"
  desc_lha_ricebasket_of_asia:0 "This province has been transformed into a cornerstone of the empire's agricultural might. Expanding irrigation networks, improved granaries, and monastic oversight ensure bountiful harvests that sustain both the population and the armies of the realm. As the heart of the empire's food supply, this land not only fills storehouses but also strengthens the hands that wield the sword in its defense."
+ estate_gya_levy_of_the_middle_kingdom_gya:0 "Gya Provincial Levies"
+ desc_estate_gya_levy_of_the_middle_kingdom_gya:0 "The Gya provinces have been integrated into the empire’s military structure, contributing a steady supply of recruits to the army. While their devotion to the Dharma remains firm, their role on the battlefield grows ever larger."
+
+ estate_gya_levy_of_the_middle_kingdom_chinese_culture_group:0 "Imperial Chinese Levies"
+ desc_estate_gya_levy_of_the_middle_kingdom_chinese_culture_group:0 "Across the Middle Kingdom, banners are raised, and men are conscripted to serve the empire. No longer bound by loyalty to the fallen emperors, they now march under the banner of the Dharma, swelling the ranks of the army with disciplined warriors drawn from every province."
+
+ estate_gya_levy_of_the_middle_kingdom_penalty:0 "Drained Tax Base"
+ desc_estate_gya_levy_of_the_middle_kingdom_penalty:0 "With large swathes of the population drafted into military service, local economies suffer from a dwindling workforce. Fields go untended, merchants struggle to fill their ledgers, and the burden of war weighs heavily on those left behind."

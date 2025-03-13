@@ -47,6 +47,7 @@ estate_gya = {
 		estate_gya_autonymous_guild_cities
 		estate_gya_monastic_administrators
 		estate_gya_harmonized_grain_routes
+		estate_gya_levy_of_the_middle_kingdom
 	}
 	agendas = {
 	}

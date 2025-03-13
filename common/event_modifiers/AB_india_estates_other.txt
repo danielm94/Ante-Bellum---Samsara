@@ -95,3 +95,15 @@ estate_gya_transitioning_provincial_governance = {
 	local_unrest = 5
 	local_state_maintenance_modifier = 0.2
 }
+
+estate_gya_levy_of_the_middle_kingdom_gya = {
+	local_manpower_modifier = 0.3
+}
+
+estate_gya_levy_of_the_middle_kingdom_chinese_culture_group = {
+	local_manpower_modifier = 0.2
+}
+
+estate_gya_levy_of_the_middle_kingdom_penalty ={
+	local_tax_modifier = -0.4
+}
