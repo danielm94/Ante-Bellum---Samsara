@@ -29,6 +29,7 @@ gph_realm_of_the_bodhisattva = {
 		3 = GPH_RECOGNIZED_REINCARNATION
 	}
 }
+
 gph_eternal_throne_of_the_chakravartin = {
 	trigger = {
 		has_reform = gph_eternal_throne_of_the_chakravartin
@@ -60,6 +61,7 @@ gph_eternal_throne_of_the_chakravartin = {
 		3 = GPH_RECOGNIZED_REINCARNATION
 	}
 }
+
 buddhist_theocracy = {
 	rank = {
 		1 = HOLY_PRINCIPALITY
@@ -106,5 +108,40 @@ buddhist_theocracy = {
 		NOT = {
 			tag = GPH
 		}
+		NOT ={
+			is_subject_of_type = chakravartin_order
+		}
+	}
+}
+
+chakravartin_order_reform = {
+	trigger = {
+		has_reform = chakravartin_order_reform
+		is_subject_of_type = chakravartin_order
+	}
+	rank = {
+		1 = CHAKRAVARTIN_ORDER_DUCHY
+		2 = CHAKRAVARTIN_ORDER_REALM
+		3 = CHAKRAVARTIN_ORDER_DOMINION
+	}
+	ruler_male = {
+		1 = CHAKRAVARTIN_ORDER_ABBOT_COMMANDER
+		2 = CHAKRAVARTIN_ORDER_ABBOT_GENERAL
+		3 = CHAKRAVARTIN_ORDER_DHARMA_LORD
+	}
+	ruler_female = {
+		1 = CHAKRAVARTIN_ORDER_ABBESS_COMMANDER
+		2 = CHAKRAVARTIN_ORDER_ABBESS_GENERAL
+		3 = CHAKRAVARTIN_ORDER_DHARMA_MOTHER
+	}
+	heir_male = {
+		1 = CHAKRAVARTIN_ORDER_HEIR_DISCIPLE
+		2 = CHAKRAVARTIN_ORDER_HEIR_MILITANT_PROTEGE
+		3 = CHAKRAVARTIN_ORDER_HEIR_ANOINTED_SUCCESSOR
+	}
+	heir_female = {
+		1 = CHAKRAVARTIN_ORDER_HEIR_DISCIPLE
+		2 = CHAKRAVARTIN_ORDER_HEIR_MILITANT_PROTEGE
+		3 = CHAKRAVARTIN_ORDER_HEIR_ANOINTED_SUCCESSOR
 	}
 }
