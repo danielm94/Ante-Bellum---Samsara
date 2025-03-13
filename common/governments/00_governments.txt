@@ -2111,6 +2111,7 @@ theocracy = {
 				vlr_st_thomas_apostle
 				gph_realm_of_the_bodhisattva
 				gph_eternal_throne_of_the_chakravartin
+				chakravartin_order_reform
 				# ]]]
 			}
 		}

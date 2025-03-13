@@ -54,4 +54,8 @@ spriteTypes = {
 		name = "government_reform_eternal_throne_of_the_chakravartin"
 		texturefile = "gfx/interface/government_reform_icons/eternal_throne_of_the_chakravartin.dds"
 	}
+	spriteType = {
+		name = "government_reform_chakravartin_order_reform"
+		texturefile = "gfx/interface/government_reform_icons/chakravartin_order_reform.dds"
+	}
 }
