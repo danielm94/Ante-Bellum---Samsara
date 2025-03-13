@@ -3,7 +3,7 @@ chakravartin_order_reform = {
 	allow_convert = no
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
-	
+	fixed_rank = 2
 	potential = {
 		is_subject_of_type = chakravartin_order
 		OR = {
