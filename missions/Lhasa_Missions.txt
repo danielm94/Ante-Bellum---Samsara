@@ -4497,7 +4497,6 @@ lha_china_slot_3 = {
 				estate = estate_gya
 				loyalty = 15
 			}
-
 			custom_tooltip = lha_qufu_vihara_privilege_tooltip
 			tooltip = {
 				set_estate_privilege = estate_gya_monastic_administrators
@@ -4583,6 +4582,76 @@ lha_china_slot_3 = {
 			}
 		}
 	}
+	lha_granaries_of_china = {
+		icon = gfx_lha_granaries_of_china 
+		position = 23
+		required_missions = {
+			lha_secure_china
+		}
+		provinces_to_highlight = {
+			superregion = china_superregion
+			owned_by = ROOT
+			trade_goods = grain
+			NOT = {
+				AND = {
+					development = 12
+					has_production_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					superregion = china_superregion
+					trade_goods = grain
+					development = 12
+					has_production_building_trigger = yes
+				}
+				amount = 15
+			}
+		}
+		effect = {
+			custom_tooltip = lha_granaries_of_china_upgrade_tooltip
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						superregion = china_superregion
+						trade_goods = grain
+					}
+					upgrade_production_building = yes
+				}
+			}
+			hidden_effect = {
+				for = {
+					amount = 6
+					effect = "lha_granaries_of_china_upgrade_effect = yes"
+				}
+			}
+			custom_tooltip = lha_granaries_of_china_province_bonus_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = lha_ricebasket_of_asia
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						superregion = china_superregion
+						trade_goods = grain
+						development = 12
+						has_production_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = lha_ricebasket_of_asia
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = lha_granaries_of_china_privilege_tooltip
+		}
+	}
+
 	lha_chakravartin_ascendant = {
 		icon = gfx_lha_chakravartin_ascendant
 		position = 24

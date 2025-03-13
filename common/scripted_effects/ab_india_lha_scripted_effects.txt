@@ -386,3 +386,21 @@ gya_upgrade_guild_modifier_effect = {
 	}
 	set_country_flag = gya_upgraded_guild_modifiers
 }
+
+lha_granaries_of_china_upgrade_effect = {
+	random_owned_province = {
+		limit ={
+			superregion = china_superregion
+			trade_goods = grain
+			development = 12
+			has_production_building_trigger = yes
+			NOT ={
+				has_province_flag = lha_granaries_of_china_upgrade_effect_upgraded
+			}
+		}
+
+		upgrade_production_building = yes
+		set_province_flag = lha_granaries_of_china_upgrade_effect_upgraded
+	}
+}
+

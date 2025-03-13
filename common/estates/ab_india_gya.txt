@@ -46,6 +46,7 @@ estate_gya = {
 		estate_gya_civil_administration
 		estate_gya_autonymous_guild_cities
 		estate_gya_monastic_administrators
+		estate_gya_harmonized_grain_routes
 	}
 	agendas = {
 	}

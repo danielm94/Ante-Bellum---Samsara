@@ -242,4 +242,9 @@ spriteTypes = {
 		name = "gfx_lha_qufu_vihara"
 		texturefile = "gfx/interface/missions/LHA/lha_qufu_vihara.dds"
 	}
+
+	spriteType = {
+		name = "gfx_lha_granaries_of_china"
+		texturefile = "gfx/interface/missions/LHA/lha_granaries_of_china.dds"
+	}
 }
