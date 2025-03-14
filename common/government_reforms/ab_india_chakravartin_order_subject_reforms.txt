@@ -28,4 +28,5 @@ chakravartin_order_reform = {
 		allow = {
 		}
 	}
+	rulers_can_be_generals = yes
 }
