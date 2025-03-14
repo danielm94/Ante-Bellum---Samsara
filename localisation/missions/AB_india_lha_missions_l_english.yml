@@ -234,4 +234,6 @@
  lha_granaries_of_china_upgrade_tooltip:0 "Up to §Y6§! province in §YChina§! that meet the requirements receive:"
  lha_granaries_of_china_province_bonus_tooltip:0 "\nEvery province that meets the requirements will receive:"
  lha_granaries_of_china_privilege_tooltip:0 "Unlocks the §YHarmonized Grain Routes§! estate privilige for the §YGya§! estate!"
- 
+ lha_end_the_toyouji_rule_title:0 "End the Toyouji Rule"
+ lha_end_the_toyouji_rule_desc:0 "For centuries, Japan has suffered under the rule of the Toyouji, a dynasty born from the Mongol invaders who once subjugated the archipelago. Though they claim legitimacy as Shoguns, their rule is nothing more than the last vestige of a broken empire. Under their watch, the followers of the Dharma are treated as second-class citizens, forced to live under the shadow of warlords and warrior clans who hold no reverence for the Buddha's teachings. This injustice cannot stand. If the Toyouji refuse to embrace the Dharma, then they must be removed. We shall cross the sea, shatter their power, and ensure that Japan is no longer ruled by the remnants of the Mongol yoke. The Wheel of Dharma must turn, and with it, the Land of the Rising Sun shall find enlightenment at last."
+ lha_end_the_toyouji_rule_parliament_tooltip:0 "§TWe will unlock a parliament issue that will allows us to release a powerful subject in §YJapan§!§!.\nWe can start the debate by selecting the debate decision in the decision tab."

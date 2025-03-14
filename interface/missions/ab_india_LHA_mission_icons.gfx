@@ -247,4 +247,8 @@ spriteTypes = {
 		name = "gfx_lha_granaries_of_china"
 		texturefile = "gfx/interface/missions/LHA/lha_granaries_of_china.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_end_the_touyoji_rule"
+		texturefile = "gfx/interface/missions/LHA/lha_end_the_touyoji_rule.dds"
+	}
 }

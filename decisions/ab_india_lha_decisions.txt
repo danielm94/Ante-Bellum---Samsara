@@ -1,12 +1,14 @@
 country_decisions = {
-	lha_spread_cloves ={
+	lha_spread_cloves = {
 		major = yes
-		color = {255 93 156}
-
-		potential = {
-			mission_completed = lha_moluccan_trade	
+		color = {
+			255
+			93
+			156
 		}
-
+		potential = {
+			mission_completed = lha_moluccan_trade
+		}
 		allow = {
 			custom_trigger_tooltip = {
 				tooltip = lha_spread_cloves_cooldown_tooltip
@@ -21,7 +23,6 @@ country_decisions = {
 					limit = {
 						trade_goods = spices
 					}
-
 					change_trade_goods = cloves
 					change_price = {
 						trade_goods = cloves
@@ -43,5 +44,51 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
+	}
+	debate_establish_japanese_monastic_order_act_issue = {
+		color = {
+			110
+			0
+			140
+		}
+		major = yes
+		potential = {
+			has_parliament = yes
+			has_issue_unlocked = {
+				issue = establish_japanese_monastic_order_act
+			}
+			has_not_enacted_parliament_action = {
+				parliament_action = establish_japanese_monastic_order_act
+			}
+			mission_completed = lha_end_the_toyouji_rule
+		}
+		allow = {
+			has_active_debate = no
+			calc_true_if = {
+				all_owned_province = {
+					region = japan_region
+				}
+				amount = 50
+			}
+			NOT = {
+				exists = ORS
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = japan_region
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			start_debate = establish_japanese_monastic_order_act
+			custom_tooltip = DEBATE_EFFECT_TT
+			custom_tooltip = establish_japanese_monastic_order_act_tooltip
+		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 }

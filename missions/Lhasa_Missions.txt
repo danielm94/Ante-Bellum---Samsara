@@ -4583,7 +4583,7 @@ lha_china_slot_3 = {
 		}
 	}
 	lha_granaries_of_china = {
-		icon = gfx_lha_granaries_of_china 
+		icon = gfx_lha_granaries_of_china
 		position = 23
 		required_missions = {
 			lha_secure_china
@@ -4651,7 +4651,6 @@ lha_china_slot_3 = {
 			custom_tooltip = lha_granaries_of_china_privilege_tooltip
 		}
 	}
-
 	lha_chakravartin_ascendant = {
 		icon = gfx_lha_chakravartin_ascendant
 		position = 24
@@ -4686,6 +4685,55 @@ lha_china_slot_3 = {
 			}
 			add_permanent_claim_multi_provinces = {
 				target = far_east_superregion
+			}
+			hidden_effect = {
+				# Makes tooltip look cleaner :)
+				add_permanent_claim_multi_provinces = {
+					target = buryatia_area
+				}
+			}
+		}
+	}
+	lha_end_the_toyouji_rule = {
+		icon = gfx_lha_end_the_touyoji_rule
+		position = 25
+		required_missions = {
+			lha_chakravartin_ascendant
+		}
+		provinces_to_highlight = {
+			region = japan_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			AND = {
+				NOT = {
+					exists = TJJ
+				}
+				NOT = {
+					exists = JAP
+				}
+			}
+			calc_true_if = {
+				all_province = {
+					region = japan_region
+					owned_by = ROOT
+				}
+				amount = 50
+			}
+		}
+		effect = {
+			custom_tooltip = lha_end_the_toyouji_rule_parliament_tooltip
+			unlock_parliament_issue = {
+				issue = establish_japanese_monastic_order_act
+			}
+			add_country_modifier = {
+				name = lha_vanquishers_of_the_sun
+				duration = -1
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
 			}
 		}
 	}

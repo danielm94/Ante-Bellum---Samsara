@@ -464,7 +464,7 @@ lha_reign_of_the_chakravartin = {
 	administrative_efficiency = 0.05
 }
 
-lha_thriving_local_maritime_guild ={
+lha_thriving_local_maritime_guild = {
 	local_sailors_modifier = 1
 	local_ship_cost = -0.25
 	local_ship_repair = 0.5
@@ -476,4 +476,9 @@ lha_ricebasket_of_asia = {
 	trade_goods_size = 0.3
 	local_production_efficiency = 0.1
 	local_manpower_modifier = 0.5
+}
+
+lha_vanquishers_of_the_sun = {
+	prestige_from_land = 0.5
+	prestige_from_naval = 0.5
 }
