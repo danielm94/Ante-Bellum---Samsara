@@ -1,16 +1,12 @@
-#ROOT = Ganden Phodrang
-#FROM = Target
 revoke_chakravartin_order = {
 	category = influence	# Which diplomatic action list the action will appear in.
 	require_acceptance = no	# Whether the action needs to be accepted by the target country for the accept effect to execute.
 	# Determines when the action is visible
 	is_visible = {
 		FROM = {
-			AND = {
-				is_subject_of_type_with_overlord = {
-					who = ROOT
-					type = chakravartin_order
-				}
+			is_subject_of_type = chakravartin_order
+			overlord = {
+				tag = ROOT
 			}
 		}
 	}
@@ -39,7 +35,7 @@ revoke_chakravartin_order = {
 			subject_type = chakravartin_order
 		}
 		free_vassal = FROM
-        create_subject = {
+		create_subject = {
 			subject_type = vassal
 			subject = FROM
 		}
@@ -62,5 +58,44 @@ revoke_chakravartin_order = {
 	# Controls the AI's usage of the action
 	ai_will_do = {
 		always = no
+	}
+}
+
+support_chakravartin_order = {
+	category = alliance	# Which diplomatic action list the action will appear in.
+	require_acceptance = no	# Whether the action needs to be accepted by the target country for the accept effect to execute.
+	# Determines when the action is visible
+	is_visible = {
+		FROM = {
+			is_subject_of_type = chakravartin_order
+			overlord = {
+				tag = ROOT
+			}
+		}
+	}
+	# Determines when the action can be taken
+	is_allowed = {
+		FROM = {
+			OR = {
+				is_in_war = {
+					casus_belli = cb_chakravartin_order_crusade
+				}
+				is_in_war = {
+					defender_leader = FROM
+				}
+			}
+		}
+	}
+	# Which effects to execute on acceptance
+	on_accept = {
+		join_all_defensive_wars_of = FROM
+		join_all_offensive_wars_of = FROM
+		FROM = {
+			add_liberty_desire = -5
+		}
+	}
+	# Controls the AI's usage of the action
+	ai_will_do = {
+		always = yes
 	}
 }
