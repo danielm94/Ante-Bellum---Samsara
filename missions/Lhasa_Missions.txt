@@ -1933,7 +1933,6 @@ lha_slot_4 = {
 		}
 		effect = {
 			custom_tooltip = lha_the_lost_bretheren_unlock_eoc_tooltip
-			set_country_flag = gph_enable_eoc_tree
 			custom_tooltip = lha_the_lost_bretheren_tooltip
 			if = {
 				limit = {
@@ -4101,6 +4100,34 @@ lha_china_slot_2 = {
 			add_mil_power = 100
 			add_prestige_or_monarch_power = {
 				amount = 30
+			}
+		}
+	}
+	lha_the_hermit_kingdom = {
+		icon = mjz_into_korea
+		position = 25
+		required_missions = {
+			lha_chakravartin_ascendant
+		}
+		provinces_to_highlight = {
+			region = korea_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			korea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = lha_the_hermit_kingdom_tibetanization_tooltip
+			set_country_flag = lha_tibetanization_of_korea
+			custom_tooltip = lha_the_hermit_kingdom_scientist_tooltip
+			set_country_flag = frn_unlock_adm_advisor_bonus
+			add_prestige_or_monarch_power = {
+				amount = 15
 			}
 		}
 	}

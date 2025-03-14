@@ -618,7 +618,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = FU_Byzantium_Events.55.a
+		name = ab_india_lha_events.14.a
 		ai_chance = {
 			factor = 1
 		}
@@ -760,6 +760,77 @@ country_event = {
 		lha_subjugate_oirat_friend = yes
 		add_ruler_modifier = {
 			name = lha_avid_reader
+		}
+	}
+}
+
+# Avert your gaze if Korean
+province_event = {
+	id = ab_india_lha_events.19
+	title = ab_india_lha_events.19.t
+	desc = ab_india_lha_events.19.d
+	picture = FARMING_eventPicture
+	hidden = yes
+	trigger = {
+		owner = {
+			tag = GPH
+			has_country_flag = lha_tibetanization_of_korea
+		}
+		NOT = {
+			culture_group = tibetan_group
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_country_flag = lha_tibetanized_korea_recently
+				}
+				OR = {
+					had_country_flag = {
+						flag = lha_tibetanized_korea_recently
+						days = 730
+					}
+				}
+			}
+		}
+		region = korea_region
+		religion = owner
+	}
+	goto = ROOT
+	hidden = yes
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.33
+			has_port = yes
+		}
+		modifier = {
+			factor = 0.33
+			num_of_times_improved_by_owner = 3
+		}
+		modifier = {
+			factor = 0.33
+			has_courthouse_building_trigger = yes
+		}
+		modifier = {
+			factor = 0.33
+			has_tax_building_trigger = yes
+		}
+	}
+	option = {
+		name = ab_india_lha_events.19.a
+		ai_chance = {
+			factor = 1
+		}
+		owner = {
+			clr_country_flag = lha_tibetanized_korea_recently
+			set_country_flag = lha_tibetanized_korea_recently
+		}
+		
+		if = {
+			limit = {
+				culture_group = korean_g
+			}
+			change_culture = gorywa
 		}
 	}
 }
