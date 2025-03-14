@@ -5,6 +5,7 @@ on_new_monarch = {
 			has_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		}
 
+		clr_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 		set_country_flag = lha_dalai_lama_is_of_age
 		country_event = {
 			id = ab_india_lha_events.12
