@@ -4,3 +4,6 @@
  ab_india_chakravartin_order_events.1.a:0 "I like the pious one from the monestary."
  ab_india_chakravartin_order_events.1.b:0 "I like the candidate who has a grand vision for [leaderless_chakravartin_subject.GetName]"
  ab_india_chakravartin_order_events.1.c:0 "It's only natural that we go with the military genius."
+ ab_india_chakravartin_order_events.1.a_tooltip:0 "The candidate will be a §YZealot§!"
+ ab_india_chakravartin_order_events.1.b_tooltip:0 "The candidate will be an §YExpansionist§!"
+ ab_india_chakravartin_order_events.1.c_tooltip:0 "The candidate will be §YStrict§!"

@@ -13,12 +13,14 @@ country_event = {
 		clr_country_flag = waiting_for_chakravartin_overlord_to_select
 		event_target:leaderless_chakravartin_subject = {
 			define_ruler = {
-				culture = ROOT
+				culture = event_target:leaderless_chakravartin_subject
 				religion = ROOT
 				change_adm = 1
-				
 			}
-			add_ruler_personality = zealot_personality
+			custom_tooltip = ab_india_chakravartin_order_events.1.a_tooltip
+			hidden_effect = {
+				add_ruler_personality = zealot_personality
+			}
 			clr_country_flag = subject_picking_new_ruler
 			add_ruler_modifier = {
 				name = chakravartin_order_pious_leader
@@ -31,11 +33,14 @@ country_event = {
 		clr_country_flag = waiting_for_chakravartin_overlord_to_select
 		event_target:leaderless_chakravartin_subject = {
 			define_ruler = {
-				culture = ROOT
+				culture = event_target:leaderless_chakravartin_subject
 				religion = ROOT
 				change_dip = 1
 			}
-			add_ruler_personality = expansionist_personality
+			custom_tooltip = ab_india_chakravartin_order_events.1.b_tooltip
+			hidden_effect = {
+				add_ruler_personality = expansionist_personality
+			}
 			clr_country_flag = subject_picking_new_ruler
 			add_ruler_modifier = {
 				name = chakravartin_order_expansionist_leader
@@ -48,11 +53,14 @@ country_event = {
 		clr_country_flag = waiting_for_chakravartin_overlord_to_select
 		event_target:leaderless_chakravartin_subject = {
 			define_ruler = {
-				culture = ROOT
+				culture = event_target:leaderless_chakravartin_subject
 				religion = ROOT
 				change_mil = 1
 			}
-			add_ruler_personality = strict_personality
+			custom_tooltip = ab_india_chakravartin_order_events.1.c_tooltip
+			hidden_effect = {
+				add_ruler_personality = strict_personality
+			}
 			add_ruler_modifier = {
 				name = chakravartin_order_military_genius
 			}
