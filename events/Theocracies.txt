@@ -85,6 +85,7 @@ country_event = {
 			OR = {
 					has_country_flag = lha_waiting_for_dalai_lama_to_come_of_age
 					has_country_flag = lha_dalai_lama_is_of_age
+					has_country_flag = dalai_lama_mechanics
 			}
 		}
 		has_government_attribute = heir
