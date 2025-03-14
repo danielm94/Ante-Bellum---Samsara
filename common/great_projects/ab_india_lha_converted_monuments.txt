@@ -589,7 +589,7 @@ qufu_vihara = {
 	date = 1445.01.01	#Yuan Dynasty restoration
 	#time to build
 	time = {
-		months = 0
+		months = 24
 	}
 	#how much to build one
 	build_cost = 0
