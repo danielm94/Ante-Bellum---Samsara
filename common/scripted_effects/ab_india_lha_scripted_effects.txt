@@ -397,3 +397,488 @@ lha_granaries_of_china_upgrade_effect = {
 		set_province_flag = lha_granaries_of_china_upgrade_effect_upgraded
 	}
 }
+
+#Pain
+lha_create_dalai_lama_effect = {
+	#Get age between 0 and 13, we want the heir to be between 2 and 15
+	random_variable = {
+		which = dl_age
+		value = 13
+	}
+	round_variable = {
+		which = dl_age
+		value = -1		#round down
+	}
+	change_variable = {
+		#Min age must be 2
+		which = dl_age
+		value = 2
+	}
+	while = {
+		#There was no better way to do this shit
+		#I apologize for the eye cancer
+		limit = {
+			OR = {
+				AND = {
+					#Don't want to generate a number > 2 if he didn't die 3 years ago
+					NOT = {
+						had_country_flag = {
+							# 3 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 1095
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 3
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 3 if he didn't die 4 years ago
+					NOT = {
+						had_country_flag = {
+							# 4 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 1460
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 4
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 4 if he didn't die 5 years ago
+					NOT = {
+						had_country_flag = {
+							# 5 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 1825
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 5
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 5 if he didn't die 6 years ago
+					NOT = {
+						had_country_flag = {
+							# 6 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 2190
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 5
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 6 if he didn't die 7 years ago
+					NOT = {
+						had_country_flag = {
+							# 7 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 2555
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 6
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 7 if he didn't die 8 years ago
+					NOT = {
+						had_country_flag = {
+							# 8 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 2920
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 7
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 8 if he didn't die 9 years ago
+					NOT = {
+						had_country_flag = {
+							# 9 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 3285
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 8
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 9 if he didn't die 10 years ago
+					NOT = {
+						had_country_flag = {
+							# 10 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 3650
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 9
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 10 if he didn't die 11 years ago
+					NOT = {
+						had_country_flag = {
+							# 11 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 4015
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 10
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 11 if he didn't die 12 years ago
+					NOT = {
+						had_country_flag = {
+							# 12 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 4380
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 11
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 12 if he didn't die 13 years ago
+					NOT = {
+						had_country_flag = {
+							# 13 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 4745
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 12
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 13 if he didn't die 14 years ago
+					NOT = {
+						had_country_flag = {
+							# 14 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 5110
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 13
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 14 if he didn't die 15 years ago
+					NOT = {
+						had_country_flag = {
+							# 15 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 5475
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 14
+					}
+				}
+				AND = {
+					#Don't want to generate a number > 15 if he didn't die 16 years ago
+					NOT = {
+						had_country_flag = {
+							# 16 years since Dalai Lama death
+							flag = dalai_lama_died
+							days = 5840
+						}
+					}
+					check_variable = {
+						which = dl_age
+						value = 15
+					}
+				}
+			}
+		}
+		#Get age between 0 and 13, we want the heir to be between 2 and 15
+		random_variable = {
+			which = dl_age
+			value = 13
+		}
+		round_variable = {
+			which = dl_age
+			value = -1			#round down
+		}
+		change_variable = {
+			#Min age must be 2
+			which = dl_age
+			value = 2
+		}
+	}
+	#Create a new heir based on the random variable value
+	#There was no better way to do this shit
+	#I apologize for the eye cancer
+	if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 2
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 3
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 2
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 3
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 4
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 3
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 4
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 5
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 5
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 6
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 5
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 6
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 7
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 6
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 7
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 8
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 7
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 8
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 9
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 8
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 9
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 10
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 9
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 10
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 11
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 10
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 11
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 12
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 11
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 12
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 13
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 12
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 13
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 14
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 13
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 14
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 15
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 14
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = dl_age
+				value = 15
+			}
+			NOT = {
+				check_variable = {
+					which = dl_age
+					value = 16
+				}
+			}
+		}
+		lha_define_dalai_lama_effect = {
+			dalai_lama_age = 15
+		}
+	}
+}
+
+lha_define_dalai_lama_effect = {
+	define_heir = {
+		culture = ROOT
+		religion = ROOT
+		age = $dalai_lama_age$
+	}
+}

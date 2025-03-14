@@ -307,6 +307,7 @@ country_event = {
 		has_country_flag = lha_dalai_lama_found
 	}
 	immediate = {
+		set_country_flag = dalai_lama_mechanics
 		clr_country_flag = lha_dalai_lama_found
 		hidden_effect = {
 			kill_heir = {
@@ -381,6 +382,13 @@ country_event = {
 	option = {
 		name = ab_india_lha_events.12.a
 		change_tag = GPH
+		hidden_effect = {
+			export_to_variable = {
+				which = dalai_lamas_found
+				value = 1
+				who = ROOT
+			}
+		}
 		add_prestige_or_monarch_power = {
 			amount = 25
 		}
@@ -400,7 +408,6 @@ country_event = {
 			kill_heir = {
 				allow_new_heir = no
 			}
-			set_country_flag = dalai_lama_mechanics
 		}
 	}
 }

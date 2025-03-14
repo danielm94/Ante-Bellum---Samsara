@@ -1,5 +1,4 @@
 namespace = ab_india_dalai_lama_events
-
 #This event file is only for events related to Ganden Phodrang's government.
 #Dalai Lama's death start
 country_event = {
@@ -10,6 +9,9 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = dalai_lama_mechanics
+	}
+	immediate = {
+		set_country_flag = dalai_lama_died
 	}
 	option = {
 		name = ab_india_dalai_lama_events.1.a
@@ -36,7 +38,6 @@ country_event = {
 	}
 }
 
-
 #Dalai Lama Found Fastest
 country_event = {
 	id = ab_india_dalai_lama_events.2
@@ -47,9 +48,72 @@ country_event = {
 	trigger = {
 		has_country_flag = searching_for_dalai_lama_fastest
 		has_country_flag = dalai_lama_mechanics
+		had_country_flag = {
+			flag = dalai_lama_died
+			days = 730
+		}
 	}
 	mean_time_to_happen = {
-		months = 6
+		months = 12
+		modifier = {
+			factor = 0.9
+			check_variable = {
+				which = dalai_lamas_found
+				value = 1
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			check_variable = {
+				which = dalai_lamas_found
+				value = 2
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			check_variable = {
+				which = dalai_lamas_found
+				value = 3
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			check_variable = {
+				which = dalai_lamas_found
+				value = 4
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = dalai_lamas_found
+				value = 5
+			}
+		}
 	}
 	immediate = {
 		clr_country_flag = searching_for_dalai_lama_fastest
@@ -77,9 +141,72 @@ country_event = {
 	trigger = {
 		has_country_flag = searching_for_dalai_lama_fast
 		has_country_flag = dalai_lama_mechanics
+		had_country_flag = {
+			flag = dalai_lama_died
+			days = 730
+		}
 	}
 	mean_time_to_happen = {
-		months = 12
+		months = 24
+		modifier = {
+			factor = 0.9
+			check_variable = {
+				which = dalai_lamas_found
+				value = 1
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			check_variable = {
+				which = dalai_lamas_found
+				value = 2
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			check_variable = {
+				which = dalai_lamas_found
+				value = 3
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			check_variable = {
+				which = dalai_lamas_found
+				value = 4
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = dalai_lamas_found
+				value = 5
+			}
+		}
 	}
 	immediate = {
 		clr_country_flag = searching_for_dalai_lama_fast
@@ -108,9 +235,72 @@ country_event = {
 	trigger = {
 		has_country_flag = searching_for_dalai_lama
 		has_country_flag = dalai_lama_mechanics
+		had_country_flag = {
+			flag = dalai_lama_died
+			days = 730
+		}
 	}
 	mean_time_to_happen = {
-		months = 24
+		months = 48
+		modifier = {
+			factor = 0.9
+			check_variable = {
+				which = dalai_lamas_found
+				value = 1
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			check_variable = {
+				which = dalai_lamas_found
+				value = 2
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 0.7
+			check_variable = {
+				which = dalai_lamas_found
+				value = 3
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			check_variable = {
+				which = dalai_lamas_found
+				value = 4
+			}
+			NOT = {
+				check_variable = {
+					which = dalai_lamas_found
+					value = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			check_variable = {
+				which = dalai_lamas_found
+				value = 5
+			}
+		}
 	}
 	immediate = {
 		clr_country_flag = searching_for_dalai_lama
@@ -128,7 +318,7 @@ country_event = {
 	}
 }
 
-# Dalai Lama
+# Dalai Lama Found
 country_event = {
 	id = ab_india_dalai_lama_events.5
 	title = ab_india_lha_events.5.t
@@ -139,16 +329,17 @@ country_event = {
 		has_country_flag = dalai_lama_found
 	}
 	immediate = {
+		change_variable = {
+			which = dalai_lamas_found
+			value = 1
+		}
 		clr_country_flag = dalai_lama_found
 		hidden_effect = {
 			kill_heir = {
 				allow_new_heir = no
 			}
-			define_heir = {
-				religion = vajrayana
-				culture = tibetan
-				age = 10
-			}
+			lha_create_dalai_lama_effect = yes
+			clr_country_flag = dalai_lama_died
 			add_heir_personality = enlightened_personality
 		}
 	}
