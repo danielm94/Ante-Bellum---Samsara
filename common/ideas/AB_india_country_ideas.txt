@@ -429,6 +429,46 @@ GPH_ideas_3 = {
 	}
 }
 
+ORS_ideas = {
+	start = {
+		discipline = 0.05
+		allowed_samurai_fraction = 0.2
+	}
+	bonus = {
+		mil_advisor_cost = -0.25
+	}
+	trigger = {
+		tag = ORS
+	}
+	free = yes
+	ORS_warrior_monks_of_the_sun = {
+		infantry_cost = -0.10
+		global_ship_cost = -0.10
+	}
+	ORS_guardians_of_the_dharma = {
+		manpower_recovery_speed = 0.15
+		manpower_in_true_faith_provinces = 0.1
+	}
+	ORS_swords_of_enlightenment = {
+		global_missionary_strength = 0.02
+		yearly_karma_decay = 0.2
+	}
+	ORS_pioneers_of_the_outer_isles = {
+		global_colonial_growth = 20
+		global_trade_power = 0.1
+	}
+	ORS_harmonious_rule_of_law = {
+		development_cost_in_primary_culture = -0.1
+		global_tax_modifier = 0.1
+	}
+	ORS_fortresses_of_the_eternal_watch = {
+		general_cost = -0.1
+	}
+	ORS_warriors_of_the_way = {
+		warscore_cost_vs_other_religion = -0.1
+		core_creation = -0.05
+	}
+}
 #Kakatiya ideas
 KAK_ideas = {
 	start = {
