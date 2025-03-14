@@ -1828,6 +1828,9 @@ lha_slot_4 = {
 					}
 				}
 			}
+			NOT = {
+				alliance_with = event_target:EmperorOfChina
+			}
 		}
 		effect = {
 			if = {
