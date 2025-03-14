@@ -149,3 +149,7 @@ upgrade_center_of_trade = {
 		}
 	}
 }
+
+unlock_parliament_issue = {
+	set_country_flag = unlocked_issue_$issue$
+}
