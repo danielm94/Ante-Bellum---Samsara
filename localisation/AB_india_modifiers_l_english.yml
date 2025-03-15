@@ -469,13 +469,18 @@
  desc_lha_ricebasket_of_asia:0 "This province has been transformed into a cornerstone of the empire's agricultural might. Expanding irrigation networks, improved granaries, and monastic oversight ensure bountiful harvests that sustain both the population and the armies of the realm. As the heart of the empire's food supply, this land not only fills storehouses but also strengthens the hands that wield the sword in its defense."
  estate_gya_levy_of_the_middle_kingdom_gya:0 "Gya Provincial Levies"
  desc_estate_gya_levy_of_the_middle_kingdom_gya:0 "The Gya provinces have been integrated into the empire's military structure, contributing a steady supply of recruits to the army. While their devotion to the Dharma remains firm, their role on the battlefield grows ever larger."
-
  estate_gya_levy_of_the_middle_kingdom_chinese_culture_group:0 "Imperial Chinese Levies"
  desc_estate_gya_levy_of_the_middle_kingdom_chinese_culture_group:0 "Across the Middle Kingdom, banners are raised, and men are conscripted to serve the empire. No longer bound by loyalty to the fallen emperors, they now march under the banner of the Dharma, swelling the ranks of the army with disciplined warriors drawn from every province."
-
  estate_gya_levy_of_the_middle_kingdom_penalty:0 "Drained Tax Base"
  desc_estate_gya_levy_of_the_middle_kingdom_penalty:0 "With large swathes of the population drafted into military service, local economies suffer from a dwindling workforce. Fields go untended, merchants struggle to fill their ledgers, and the burden of war weighs heavily on those left behind."
  lha_revoked_chakravartin_order:0 "Disbanded Our Sacred Order."
-
  lha_vanquishers_of_the_sun:0 "Vanquishers of the Sun"
  desc_lha_vanquishers_of_the_sun:0 "The conquest of Japan has solidified our reputation as the supreme force of both land and sea. The once-feared samurai have been broken, their fleets scattered like autumn leaves upon the waves. Every battle won and every enemy vanquished now serves as a testament to our might, ensuring that our name is spoken with reverence—and fear—throughout the known world."
+ lha_funded_pilgrimage:0 "Funded a Pilgrimage for Us"
+ lha_accepted_pilgrimage:0 "Patronized Our Holy City"
+ lha_funded_pilgrimage_for_someone:0 "Funded a Pilgrimage"
+ desc_lha_funded_pilgrimage_for_someone:0 "By generously financing the journey of distant Buddhist devotees to the holy city of Lhasa, we have strengthened our spiritual influence across the Buddhist world. The faithful look upon our realm with reverence, and our dedication to the Dharma radiates like the light of the sun."
+ lha_went_on_pilgrimage:0 "Completed a Pilgrimage"
+ desc_lha_went_on_pilgrimage:0 "Our people have undertaken the sacred journey to Lhasa, walking the path of the enlightened ones before us. The blessings of the Dalai Lama and the sanctity of this pilgrimage have brought peace to our realm, reinforcing our spiritual foundation and uniting us under the Dharma."
+ lha_pilgrimage_hub:0 "Pilgrimage Hub of the Dharma"
+ desc_lha_pilgrimage_hub:0 "Lhasa has become the spiritual heart of the Buddhist world, drawing pilgrims from distant lands who seek enlightenment at the feet of the Dalai Lama. With the influx of devoted travelers, markets flourish, monasteries expand, and the city's prosperity grows alongside its sacred renown."

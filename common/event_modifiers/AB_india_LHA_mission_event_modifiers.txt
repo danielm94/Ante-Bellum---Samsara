@@ -482,3 +482,30 @@ lha_vanquishers_of_the_sun = {
 	prestige_from_land = 0.5
 	prestige_from_naval = 0.5
 }
+
+lha_funded_pilgrimage_for_someone = {
+	yearly_karma_decay = 0.1
+	prestige = 0.25
+	monthly_enlightenment_power = 0.01
+}
+
+#Hidden modifier, used as flag
+lha_recent_pilgrimage = {
+}
+
+lha_went_on_pilgrimage = {
+	global_unrest = -2
+	yearly_karma_decay = 0.1
+	legitimacy = 0.5
+	republican_tradition = 0.2
+	devotion = 0.5
+	horde_unity = 0.5
+}
+
+lha_pilgrimage_hub = {
+	prestige = 0.1
+	local_tax_modifier = 0.5
+	local_prosperity_growth = 0.25
+	local_development_cost = -0.1
+	build_cost = -0.1
+}

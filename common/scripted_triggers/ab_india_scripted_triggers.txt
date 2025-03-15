@@ -237,3 +237,326 @@ still_buddies_with_oir = {
 		}
 	}
 }
+
+fund_pilgrimage_cost_trigger = {
+	if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 0
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 101
+				}
+			}
+		}
+		treasury = 200
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 101
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 201
+				}
+			}
+		}
+		treasury = 400
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 201
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 301
+				}
+			}
+		}
+		treasury = 600
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 301
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 401
+				}
+			}
+		}
+		treasury = 800
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 401
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 501
+				}
+			}
+		}
+		treasury = 1000
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 501
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 601
+				}
+			}
+		}
+		treasury = 1200
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 601
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 701
+				}
+			}
+		}
+		treasury = 1400
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 701
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 801
+				}
+			}
+		}
+		treasury = 1600
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 801
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 901
+				}
+			}
+		}
+		treasury = 1800
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 901
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1001
+				}
+			}
+		}
+		treasury = 2000
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1001
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1101
+				}
+			}
+		}
+		treasury = 2200
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1101
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1201
+				}
+			}
+		}
+		treasury = 2400
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1201
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1301
+				}
+			}
+		}
+		treasury = 2600
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1301
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1401
+				}
+			}
+		}
+		treasury = 2800
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1401
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1501
+				}
+			}
+		}
+		treasury = 3000
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1501
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1601
+				}
+			}
+		}
+		treasury = 3200
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1600
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1701
+				}
+			}
+		}
+		treasury = 3400
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1701
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1801
+				}
+			}
+		}
+		treasury = 3600
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1801
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 1901
+				}
+			}
+		}
+		treasury = 3800
+	}
+	else_if = {
+		limit = {
+			capital_distance = {
+				who = $target$
+				distance = 1901
+			}
+			NOT = {
+				capital_distance = {
+					who = $target$
+					distance = 2001
+				}
+			}
+		}
+		treasury = 4000
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = too_far_for_pilgrimage
+			always = no
+		}
+	}
+}
+
+empire_of_china_dismantled= {
+	custom_trigger_tooltip = {
+		tooltip = empire_of_china_dismantled_tooltip
+		OR = {
+			has_global_flag = empire_of_china_dismantled
+			NOT = {
+				any_country = {
+					is_emperor_of_china = yes
+				}
+			}
+		}
+	}
+}

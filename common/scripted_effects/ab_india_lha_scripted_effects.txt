@@ -912,17 +912,15 @@ lha_settlement_of_siberia_effect = {
 		}
 		add_siberian_construction = 0
 		if = {
-			limit ={
+			limit = {
 				region = east_siberia_region
 			}
-
 			change_culture = manju
 		}
-		else_if ={
-			limit ={
+		else_if = {
+			limit = {
 				region = west_siberia_region
 			}
-
 			change_culture = sogpo
 		}
 		change_religion = ROOT
@@ -930,9 +928,26 @@ lha_settlement_of_siberia_effect = {
 }
 
 lha_settlement_of_siberia_parliament_effect = {
-	for ={
+	for = {
 		amount = $iterations$
 		custom_tooltip = lha_settlement_of_siberia_effect_4_tooltip
 		effect = "lha_settlement_of_siberia_effect = yes"
+	}
+}
+
+fund_pilgrimage_pay_cost_effect = {
+	export_to_variable = {
+		variable_name = capital_distance_from_target
+		value = capital_distance
+		who = $target$
+	}
+	multiply_variable = {
+		which = capital_distance_from_target
+		value = -2
+	}
+
+	variable_use_in_effect_effect ={
+		effect = add_treasury
+		variable = capital_distance_from_target
 	}
 }
