@@ -150,6 +150,63 @@ lha_slot_1 = {
 			}
 		}
 	}
+	lha_the_great_monastic_colleges = {
+		icon = gfx_lha_the_great_monastic_colleges
+		position = 5
+		required_missions = {
+			lha_the_great_monastic_awakening
+		}
+		provinces_to_highlight = {
+			province_id = 677
+			NOT = {
+				has_building = university
+			}
+		}
+		trigger = {
+			677 = {
+				has_building = university
+				owned_by = ROOT
+			}
+			calc_true_if = {
+				amount = 5
+				all_owned_province = {
+					has_building = university
+				}
+			}
+		}
+		effect = {
+			change_government_reform_progress = 50
+			677 = {
+				add_province_modifier = {
+					name = lha_center_of_buddhist_studies
+					duration = -1
+				}
+			}
+
+			set_country_flag = enlightened_academies_university_buff
+			custom_tooltip = lha_the_great_monastic_colleges_uni_buff_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = lha_enlightened_academies
+					duration = -1
+				}
+			}
+			custom_tooltip = lha_the_great_monastic_colleges_enlightenment_tooltip
+
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_building = university
+					}
+
+					add_province_modifier = {
+						name = lha_enlightened_academies
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 	lha_moving_through_kashmir = {
 		icon = gfx_lha_moving_through_kashmir
 		position = 6

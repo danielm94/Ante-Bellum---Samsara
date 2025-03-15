@@ -516,3 +516,13 @@ lha_fortress_of_the_dharma ={
 	local_garrison_size = 0.25
 	local_hostile_attrition = 1
 }
+
+lha_center_of_buddhist_studies ={
+	local_institution_spread = 0.5
+	prestige_decay = -0.01
+}
+
+lha_enlightened_academies ={
+	local_missionary_strength = 0.01
+	local_unrest = -0.5
+}

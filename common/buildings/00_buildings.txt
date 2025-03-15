@@ -1393,7 +1393,6 @@ cathedral = {
 				}
 				has_province_modifier = estate_gya_monastic_administration_great_temple
 			}
-
 			remove_province_modifier = estate_gya_monastic_administration_great_temple
 			FROM = {
 				add_estate_loyalty = {
@@ -1430,6 +1429,24 @@ university = {
 		# AB [[[
 		ab_building_university_effect = yes
 		# ]]]
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = enlightened_academies_university_buff
+				}
+			}
+			add_province_modifier = {
+				name = lha_enlightened_academies
+				duration = -1
+			}
+			owner = {
+				add_government_power = {
+					mechanic_type = state_enlightenment_mechanic
+					power_type = enlightenment_power
+					value = 0.01
+				}
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -1440,6 +1457,19 @@ university = {
 		# AB [[[
 		ab_removing_university_effect = yes
 		# ]]]
+		if = {
+			limit = {
+				has_province_modifier = lha_enlightened_academies
+			}
+			remove_province_modifier = lha_enlightened_academies
+			owner = {
+				add_government_power = {
+					mechanic_type = state_enlightenment_mechanic
+					power_type = enlightenment_power
+					value = -0.02
+				}
+			}
+		}
 	}
 	on_obsolete = {
 	}

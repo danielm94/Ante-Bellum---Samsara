@@ -255,4 +255,8 @@ spriteTypes = {
 		name = "gfx_lha_shield_the_holy_city"
 		texturefile = "gfx/interface/missions/LHA/lha_shield_the_holy_city.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_the_great_monastic_colleges"
+		texturefile = "gfx/interface/missions/LHA/lha_the_great_monastic_colleges.dds"
+	}
 }
