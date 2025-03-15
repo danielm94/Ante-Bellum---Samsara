@@ -59,3 +59,67 @@ establish_japanese_monastic_order_act = {
 		factor = 1
 	}
 }
+
+settlement_of_siberia_act = {
+	category = 2
+	allow = {
+		mission_completed = lha_the_northern_frontier
+		any_province = {
+			is_empty = yes
+			OR = {
+				region = east_siberia_region
+				region = west_siberia_region
+			}
+			calc_true_if = {
+				all_neighbor_province = {
+					NOT = {
+						is_sea = yes
+					}
+					NOT = {
+						is_wasteland = yes
+					}
+					NOT = {
+						is_empty = yes
+					}
+					NOT = {
+						is_colony = yes
+					}
+					owned_by = ROOT
+				}
+				amount = 1
+			}
+		}
+	}
+	effect = {
+		issue_effect_scaling_with_estate_influence = {
+			estate = estate_church
+			effect1 = "lha_settlement_of_siberia_parliament_effect ={
+		iterations = 4
+	}"
+			effect2 = "lha_settlement_of_siberia_parliament_effect ={
+		iterations = 5
+	}"
+			effect3 = "lha_settlement_of_siberia_parliament_effect ={
+		iterations = 6
+	}"
+			effect4 = "lha_settlement_of_siberia_parliament_effect ={
+		iterations = 7
+	}"
+			effect5 = "lha_settlement_of_siberia_parliament_effect ={
+		iterations = 8
+	}"
+			fallback_effect = "lha_settlement_of_siberia_parliament_effect ={
+		iterations = 5
+	}"
+		}
+	}
+	modifier = {
+		global_colonial_growth = 10
+	}
+	chance = {
+		factor = 9
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

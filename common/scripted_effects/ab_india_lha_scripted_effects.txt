@@ -882,3 +882,63 @@ lha_define_dalai_lama_effect = {
 		age = $dalai_lama_age$
 	}
 }
+
+lha_settlement_of_siberia_effect = {
+	random_province = {
+		limit = {
+			is_empty = yes
+			OR = {
+				region = east_siberia_region
+				region = west_siberia_region
+			}
+			calc_true_if = {
+				all_neighbor_province = {
+					NOT = {
+						is_sea = yes
+					}
+					NOT = {
+						is_wasteland = yes
+					}
+					NOT = {
+						is_empty = yes
+					}
+					NOT = {
+						is_colony = yes
+					}
+					owned_by = ROOT
+				}
+				amount = 1
+			}
+		}
+		add_siberian_construction = 0
+		if = {
+			limit ={
+				region = east_siberia_region
+			}
+
+			change_culture = manju
+		}
+		else_if ={
+			limit ={
+				region = west_siberia_region
+			}
+
+			change_culture = sogpo
+		}
+		change_religion = ROOT
+	}
+}
+
+lha_settlement_of_siberia_parliament_effect = {
+	for ={
+		amount = $iterations$
+		custom_tooltip = lha_settlement_of_siberia_effect_4_tooltip
+		effect = "lha_settlement_of_siberia_effect = yes"
+	}
+}
+
+b={
+	lha_settlement_of_siberia_parliament_effect ={
+		iterations = 4
+	}
+}

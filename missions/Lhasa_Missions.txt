@@ -4938,6 +4938,55 @@ lha_china_slot_4 = {
 			set_karma = 0
 		}
 	}
+	lha_the_northern_frontier = {
+		icon = mng_nomadic_frontier
+		position = 25
+		required_missions = {
+			lha_chakravartin_ascendant
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = manchuria_region
+				area = buryatia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			manchuria_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			buryatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = lha_the_northern_frontier_tibetanization_tooltip
+			set_country_flag = lha_tibetanization_of_the_steppes
+			custom_tooltip = lha_the_northern_frontier_discover_siberia_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_empty = yes
+						is_neighbor_of = ROOT
+						superregion = tartary_superregion
+						NOT = {
+							has_discovered = ROOT
+						}
+					}
+					discover_country = ROOT
+				}
+			}
+			custom_tooltip = lha_the_northern_frontier_parliament_issue_tooltip
+			add_mil_power = 100
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+		}
+	}
 }
 
 lha_china_slot_5 = {
