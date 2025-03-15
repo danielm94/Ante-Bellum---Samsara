@@ -1806,57 +1806,72 @@ lha_slot_4 = {
 		required_missions = {
 		}
 		provinces_to_highlight = {
-			owned_by = event_target:EmperorOfChina
+			if = {
+				limit = {
+					empire_of_china_dismantled = yes
+				}
+				always = no
+			}
+			else = {
+				is_capital = yes
+				owner = {
+					is_emperor_of_china = yes
+				}
+			}
 		}
 		trigger = {
-			OR = {
-				AND = {
-					NOT = {
-						grown_by_development = 250
-					}
-					any_country = {
-						is_emperor_of_china = yes
-						has_opinion = {
-							who = ROOT
-							value = 100
+			if = {
+				#Avoid issues where game references event_target that no longer exists after eoc dies. Also better performance
+				limit = {
+					empire_of_china_dismantled = yes
+				}
+				empire_of_china_dismantled = yes
+			}
+			else = {
+				OR = {
+					empire_of_china_dismantled = yes
+					alliance_with = event_target:EmperorOfChina
+					AND = {
+						NOT = {
+							grown_by_development = 250
+						}
+						event_target:EmperorOfChina = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
 						}
 					}
 				}
-				NOT = {
-					any_country = {
-						is_emperor_of_china = yes
-					}
-				}
-			}
-			NOT = {
-				alliance_with = event_target:EmperorOfChina
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					NOT = {
-						any_country = {
-							is_emperor_of_china = yes
-						}
-					}
+					empire_of_china_dismantled = yes
 				}
-				custom_tooltip = lha_take_refuge_under_yuan_tooltip_emperor_exists_no
-				hidden_effect = {
-					add_prestige_or_monarch_power = {
-						amount = 10
+				add_prestige_or_monarch_power = {
+					amount = 10
+				}
+			}
+			else_if = {
+				limit = {
+					alliance_with = event_target:EmperorOfChina
+				}
+				event_target:EmperorOfChina = {
+					add_trust = {
+						who = ROOT
+						value = 10
+						mutual = yes
 					}
 				}
 			}
 			else = {
-				custom_tooltip = lha_take_refuge_under_yuan_tooltip_emperor_exists_yes
-				hidden_effect = {
-					add_prestige = -10
-					event_target:EmperorOfChina = {
-						create_subject = {
-							subject_type = tributary_state
-							subject = LHA
-						}
+				add_prestige = -10
+				event_target:EmperorOfChina = {
+					create_subject = {
+						subject_type = tributary_state
+						subject = ROOT
 					}
 				}
 			}
@@ -4074,17 +4089,21 @@ lha_china_slot_2 = {
 			lha_secure_china
 		}
 		provinces_to_highlight = {
-			owned_by = event_target:EmperorOfChina
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					empire_of_china_dismantled = yes
+				}
+				always = no
+			}
+			else = {
+				owned_by = event_target:EmperorOfChina
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		trigger = {
-			NOT = {
-				any_country = {
-					is_emperor_of_china = yes
-				}
-			}
+			empire_of_china_dismantled = yes
 		}
 		effect = {
 			custom_tooltip = lha_slay_the_dragon_pp_tooltip
