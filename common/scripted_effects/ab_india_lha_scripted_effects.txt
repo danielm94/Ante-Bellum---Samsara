@@ -936,9 +936,3 @@ lha_settlement_of_siberia_parliament_effect = {
 		effect = "lha_settlement_of_siberia_effect = yes"
 	}
 }
-
-b={
-	lha_settlement_of_siberia_parliament_effect ={
-		iterations = 4
-	}
-}
