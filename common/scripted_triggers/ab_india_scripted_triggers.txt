@@ -14,6 +14,18 @@ is_dharmic = {
 	}
 }
 
+is_buddhist = {
+	custom_trigger_tooltip = {
+		tooltip = is_buddhist
+		OR = {
+			religion = buddhism
+			religion = mahayana
+			religion = vajrayana
+			religion = maitreya
+		}
+	}
+}
+
 # All the provinces except the uncolonized ones at the start of the game
 owns_inhabited_provinces_of_sumatra = {
 	custom_trigger_tooltip = {
@@ -177,7 +189,7 @@ has_exempt_from_seize_land_for_estate_hill_clans = {
 }
 
 has_exempt_from_seize_land_for_estate_gya = {
-	OR ={
+	OR = {
 		has_estate_privilege = estate_gya_civil_administration
 	}
 }
@@ -225,4 +237,3 @@ still_buddies_with_oir = {
 		}
 	}
 }
-

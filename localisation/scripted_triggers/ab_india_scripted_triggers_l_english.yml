@@ -4,3 +4,4 @@
  owns_inhabited_provinces_of_moluccan_trade_node_tooltip:0 "All provinces, ignoring the uncolonized ones, in the Moluccan trade node are owned by you or your non tributary subjects."
  is_islamic:0 "The province or country is Islamic."
  is_dharmic:0 "The province or country is of a Dharmic religion."
+ is_buddhist:0 "The province or country is Buddhist"
