@@ -13271,7 +13271,7 @@ gyeongbok_palace = {
 				OR = {
 					culture = korean_new
 					culture = korean
-					culture = gorywa
+					culture = koriya
 				}
 				province_is_or_accepts_culture = yes
 				OR = { 
