@@ -251,4 +251,8 @@ spriteTypes = {
 		name = "gfx_lha_end_the_touyoji_rule"
 		texturefile = "gfx/interface/missions/LHA/lha_end_the_touyoji_rule.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_shield_the_holy_city"
+		texturefile = "gfx/interface/missions/LHA/lha_shield_the_holy_city.dds"
+	}
 }

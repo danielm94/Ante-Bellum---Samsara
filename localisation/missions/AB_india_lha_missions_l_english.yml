@@ -244,3 +244,5 @@
  lha_the_northern_frontier_tibetanization_tooltip:0 "All provinces of §YEvenki§! or §YMongol§! culture in §YAsia§! that are §Y[Root.Religion.GetName]§! will slowly be Tibetanized.\n"
  lha_the_northern_frontier_discover_siberia_tooltip:0 "We will discover all neighboring uncolonized provinces in §YSiberia§!\n"
  lha_the_northern_frontier_parliament_issue_tooltip:0 "§TUnlock the §YThe Settlement of Siberia Act§! parliament issue. When passed, this parliament issue will create §Y4§! to §Y8§! §YSiberian Frontiers§! in §YSiberia§!, depending on the estate influence of the §YMerchant Guilds§!.§!\n"
+ lha_shield_the_holy_city_title:0 "Shield the Holy City"
+ lha_shield_the_holy_city_desc:0 "For centuries, Lhasa has stood as the heart of the Dharma, a sacred refuge where wisdom and enlightenment flourish. But a city of such spiritual significance must also be defended against those who would see it fall. We must ensure that Lhasa is not only a beacon of peace but also an impenetrable stronghold. By fortifying its walls and securing its defenses, we will guarantee that no enemy shall ever defile the sanctity of the Holy City."

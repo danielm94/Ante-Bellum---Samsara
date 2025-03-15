@@ -1922,6 +1922,41 @@ lha_slot_4 = {
 			}
 		}
 	}
+	lha_shield_the_holy_city = {
+		icon = gfx_lha_shield_the_holy_city
+		position = 3
+		provinces_to_highlight = {
+			province_id = 677
+			NOT = {
+				has_fort_building_trigger = yes
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			677 = {
+				has_fort_building_trigger = yes
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			677 = {
+				add_province_modifier = {
+					name = lha_fortress_of_the_dharma
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				age = 30
+				cost_multiplier = 0.4
+				religion = ROOT
+				culture = ROOT
+				skill = 1
+			}
+		}
+	}
 	lha_the_lost_bretheren = {
 		icon = gfx_lha_the_lost_bretheren
 		position = 6
