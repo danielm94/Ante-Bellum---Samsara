@@ -672,6 +672,8 @@ monarchy = {
 				fkn_improved_blitzkrieg
 				rhl_imperial_guards
 				# ]]]
+				#Samsara
+				dzong_system
 			}
 		}
 		state_and_religion = {
@@ -1541,6 +1543,8 @@ republic = {
 				ab_condottiero_reform
 				rhl_imperial_guards
 				# ]]]
+				#Samsara
+				dzong_system
 			}
 		}
 		republic_and_religion = {
@@ -2348,6 +2352,8 @@ theocracy = {
 				fkn_improved_blitzkrieg
 				rhl_imperial_guards
 				# ]]]
+				#Samsara
+				dzong_system
 			}
 		}
 		# secularization = {

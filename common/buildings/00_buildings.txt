@@ -219,6 +219,23 @@ temple = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					has_reform = dzong_system
+				}
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = glacier
+					has_terrain = highlands
+				}
+			}
+			add_province_modifier = {
+				name = lha_local_dzong
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -304,6 +321,12 @@ temple = {
 				name = estate_gya_transitioning_provincial_governance
 				duration = 3650
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = lha_local_dzong
+			}
+			remove_province_modifier = lha_local_dzong
 		}
 	}
 	on_obsolete = {
@@ -1319,6 +1342,29 @@ cathedral = {
 				remove_province_modifier = estate_gya_monastic_administration_temple
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					has_reform = dzong_system
+				}
+				OR = {
+					has_terrain = mountain
+					has_terrain = hills
+					has_terrain = glacier
+					has_terrain = highlands
+				}
+			}
+			add_province_modifier = {
+				name = lha_local_great_dzong
+				duration = -1
+			}
+			if = {
+				limit = {
+					has_province_modifier = lha_local_dzong
+				}
+				remove_province_modifier = lha_local_dzong
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -1404,6 +1450,12 @@ cathedral = {
 				name = estate_gya_transitioning_provincial_governance
 				duration = 3650
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = lha_local_great_dzong
+			}
+			remove_province_modifier = lha_local_great_dzong
 		}
 	}
 	on_obsolete = {

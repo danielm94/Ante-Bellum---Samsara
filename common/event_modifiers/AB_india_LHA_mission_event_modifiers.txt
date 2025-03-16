@@ -510,19 +510,51 @@ lha_pilgrimage_hub = {
 	build_cost = -0.1
 }
 
-lha_fortress_of_the_dharma ={
+lha_fortress_of_the_dharma = {
 	local_defensiveness = 0.5
 	local_fort_maintenance_modifier = -0.5
 	local_garrison_size = 0.25
 	local_hostile_attrition = 1
 }
 
-lha_center_of_buddhist_studies ={
+lha_center_of_buddhist_studies = {
 	local_institution_spread = 0.5
 	prestige_decay = -0.01
 }
 
-lha_enlightened_academies ={
+lha_enlightened_academies = {
 	local_missionary_strength = 0.01
 	local_unrest = -0.5
+}
+
+lha_gates_of_tibet = {
+	local_defensiveness = 0.25
+	local_fort_maintenance_modifier = -0.25
+	local_garrison_size = 0.25
+	local_hostile_attrition = 1
+}
+
+lha_develop_the_dzongs = {
+	local_great_project_upgrade_cost = -0.33
+	local_great_project_upgrade_time = -0.33
+}
+
+lha_local_dzong = {
+	local_defensiveness = 0.25
+	local_governing_cost = -0.1
+	local_fort_maintenance_modifier = -0.1
+	local_garrison_size = 0.3
+	local_garrison_damage = 0.25
+	local_tax_modifier = 0.25
+	allowed_num_of_buildings = 1
+}
+
+lha_local_great_dzong = {
+	local_defensiveness = 0.50
+	local_governing_cost = -0.25
+	local_fort_maintenance_modifier = -0.25
+	local_garrison_size = 0.6
+	local_garrison_damage = 0.5
+	local_tax_modifier = 0.50
+	allowed_num_of_buildings = 1
 }

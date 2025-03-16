@@ -58,4 +58,8 @@ spriteTypes = {
 		name = "government_reform_chakravartin_order_reform"
 		texturefile = "gfx/interface/government_reform_icons/chakravartin_order_reform.dds"
 	}
+	spriteType = {
+		name = "government_reform_dzong_system"
+		texturefile = "gfx/interface/government_reform_icons/dzong_system.dds"
+	}
 }
