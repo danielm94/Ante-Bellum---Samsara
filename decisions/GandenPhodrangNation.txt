@@ -2,6 +2,7 @@ country_decisions{
 	ganden_phodrang_nation={
 		major = yes
 		potential = {
+			ironman = no
 			tag = LHA
 		}
 		allow = {
