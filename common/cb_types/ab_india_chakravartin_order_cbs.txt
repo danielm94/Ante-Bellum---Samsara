@@ -4,23 +4,13 @@ cb_chakravartin_order_crusade = {
 
 	prerequisites_self = {
 		is_subject_of_type = chakravartin_order
-		OR ={
-			religion = buddhism
-			religion = mahayana
-			religion = vajrayana
-			religion = maitreya
-		}
+		is_buddhist = yes
 	}
 
 	prerequisites = {
 		NOT ={
 			FROM = {
-				OR ={
-					religion = buddhism
-					religion = mahayana
-					religion = vajrayana
-					religion = maitreya
-				}
+				is_buddhist = yes
 			}
 		}
 	}
