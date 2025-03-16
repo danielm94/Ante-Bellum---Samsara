@@ -3379,6 +3379,106 @@ lha_slot_5 = {
 			custom_tooltip = lha_gates_of_the_himalayas_guerrillas_tooltip
 		}
 	}
+	lha_himalayan_strongholds = {
+		icon = gfx_lha_himalayan_strongholds
+		position = 5
+		required_missions = {
+			lha_gates_of_the_himalayas
+		}
+		trigger = {
+			5261 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_great_project = {
+					type = himalaya_fort_3
+					tier = 3
+				}
+			}
+			5316 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_great_project = {
+					type = himalaya_fort_2
+					tier = 3
+				}
+			}
+			5314 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_great_project = {
+					type = himalaya_fort_4
+					tier = 3
+				}
+			}
+			557 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_great_project = {
+					type = himalaya_fort_1
+					tier = 3
+				}
+			}
+		}
+		effect = {
+			5261 = {
+				add_or_upgrade_fort_building = yes
+			}
+			5316 = {
+				add_or_upgrade_fort_building = yes
+			}
+			5314 = {
+				add_or_upgrade_fort_building = yes
+			}
+			557 = {
+				add_or_upgrade_fort_building = yes
+			}
+
+			custom_tooltip = lha_himalayan_strongholds_advisor_buff_tooltip
+			set_country_flag = ned_military_engineer_siege_ability_scaled_modifier_flag
+
+			custom_tooltip = lha_himalayan_strongholds_fort_buff_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = ned_low_countries_fort_buff
+					duration = -1
+				}
+			}
+
+			custom_tooltip = lha_himalayan_strongholds_fort_def_ideas_buff_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = ned_low_countries_fort_buff_buffed
+					duration = -1
+				}
+			}
+			set_country_flag = lha_mountain_fort_experts
+			set_country_flag = fort_rebate_enabled
+			hidden_effect = {
+				every_owned_province = {
+					limit ={
+						OR = {
+							has_terrain = mountain
+							has_terrain = hills
+							has_terrain = highlands
+							has_terrain = glacier
+						}
+					}
+					if = {
+						limit = {
+							owner = {
+								full_idea_group = defensive_ideas
+							}
+						}
+						add_province_modifier = {
+							name = ned_low_countries_fort_buff_buffed
+							duration = -1
+						}
+					} else = {
+						add_province_modifier = {
+							name = ned_low_countries_fort_buff
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
 	lha_the_sands_of_tarim = {
 		icon = gfx_lha_the_sands_of_tarim
 		position = 6

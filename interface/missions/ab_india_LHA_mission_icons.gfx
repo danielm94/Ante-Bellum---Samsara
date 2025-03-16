@@ -271,4 +271,8 @@ spriteTypes = {
 		name = "gfx_lha_gates_of_the_himalayas"
 		texturefile = "gfx/interface/missions/LHA/lha_gates_of_the_himalayas.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_himalayan_strongholds"
+		texturefile = "gfx/interface/missions/LHA/lha_himalayan_strongholds.dds"
+	}
 }
