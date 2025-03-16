@@ -2062,7 +2062,6 @@ lha_slot_4 = {
 		effect = {
 			change_government_reform_progress = 50
 			custom_tooltip = lha_fortress_tibet_dzong_system_enabled_tooltip
-
 			custom_tooltip = lha_fortress_tibet_mod_tooltip
 			tooltip = {
 				add_province_modifier = {
@@ -2095,6 +2094,80 @@ lha_slot_4 = {
 				religion = ROOT
 				culture = ROOT
 				skill = 2
+			}
+		}
+	}
+	lha_reinforce_the_gyantse_dzong = {
+		icon = gfx_lha_reinforce_the_gyantse_dzong
+		position = 5
+		required_missions = {
+			lha_fortress_tibet
+		}
+		provinces_to_highlight = {
+			province_id = 676
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_great_project = {
+						type = gyantse_dzong
+						tier = 1
+					}
+				}
+			}
+		}
+		trigger = {
+			676 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_great_project = {
+					type = gyantse_dzong
+					tier = 1
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					676 = {
+						has_great_project = {
+							type = gyantse_dzong
+							tier = 3
+						}
+					}
+				}
+				add_treasury = 1000
+			}
+			else = {
+				676 = {
+					add_great_project_tier = {
+						type = gyantse_dzong
+						tier = 1
+					}
+				}
+			}
+			676 = {
+				add_or_upgrade_fort_building = yes
+			}
+			
+			custom_tooltip = lha_reinforce_the_gyantse_dzong_gp_mod_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = lha_develop_the_dzongs
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				add_himalayan_great_project_reward_effect = {
+					province = 557
+				}
+				add_himalayan_great_project_reward_effect = {
+					province = 5314
+				}
+				add_himalayan_great_project_reward_effect = {
+					province = 5316
+				}
+				add_himalayan_great_project_reward_effect = {
+					province = 5261
+				}
 			}
 		}
 	}

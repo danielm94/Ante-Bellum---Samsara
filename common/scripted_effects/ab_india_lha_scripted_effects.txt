@@ -945,9 +945,22 @@ fund_pilgrimage_pay_cost_effect = {
 		which = capital_distance_from_target
 		value = -2
 	}
-
-	variable_use_in_effect_effect ={
+	variable_use_in_effect_effect = {
 		effect = add_treasury
 		variable = capital_distance_from_target
+	}
+}
+
+add_himalayan_great_project_reward_effect ={
+	$province$ ={
+		if ={
+			limit ={
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		add_province_modifier = {
+			name = lha_develop_the_dzongs
+			duration = -1
+		}
 	}
 }

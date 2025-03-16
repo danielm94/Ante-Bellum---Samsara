@@ -263,4 +263,8 @@ spriteTypes = {
 		name = "gfx_lha_fortress_tibet"
 		texturefile = "gfx/interface/missions/LHA/lha_fortress_tibet.dds"
 	}
+	spriteType = {
+		name = "gfx_lha_reinforce_the_gyantse_dzong"
+		texturefile = "gfx/interface/missions/LHA/lha_reinforce_the_gyantse_dzong.dds"
+	}
 }
