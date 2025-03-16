@@ -951,10 +951,10 @@ fund_pilgrimage_pay_cost_effect = {
 	}
 }
 
-add_himalayan_great_project_reward_effect ={
-	$province$ ={
-		if ={
-			limit ={
+add_himalayan_great_project_reward_effect = {
+	$province$ = {
+		if = {
+			limit = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
