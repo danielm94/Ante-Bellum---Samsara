@@ -614,7 +614,7 @@ estate_gya_levy_of_the_middle_kingdom = {
 				duration = -1
 			}
 		}
-		custom_tooltip = estate_gya_levy_of_the_middle_kingdom_gya_granted_tooltip
+		custom_tooltip = estate_gya_levy_of_the_middle_kingdom_regular_chinese_granted_tooltip
 		tooltip = {
 			add_province_modifier = {
 				name = estate_gya_levy_of_the_middle_kingdom_chinese_culture_group
