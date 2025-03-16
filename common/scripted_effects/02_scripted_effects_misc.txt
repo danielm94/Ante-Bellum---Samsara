@@ -269,3 +269,100 @@ safe_remove_province_modifier ={
 		remove_province_modifier = $mod$
 	}
 }
+
+clear_all_fort_building_flags_for_province = {
+	clr_province_flag = prev_fort_tier_1
+	clr_province_flag = prev_fort_tier_2
+	clr_province_flag = prev_fort_tier_3
+	clr_province_flag = prev_fort_tier_4
+	clr_province_flag = prev_fort_tier_5
+}
+
+set_prev_fort_building_tier_for_provence = {
+	clear_all_fort_building_flags_for_province = yes
+	if = {
+		limit = {
+			has_building = fort_15th
+		}
+		set_province_flag = prev_fort_tier_1
+	}
+	else_if = {
+		limit = {
+			has_building = fort_16th
+		}
+		set_province_flag = prev_fort_tier_2
+	}
+	else_if = {
+		limit = {
+			has_building = fort_17th
+		}
+		set_province_flag = prev_fort_tier_3
+	}
+	else_if = {
+		limit = {
+			has_building = fort_18th
+		}
+		set_province_flag = prev_fort_tier_4
+	}
+	else_if = {
+		limit = {
+			has_building = fort_19th
+		}
+		set_province_flag = prev_fort_tier_5
+	}
+}
+
+fort_build_rebate_effect = {
+	set_variable = {
+		which = tier
+		value = $tier_to_build$
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = tier
+				value = 1
+			}
+		}
+		owner = {
+			add_treasury = 20
+		}
+		subtract_variable = {
+			which = tier
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_province_flag = prev_fort_tier_1
+		}
+		owner = {
+			add_treasury = -20
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_flag = prev_fort_tier_2
+		}
+		owner = {
+			add_treasury = -40
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_flag = prev_fort_tier_3
+		}
+		owner = {
+			add_treasury = -60
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_flag = prev_fort_tier_4
+		}
+		owner = {
+			add_treasury = -80
+		}
+	}
+	set_prev_fort_building_tier_for_provence = yes
+}
