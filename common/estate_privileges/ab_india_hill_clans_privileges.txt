@@ -240,6 +240,14 @@ estate_hill_clans_enlist_the_sherpas = {
 	max_absolutism = -10
 	loyalty = 0.05
 	influence = 0.05
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
 	is_valid = {
 	}
 	can_select = {
@@ -469,6 +477,14 @@ estate_hill_clans_expand_the_yak_herds = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
 	is_valid = {
 	}
 	can_select = {
@@ -606,7 +622,7 @@ estate_hill_clans_enlist_the_gurkhas = {
 			has_absolutism_reduction_for_estate_privileges = yes
 		}
 		modifier = {
-			max_absolutism = 2
+			max_absolutism = 1
 		}
 	}
 	loyalty = -0.05
@@ -697,6 +713,14 @@ estate_hill_clans_prioritize_yak_hair_industry = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.1
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
 	is_valid = {
 	}
 	can_select = {
@@ -803,7 +827,7 @@ estate_hill_clans_monopoly_of_cashmere = {
 			has_absolutism_reduction_for_estate_privileges = yes
 		}
 		modifier = {
-			max_absolutism = 2
+			max_absolutism = 1
 		}
 	}
 	loyalty = 0.05
@@ -923,5 +947,111 @@ estate_hill_clans_monopoly_of_cashmere = {
 	ai_will_do = {
 		#having the AI use these could lead to an unstoppable downwards spiral if it can't work out how to get rid of them
 		factor = 0
+	}
+}
+
+estate_hill_clans_himalayan_guerrillas = {
+	icon = gfx_himalayan_guerrillas
+	land_share = 2
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	is_valid = {
+		has_country_flag = himalayan_guerrillas_enabled
+		is_at_war = yes
+	}
+	can_select = {
+		crown_land_share = 2
+	}
+	benefits = {
+		hill_clans_privilege_slots = 1
+	}
+	on_granted = {
+		custom_tooltip = estate_hill_clans_himalayan_guerrillas_granted_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = estate_hill_clans_guerrillas_mod
+				duration = -1
+			}
+		}
+		custom_tooltip = estate_hill_clans_himalayan_guerrillas_granted_postwar_tooltip
+		if = {
+			limit = {
+				full_idea_group = court_ideas
+			}
+			add_estate_influence_modifier = {
+				estate = estate_hill_clans
+				desc = estate_hill_clans_guerrillas_influence
+				influence = 5
+				duration = 3650
+			}
+		}
+		else = {
+			add_estate_influence_modifier = {
+				estate = estate_hill_clans
+				desc = estate_hill_clans_guerrillas_influence
+				influence = 10
+				duration = 7300
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					region = tibet_region
+					area = nepal_area
+					area = baisi_rajya_area
+					area = himalayan_hills_area
+					area = kashmir_area
+				}
+			}
+			add_province_modifier = {
+				name = estate_hill_clans_guerrillas_mod
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+	}
+	on_revoked_province = {
+		safe_remove_province_modifier = {
+			mod = estate_hill_clans_guerrillas_mod
+		}
+	}
+	on_invalid = {
+	}
+	on_invalid_province = {
+		safe_remove_province_modifier = {
+			mod = estate_hill_clans_guerrillas_mod
+		}
+	}
+	#All of this assumes that the AI is at war
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1000
+			NOT = {
+				war_score = -5
+			}
+		}
+		modifier = {
+			factor = -10
+			NOT = {
+				crown_land_share = 32
+			}
+		}
+		modifier = {
+			factor = 1000
+			is_bankrupt = yes
+		}
 	}
 }

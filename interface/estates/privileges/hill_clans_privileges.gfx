@@ -27,4 +27,8 @@ spriteTypes = {
 		name = "gfx_monopoly_of_cashmere"
 		texturefile = "gfx/interface/privileges/hill_clans/monopoly_of_cashmere.dds"
 	}
+	spriteType ={
+		name = "gfx_himalayan_guerrillas"
+		texturefile = "gfx/interface/privileges/hill_clans/himalayan_guerrillas.dds"
+	}
 }

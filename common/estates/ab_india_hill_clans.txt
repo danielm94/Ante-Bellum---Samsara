@@ -49,6 +49,7 @@ estate_hill_clans = {
 	base_influence = 10
 
 	privileges = {
+		estate_hill_clans_himalayan_guerrillas
 		estate_hill_clans_land_rights
 		estate_hill_clans_enlist_the_sherpas 
 		estate_hill_clans_expand_the_yak_herds
