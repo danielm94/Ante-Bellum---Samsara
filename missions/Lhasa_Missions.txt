@@ -182,7 +182,6 @@ lha_slot_1 = {
 					duration = -1
 				}
 			}
-
 			set_country_flag = enlightened_academies_university_buff
 			custom_tooltip = lha_the_great_monastic_colleges_uni_buff_tooltip
 			tooltip = {
@@ -192,13 +191,11 @@ lha_slot_1 = {
 				}
 			}
 			custom_tooltip = lha_the_great_monastic_colleges_enlightenment_tooltip
-
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
 						has_building = university
 					}
-
 					add_province_modifier = {
 						name = lha_enlightened_academies
 						duration = -1
@@ -1985,10 +1982,10 @@ lha_slot_4 = {
 		provinces_to_highlight = {
 			province_id = 677
 			NOT = {
-				has_fort_building_trigger = yes
-			}
-			NOT = {
-				owned_by = ROOT
+				AND = {
+					has_fort_building_trigger = yes
+					owned_by = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -2011,6 +2008,93 @@ lha_slot_4 = {
 				religion = ROOT
 				culture = ROOT
 				skill = 1
+			}
+		}
+	}
+	lha_fortress_tibet = {
+		icon = gfx_lha_fortress_tibet
+		position = 4
+		required_missions = {
+			lha_shield_the_holy_city
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5262
+				province_id = 4516
+				province_id = 676
+				province_id = 678
+				province_id = 2134
+				province_id = 677
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			677 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			5262 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			4516 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			676 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			678 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			2134 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			change_government_reform_progress = 50
+			custom_tooltip = lha_fortress_tibet_dzong_system_enabled_tooltip
+
+			custom_tooltip = lha_fortress_tibet_mod_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = lha_gates_of_tibet
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = tibet_region
+						has_fort_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = lha_gates_of_tibet
+						duration = -1
+					}
+				}
+			}
+			676 = {
+				add_province_modifier = {
+					name = lha_develop_the_dzongs
+					duration = -1
+				}
+			}
+			define_advisor = {
+				type = fortification_expert
+				age = 30
+				cost_multiplier = 0.25
+				religion = ROOT
+				culture = ROOT
+				skill = 2
 			}
 		}
 	}
