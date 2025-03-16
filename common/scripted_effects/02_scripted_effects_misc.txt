@@ -251,3 +251,21 @@ add_or_renew_province_modifier ={
 		duration = $duration$
 	}
 }
+
+safe_remove_country_modifier ={
+	if = {
+		limit = {
+			has_country_modifier = $mod$
+		}
+		remove_country_modifier = $mod$
+	}
+}
+
+safe_remove_province_modifier ={
+	if = {
+		limit = {
+			has_province_modifier = $mod$
+		}
+		remove_province_modifier = $mod$
+	}
+}

@@ -2147,7 +2147,6 @@ lha_slot_4 = {
 			676 = {
 				add_or_upgrade_fort_building = yes
 			}
-			
 			custom_tooltip = lha_reinforce_the_gyantse_dzong_gp_mod_tooltip
 			tooltip = {
 				add_province_modifier = {
@@ -3273,6 +3272,111 @@ lha_slot_5 = {
 					amount = 20
 				}
 			}
+		}
+	}
+	lha_gates_of_the_himalayas = {
+		icon = gfx_lha_gates_of_the_himalayas
+		position = 4
+		required_missions = {
+			lha_shield_the_holy_city
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 565
+				province_id = 4483
+				province_id = 557
+				province_id = 5314
+				province_id = 4491
+				province_id = 5316
+				province_id = 5261
+				province_id = 4449
+				province_id = 2073
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_fort_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			565 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			4483 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			557 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			5314 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			4491 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			5316 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			5261 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			4449 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+			2073 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = lha_gates_of_the_himalayas_mod_tooltip
+			tooltip = {
+				add_province_modifier = {
+					name = lha_gates_of_the_himalayas_mod
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = bhutan_area
+							area = nepal_area
+							area = baisi_rajya_area
+							area = himalayan_hills_area
+							area = kashmir_area
+						}
+						has_fort_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = lha_gates_of_the_himalayas_mod
+						duration = -1
+					}
+				}
+			}
+			define_advisor = {
+				type = architect
+				age = 30
+				skill = 3
+				cost_multiplier = 0.4
+				religion = ROOT
+				culture = ROOT
+			}
+			add_estate_loyalty = {
+				estate = estate_hill_clans
+				loyalty = 15
+			}
+			set_country_flag = himalayan_guerrillas_enabled
+			custom_tooltip = lha_gates_of_the_himalayas_guerrillas_tooltip
 		}
 	}
 	lha_the_sands_of_tarim = {

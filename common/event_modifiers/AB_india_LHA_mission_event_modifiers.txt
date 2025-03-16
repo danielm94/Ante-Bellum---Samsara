@@ -558,3 +558,10 @@ lha_local_great_dzong = {
 	local_tax_modifier = 0.50
 	allowed_num_of_buildings = 1
 }
+
+lha_gates_of_the_himalayas_mod = {
+	local_defensiveness = 0.25
+	local_fort_maintenance_modifier = -0.25
+	local_garrison_size = 0.25
+	local_hostile_attrition = 1
+}

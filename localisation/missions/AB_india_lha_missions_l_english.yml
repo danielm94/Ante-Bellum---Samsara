@@ -257,3 +257,7 @@
  lha_reinforce_the_gyantse_dzong_title:0 "Reinforce the Gyantse Dzong"
  lha_reinforce_the_gyantse_dzong_desc:0 "Perched atop a rugged hill overlooking the Nyang Chu Valley, the Gyantse Dzong has long stood as one of Tibet's most formidable fortresses. Yet time and the elements have worn down its walls, and without proper reinforcement, it may not withstand the sieges of the future. Strengthening its defenses will not only secure one of Tibet's most strategic strongholds but also reaffirm our commitment to protecting the heartland of the Dharma."
  lha_reinforce_the_gyantse_dzong_gp_mod_tooltip:0 "\nAll owned provinces in the §YHimalayan Hills§!, §YBaisi Rajya§!, and §YNepal§! areas with a great project will receive:"
+ lha_gates_of_the_himalayas_title:0 "The Gates of the Himalayas"
+ lha_gates_of_the_himalayas_desc:0 "The towering peaks of the Himalayas have long served as a natural shield for our lands, but sheer cliffs and treacherous paths alone will not deter the ambitions of foreign conquerors. If we are to secure the sanctity of our realm, we must transform the lower Himalayas into an impenetrable line of fortresses, ensuring that no army may pass without great suffering."
+ lha_gates_of_the_himalayas_mod_tooltip:0 "Every owned province in the §YBhutan§!, §YNepal§!, §YBaisi Rajya§!, §YHimalayan Hills§!, and §YKashmir§! areas with a fort will receive:"
+ lha_gates_of_the_himalayas_guerrillas_tooltip:0 "\n§TUnlock the §YHimalayan Guerrillas§! §Owar privilege§! for the §YHill Clans§! estate.\n This privilege is only available if you are at war.§!"
