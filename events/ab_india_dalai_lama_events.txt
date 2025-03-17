@@ -329,12 +329,12 @@ country_event = {
 		has_country_flag = dalai_lama_found
 	}
 	immediate = {
-		change_variable = {
-			which = dalai_lamas_found
-			value = 1
-		}
-		clr_country_flag = dalai_lama_found
 		hidden_effect = {
+			change_variable = {
+				which = dalai_lamas_found
+				value = 1
+			}
+			clr_country_flag = dalai_lama_found
 			kill_heir = {
 				allow_new_heir = no
 			}
