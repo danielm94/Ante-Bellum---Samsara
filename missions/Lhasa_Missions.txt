@@ -1035,13 +1035,16 @@ lha_slot_3 = {
 		required_missions = {
 		}
 		trigger = {
-			army_size_percentage = 0.8
-			num_of_generals = 1
+			army_size_percentage = 1
 		}
 		effect = {
 			add_country_modifier = {
 				name = lha_struggle_for_tibet
 				duration = 7300
+			}
+			create_general = {
+				tradition = 40
+				add_siege = 1
 			}
 			tibet_region = {
 				limit = {
@@ -3428,10 +3431,8 @@ lha_slot_5 = {
 			557 = {
 				add_or_upgrade_fort_building = yes
 			}
-
 			custom_tooltip = lha_himalayan_strongholds_advisor_buff_tooltip
 			set_country_flag = ned_military_engineer_siege_ability_scaled_modifier_flag
-
 			custom_tooltip = lha_himalayan_strongholds_fort_buff_tooltip
 			tooltip = {
 				add_province_modifier = {
@@ -3439,7 +3440,6 @@ lha_slot_5 = {
 					duration = -1
 				}
 			}
-
 			custom_tooltip = lha_himalayan_strongholds_fort_def_ideas_buff_tooltip
 			tooltip = {
 				add_province_modifier = {
@@ -3451,7 +3451,7 @@ lha_slot_5 = {
 			set_country_flag = fort_rebate_enabled
 			hidden_effect = {
 				every_owned_province = {
-					limit ={
+					limit = {
 						OR = {
 							has_terrain = mountain
 							has_terrain = hills
@@ -3469,7 +3469,8 @@ lha_slot_5 = {
 							name = ned_low_countries_fort_buff_buffed
 							duration = -1
 						}
-					} else = {
+					}
+					else = {
 						add_province_modifier = {
 							name = ned_low_countries_fort_buff
 							duration = -1
