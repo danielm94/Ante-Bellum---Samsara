@@ -71,6 +71,7 @@ estate_hill_clans_guerrillas_mod ={
 	local_hostile_attrition = 3
 	max_attrition = 3
 	local_defensiveness = 0.1
+	local_warscore_cost_modifier = 0.25
 }
 
 estate_gya_thriving_guild_city = {
