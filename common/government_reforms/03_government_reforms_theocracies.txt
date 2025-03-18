@@ -1635,6 +1635,7 @@ theocratic_democracy_reform = {
 			OR = {
 				has_government_attribute = monastic_order
 				tag = KOJ
+				has_country_flag = dalai_lama_mechanics
 			}
 		}
 	}
@@ -1809,7 +1810,10 @@ monastic_elections_reform = {
 	}
 	potential = {
 		NOT = {
-			has_reform = papacy_reform
+			OR = {
+				has_reform = papacy_reform
+				has_country_flag = dalai_lama_mechanics
+			}
 		}
 	}
 	conditional = {
@@ -1845,7 +1849,10 @@ commander_king_reform = {
 	fixed_rank = 0
 	potential = {
 		NOT = {
-			has_reform = papacy_reform
+			OR = {
+				has_reform = papacy_reform
+				has_country_flag = dalai_lama_mechanics
+			}
 		}
 	}
 	modifiers = {
@@ -1871,7 +1878,10 @@ admiral_king_reform = {
 	fixed_rank = 0
 	potential = {
 		NOT = {
-			has_reform = papacy_reform
+			OR = {
+				has_reform = papacy_reform
+				has_country_flag = dalai_lama_mechanics
+			}
 		}
 	}
 	trigger = {
@@ -1972,6 +1982,11 @@ organising_our_religion_reform = {
 
 faith_and_power_reform = {
 	icon = "soldiers_5"
+	potential = {
+		NOT = {
+			has_country_flag = dalai_lama_mechanics
+		}
+	}
 	allow_normal_conversion = yes
 	modifiers = {
 		morale_damage_received = -0.1
