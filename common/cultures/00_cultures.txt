@@ -9115,7 +9115,7 @@ tibetan_group = {
 		}
 	}
 	gya = {
-		primary = GPH
+		primary = CSH
 		dynasty_names = {
 			"Fang" "Hang" "Hue" "Khang" "Kong" "Soung" "Kue" "Lo" "Lor" "Li" "Moua" "Pha" "Tang" "Thao" "Chang" "Cheng" 
 			"Chu" "Vang" "Vue" "Xiong" "Yang"
