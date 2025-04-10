@@ -1,5 +1,5 @@
 government = theocracy
-add_government_reform = leading_clergy_reform
+add_government_reform = vlr_st_thomas_apostle
 government_rank = 2
 technology_group = indian
 religion = malankara

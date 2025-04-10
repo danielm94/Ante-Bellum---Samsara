@@ -1,0 +1,93 @@
+#Applies to both LHA and GPH
+dzong_system = {
+	icon = dzong_system
+	potential = {
+		OR ={
+			tag = GPH
+			tag = LHA
+		}
+	}
+
+	trigger = {
+		mission_completed = lha_fortress_tibet
+	}
+	modifiers = {
+		defensiveness = 0.25
+		fort_maintenance_modifier = -0.15
+		governing_capacity_modifier = 0.1
+	}
+	effect = {
+		custom_tooltip = dzong_system_temple_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = lha_local_dzong
+				duration = -1
+			}
+		}
+		custom_tooltip = dzong_system_great_temple_effect_tooltip
+		tooltip = {
+			add_province_modifier = {
+				name = lha_local_great_dzong
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = mountain
+						has_terrain = hills
+						has_terrain = glacier
+						has_terrain = highlands
+					}
+					has_tax_building_trigger = yes
+				}
+				if = {
+					limit = {
+						has_building = temple
+					}
+					add_province_modifier = {
+						name = lha_local_dzong
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = cathedral
+					}
+					add_province_modifier = {
+						name = lha_local_great_dzong
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = mountain
+						has_terrain = hills
+						has_terrain = glacier
+						has_terrain = highlands
+					}
+					has_tax_building_trigger = yes
+				}
+				if = {
+					limit = {
+						has_province_modifier = lha_local_dzong
+					}
+					remove_province_modifier = lha_local_dzong
+				}
+				else_if = {
+					limit = {
+						has_province_modifier = lha_local_great_dzong
+					}
+					remove_province_modifier = lha_local_great_dzong
+				}
+			}
+		}
+	}
+}

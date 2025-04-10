@@ -1,18 +1,29 @@
 country_decisions = {
-
 	tibetan_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_tibet_flag }
-			NOT = { exists = QNH }
-			NOT = { tag = ZHG }
+			NOT = {
+				has_country_flag = formed_tibet_flag
+			}
+			NOT = {
+				exists = QNH
+			}
+			NOT = {
+				OR = {
+					tag = ZHG
+					tag = LHA
+					tag = GPH
+				}
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = TIB }
+			NOT = {
+				exists = TIB
+			}
 			OR = {
 				primary_culture = tibetan
 				primary_culture = tibetan_new
@@ -40,12 +51,18 @@ country_decisions = {
 				province_id = 2135
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			NOT = { tag = ZHG }
+			NOT = {
+				tag = ZHG
+			}
 			religion = vajrayana
 			is_at_war = no
 			is_nomad = no
@@ -65,7 +82,11 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			every_province = {
@@ -74,16 +95,28 @@ country_decisions = {
 						region = tibet_region
 						province_id = 2074
 					}
-					NOT = { area = tarim_basin_area }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						area = tarim_basin_area
+					}
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = TIB
 			}
 			add_prestige = 25
 			set_country_flag = formed_tibet_flag
 			if = {
-				limit = { has_custom_ideas = no NOT = { has_idea_group = TIB_ideas } }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+					NOT = {
+						has_idea_group = TIB_ideas
+					}
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -91,5 +124,4 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
 }
